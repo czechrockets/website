@@ -25,9 +25,11 @@
     <link rel="stylesheet" href="../assets/css/hover.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/MAV_LanguageSelectButton.css">
     <link rel="stylesheet" href="../assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons-1.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons-2.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons.css">
@@ -41,15 +43,15 @@
         <div class="container"><a href="cs/index.html" style="width: 259px;"><img src="../assets/img/logos/logo.png" style="width: 277px;filter: blur(0px);"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="border-style: hidden;">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/en/index.html" style="color: rgb(29,1,199);border-color: var(--blue);font-family: Roboto, sans-serif;">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="en/news.html" style="color: rgb(29,1,199);border-color: rgb(157,169,174);font-family: Roboto, sans-serif;">NEWS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html" style="color: rgb(29,1,199);border-color: var(--blue);font-family: Roboto, sans-serif;">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="news.html" style="color: rgb(29,1,199);border-color: rgb(157,169,174);font-family: Roboto, sans-serif;">NEWS</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">PROJECTS&nbsp;</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="en/hitchhiker.html">Hitch-Hiker</a><a class="dropdown-item" href="en/cansat.html">CanSat</a></div>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="hitchhiker.html">Hitch-Hiker</a><a class="dropdown-item" href="cansat.html">CanSat</a></div>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="en/about-us.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="en/join-us.html" style="color: rgb(29,1,199);">JOIN US</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="en/contact.html" style="color: rgb(29,1,199);">CONTACT</a></li>
-                    <li class="nav-item" style="background: url(&quot;../assets/img/logos/cs.png&quot;) center / contain no-repeat;margin: 10px;"><a class="nav-link" href="cs/index.html" style="height: 18px;"></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="about-us.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../maintenance.html" style="color: rgb(29,1,199);">JOIN US</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.html" style="color: rgb(29,1,199);">CONTACT</a></li>
+                    <li class="nav-item" style="background: url(&quot;../assets/img/logos/cs.png&quot;) center / contain no-repeat;margin: 10px;"><a class="nav-link active" href="../index.html" style="height: 18px;"></a></li>
                 </ul>
             </div>
         </div>
@@ -64,7 +66,7 @@
                 </div>
             </div>
             <div class="col-lg-8 mx-auto" style="margin: 0px;height: 247px;max-width: 81%;">
-                <p class="text-faded mb-5" style="margin: 0px;height: 170px;min-height: 170px;color: rgb(255,255,255);font-family: Roboto, sans-serif;">Po úspěšném odstartování naší první rakety <em>Stopař</em> CRS rozhodně neusíná na vavřínech a již má plán na další ambiciózní projekt, který bude nejenom výzvou pro stávající členy, ale jistě bude potřebovat další posilu, proto zájemci čtěte určitě dál.<br></p>
+                <p class="text-faded mb-5" style="margin: 0px;height: 170px;min-height: 170px;color: rgb(255,255,255);font-family: Roboto, sans-serif;">After Hitchhiker's successful take-off, the Czech Rocket Society has a plan for next year's project, which will not only challenge the current members but it will also require greater teams, therefore, students interested in joining CRS, please stay tuned.<br></p>
             </div>
         </div>
     </header>
@@ -73,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="text">
-                        <p class="text-center" style="font-family: Roboto, sans-serif;">Dalším projektem by měl být nosič na CanSat, tedy raketa která bude CanSaty vynášet. V současné době se k vynášení CanSatů používají pouze drony, což znamená, že vzdálenost do jaké se CanSat dostane je ovlivněná jejich kapacitou. CanSat je malou napodobeninou skutečné družice, která má rozměry plechovky od limonády.<br></p>
+                        <p class="text-center" style="font-family: Roboto, sans-serif;">The Czech Rocket Society feels to be very inspired by the CanSat competition, which allows high school students to build small models of real orbiters. The size of the orbiters can be compared to cans of soda but they are fully functional.<br></p>
                     </div>
                 </div>
             </div>
@@ -82,17 +84,17 @@
             <div class="row">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="text">
-                        <p class="text-center" style="font-family: Roboto, sans-serif;">I v takto malé velikosti ale musí být družice funkční, tudíž musí obsahovat všechny základní systémy, baterie, sensory, vysílače nebo počítače. Cílem CanSatů je totiž získat určitá data pro další analyzování, stejně jako u reálných družic.&nbsp;<br></p>
-                        <p class="text-center" style="font-family: Roboto, sans-serif;">Pro sběr těchto dat, je ale nutné vynést CanSat do potřebné výšky minimálně 1000 m. n. m., ale ve světě se lítá i mnohem výše. A právě proto bychom chtěli dron nahradit raketou, na které by se dalo pracovat i dále, a dostávat tak CanSaty do vyšších vzdáleností.<br></p>
-                        <p class="text-center" style="font-family: Roboto, sans-serif;">Raketa na CanSat by pozvolně navazovala na raketu Stopař, která byla prvním projektem Czech Rocket Society, ale samozřejmě potřebujeme posily. Plán je začít s plánováním od září, před Vánoci mít Kritické přezkoumání projektu a v dubnu vzlétnout.<br></p>
+                        <p class="text-center" style="font-family: Roboto, sans-serif;">They bear all basic systems, batteries, sensors, transmitters and computers, from which they can collect data for further analysis, which is exactly what happens in space.<br></p>
+                        <p class="text-center" style="font-family: Roboto, sans-serif;">In Czech Republic, the CanSats are currently dropped off from drones or airplanes. Therefore, the Czech Rocket Society sees great potential in this field, because a rocket could be a great and reasonable replacement for drones or airplanes. The motivation here is to build a rocket that is able to bring CanSats near to the space environment. Moreover, with the help of CanSat, we would focus on bringing the Czech space community together, making launches attractive and space for everyone.<br></p>
+                        <p class="text-center" style="font-family: Roboto, sans-serif;">For the building of the rocket we will use our previous knowledge and experience from the Hitchhiker project and launch. It will also give our members an opportunity to get even better in their skills. New research teams and departments will be established.<br></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section style="background: url(&quot;../assets/img/fullsize/stars_2.jpg&quot;);">
-        <h3 class="text-center" style="font-family: Raleway, sans-serif;color: rgb(255,255,255);">Navnadili jsme Tě?</h3>
-        <p class="text-center" style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">To je dobře! Podívej se do sekce <a href="pro-zajemce.html">Pro zájemce</a> a zjisti, jak se k nám můžeš přidat! <br></p>
+        <h3 class="text-center" style="font-family: Raleway, sans-serif;color: rgb(255,255,255);">Sounds interesting?</h3>
+        <p class="text-center" style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">That's great! <a href="join-us.html">Join us </a>and find out how to be part of Czech Rocket Society!<br></p>
     </section>
     <footer class="footer-dark" style="height: auto;">
         <div class="row no-gutters" style="padding-left: 0px;padding-right: 0px;">
@@ -109,13 +111,13 @@
             <div class="col-sm-6 col-md-3 text-center item" style="padding: 0px;margin-bottom: 20px;">
                 <h3 style="font-family: Raleway, sans-serif;">Projects</h3>
                 <ul>
-                    <li><a href="../cs/stopar.html" style="font-family: Roboto, sans-serif;">Hitch-Hiker</a></li>
+                    <li><a href="../cs/stopar.html" style="font-family: Roboto, sans-serif;">Hitchhiker</a></li>
                     <li><a href="../cs/cansat.html" style="font-family: Roboto, sans-serif;">CanSat</a></li>
                 </ul>
             </div>
             <div class="col-md-6 item text" style="height: 100px;padding: 0px;max-width: none;">
                 <h3 style="text-align: center;font-family: Raleway, sans-serif;">Where to find us?</h3>
-                <div class="social-icons" style="width: 100%;height: 61px;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;"><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="#" style="transform: scale(0.63);"><i class="icon ion-social-snapchat" style="transform: scale(0.63);"></i></a><a href="#" style="transform: scale(0.63);"><i class="icon ion-social-youtube" style="transform: scale(0.64);"></i></a></div>
+                <div class="social-icons" style="width: 100%;height: 61px;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;"><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="https://www.instagram.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-instagram" style="transform: scale(0.63);"></i></a><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://linkedin.com/company/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-linkedin" style="transform: scale(0.64);"></i></a></div>
                 <p></p>
             </div>
         </div>
@@ -125,12 +127,13 @@
     </footer>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/smart-forms.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="../assets/js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="../assets/js/Simple-Slider.js"></script>
 </body>
 
 </html>
