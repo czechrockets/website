@@ -180,3 +180,78 @@ To github.com:czechrockets/website.git
    b4da6d2..2337c7c  staged -> staged
 
 
+----------
+
+Tue Jul 20 2021 08:02:28 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+   9f56583..a4d67c5  staged -> staged
+
+
+----------
+
+Wed Jul 21 2021 22:29:38 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+ ! [rejected]        staged -> staged (fetch first)
+error: failed to push some refs to 'git@github.com:czechrockets/website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+----------
+
+Wed Jul 21 2021 22:46:39 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+ ! [rejected]        staged -> staged (fetch first)
+error: failed to push some refs to 'git@github.com:czechrockets/website.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+----------
+
+Wed Jul 21 2021 22:49:32 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+ ! [rejected]        staged -> staged (non-fast-forward)
+error: failed to push some refs to 'git@github.com:czechrockets/website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+----------
+
+Fri Aug 27 2021 18:06:39 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+ ! [rejected]        staged -> staged (non-fast-forward)
+error: failed to push some refs to 'git@github.com:czechrockets/website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+----------
+
+Wed Oct 13 2021 23:01:39 GMT+0200 (Středoevropský letní čas)
+
+To github.com:czechrockets/website.git
+ ! [rejected]        staged -> staged (non-fast-forward)
+error: failed to push some refs to 'git@github.com:czechrockets/website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
