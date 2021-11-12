@@ -129,16 +129,32 @@
                 <ul>
                     <li><a href="../cs/stopar.html" style="font-family: Roboto, sans-serif;">Stopař</a></li>
                     <li><a href="../cs/cansat.html" style="font-family: Roboto, sans-serif;">Cansat</a></li>
+                    <li><a style="font-family: Roboto, sans-serif;color: rgb(73,95,109);">Solids</a></li>
+                    <li><a style="font-family: Roboto, sans-serif;color: rgb(73,95,109);">Control</a></li>
+                    <li></li>
                 </ul>
             </div>
-            <div class="col-md-6 item text" style="height: 100px;padding: 0px;max-width: none;">
+            <div class="col-md-6 text-center item text" style="height: 100px;padding: 0px;max-width: none;">
                 <h3 style="text-align: center;font-family: Raleway, sans-serif;">Kde nás najdete?</h3>
-                <div class="social-icons" style="width: 100%;height: 61px;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;"><a href="https://linktr.ee/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-planet" style="transform: scale(0.63);"></i></a><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="https://www.instagram.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-instagram" style="transform: scale(0.63);"></i></a><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://www.linkedin.com/company/czechrockets/" style="transform: scale(0.63);"><i class="icon ion-social-linkedin" style="transform: scale(0.64);"></i></a></div>
-                <p></p>
+                <div class="social-icons" style="width: 100%;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px;"><a href="https://linktr.ee/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-planet" style="transform: scale(0.63);"></i></a><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="https://www.instagram.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-instagram" style="transform: scale(0.63);"></i></a><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://www.linkedin.com/company/czechrockets/" style="transform: scale(0.63);"><i class="icon ion-social-linkedin" style="transform: scale(0.64);"></i></a></div><div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'L8FADK5BT3JRC',
+image: {
+src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
             </div>
-        </div>
-        <div class="col">
-            <p class="copyright" style="padding: 0px 0px 0px;height: 42px;font-family: Roboto, sans-serif;">Czech Rocket Society z.s. © 2021</p>
+            <div class="col" style="padding-top: 61px;">
+                <p class="copyright" style="padding: 0px 0px 0px;height: 42px;font-family: Roboto, sans-serif;">Czech Rocket Society z.s. © 2021</p>
+            </div>
         </div>
     </footer>
     <script src="../assets/js/jquery.min.js"></script>
