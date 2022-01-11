@@ -3,17 +3,29 @@
 
 <head>
     <meta charset="utf-8">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v12.0&appId=667143667593160&autoLogAppEvents=1" nonce="rlodf1Ek"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S28J66GZP5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S28J66GZP5');
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Czech Rocket Society | Hlavní stránka</title>
-    <meta name="twitter:card" content="">
+    <title>Czech Rocket Society | Main Page</title>
+    <meta name="twitter:image" content="../assets/img/crs_logo_ico3.png">
+    <meta property="og:image" content="../assets/img/crs_logo_ico3.png">
     <meta property="og:type" content="website">
-    <meta name="description" content="Czech Rocket Society je studentský spolek zaměřený na rakety, kosmonautiku a vesmír.">
-    <meta property="og:image" content="../assets/img/crs_logo_ico2.png">
+    <meta name="twitter:card" content="">
+    <meta name="description" content="Czech Rocket Society is the first student rocketry society in Czech Republic. Building Czech rockets and bringing Czechia even closer to space!">
     <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico3.png">
     <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico3.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico.png">
-    <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico.png">
-    <link rel="icon" type="image/png" sizes="243x182" href="../assets/img/crs_logo_ico2.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico3.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico3.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="../assets/img/crs_logo_ico3.png">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
@@ -22,29 +34,39 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;subset=latin-ext">
+    <link rel="stylesheet" href="../assets/css/Sansation.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="../assets/css/Article-Clean.css">
     <link rel="stylesheet" href="../assets/css/Article-Dual-Column.css">
     <link rel="stylesheet" href="../assets/css/Article-List.css">
     <link rel="stylesheet" href="../assets/css/Bootstrap-4---Timeline.css">
+    <link rel="stylesheet" href="../assets/css/Brands.css">
     <link rel="stylesheet" href="../assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="../assets/css/Features-Blue.css">
+    <link rel="stylesheet" href="../assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="../assets/css/Features-Clean.css">
     <link rel="stylesheet" href="../assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="../assets/css/Highlight-Phone.css">
     <link rel="stylesheet" href="../assets/css/hover.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="../assets/css/MAV_LanguageSelectButton.css">
     <link rel="stylesheet" href="../assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="../assets/css/Projects-Horizontal.css">
     <link rel="stylesheet" href="../assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="../assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons-1.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons-2.css">
     <link rel="stylesheet" href="../assets/css/Social-Icons.css">
     <link rel="stylesheet" href="../assets/css/Team-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Team-Grid.css">
     <link rel="stylesheet" href="../assets/css/Testimonials.css">
     <link rel="stylesheet" href="../assets/css/Timeline.css">
+    <link rel="stylesheet" href="../assets/css/Toggle-Switches.css">
     <link rel="stylesheet" href="../assets/css/Zig-Zag-Timeline-v3.css">
 <link rel="icon" href="../crs_logo_ico3.png?"/>
 </head>
@@ -53,15 +75,16 @@
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
         <div class="container"><a href="../index.html" style="width: 259px;"><img src="../assets/img/logos/logo.png" style="width: 277px;filter: blur(0px);"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="border-style: hidden;">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav d-lg-flex ml-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html" style="color: rgb(29,1,199);border-color: var(--blue);font-family: Roboto, sans-serif;">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="news.html" style="color: rgb(29,1,199);border-color: rgb(157,169,174);font-family: Roboto, sans-serif;">NEWS</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">PROJECTS&nbsp;</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="hitchhiker.html">Hitch-Hiker</a><a class="dropdown-item" href="cansat.html">CanSat</a></div>
-                    </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="about-us.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../join.html" style="color: rgb(29,1,199);text-shadow: -1px 2px 4px rgb(204,255,0);">JOIN US</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.html" style="color: rgb(29,1,199);">CONTACT</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">PROJECTS&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="hitchhiker.html">Hitch-Hiker</a><a class="dropdown-item" href="cansat.html">CanSat</a><a class="dropdown-item disabled" style="color: rgb(173,181,189);">Solids (coming soon)</a><a class="dropdown-item disabled" style="color: rgb(173,181,189);">Control (coming soon)</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="media.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">MEDIA</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="join-us.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">JOIN US</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contact.html" style="color: rgb(29,1,199);font-family: Roboto, sans-serif;">CONTACT</a></li>
                     <li class="nav-item" style="background: url(&quot;../assets/img/logos/cs.png&quot;) center / contain no-repeat;margin: 10px;"><a class="nav-link active" href="../index.html" style="height: 18px;"></a></li>
                 </ul>
             </div>
@@ -71,12 +94,12 @@
         <div class="container my-auto" style="padding-top: 0px;margin-top: 0px;margin-bottom: 0px;">
             <div class="row" style="padding: 0px;">
                 <div class="col-lg-10 mx-auto">
-                    <h2><strong style="font-family: Raleway, sans-serif;font-weight: normal;">Welcome to the Czech Rocket Society</strong></h2>
+                    <h2><strong style="font-family: Raleway, sans-serif;font-weight: normal;">Welcome to the Czech Rocket Society!</strong></h2>
                     <hr style="border-color: rgb(29,1,199);">
                 </div>
             </div>
             <div class="col-lg-8 mx-auto" style="margin: 0px;max-width: 91%;height: 127px;min-height: 76px;max-height: 237px;">
-                <p class="text-center text-faded mb-5" style="margin: 7px;height: 81px;min-width: 147px;font-family: Roboto, sans-serif;color: rgb(255,255,255);">We are the first official student society engaging in rockets and cosmonautics in the Czech Republic!<br>Are you following the global development in cosmonautics? Do you want to design and build real rockets?<br>Do you dream of building Czech space companies? Then this is the right place for you…<br><br><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="../cs/o-nas.html" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;">DISCOVER US</a><br></p>
+                <p class="text-center text-faded mb-5" style="margin: 7px;height: 81px;min-width: 147px;font-family: Roboto, sans-serif;color: rgb(255,255,255);">We are the first official student society engaging in rockets and cosmonautics in the Czech Republic!<br>Are you following the global development in cosmonautics? Do you want to design and build real rockets?<br>Do you dream of building Czech space companies? Then this is the right place for you…<br><br><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="about-us.html" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;">DISCOVER US</a><br></p>
             </div>
         </div>
     </header>
@@ -86,76 +109,137 @@
                 <h2 class="text-center" style="font-family: Raleway, sans-serif;">News</h2>
                 <hr class="my-4" style="border-color: rgb(29,1,199);">
             </div>
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="../join.html"><img class="img-fluid" src="../assets/img/fullsize/krupa_rybnik.jpg" style="height: 217.5;"></a>
-                    <h3 class="name" style="font-family: Roboto, sans-serif;">Recruitment of new members</h3>
-                    <p class="description" style="font-family: Roboto, sans-serif;">The next recruitment is on. Join us!</p><a class="action" href="../join.html" style="width: 35px;"><i class="fa fa-arrow-circle-right" style="color: rgb(0,0,0);font-size: 35px;"></i></a>
+            <div class="row articles" style="margin-top: 43px;">
+                <div class="col-sm-6 col-md-4 item" style="padding-top: 50px;"><a class="stretched-link" href="cansat.html"><img class="img-fluid" src="../assets/img/crs_team.png" height="217.5" width="300"></a>
+                    <h3 class="name" style="font-family: Roboto, sans-serif;">Project CanSat in works</h3>
+                    <p class="description" style="font-family: Roboto, sans-serif;">At the moment, Czech Rocket Society is working on new CanSat Launcher project.</p><a class="action" href="cansat.html"><i class="fa fa-arrow-circle-right" style="color: rgb(0,0,0);font-size: 35px;width: 35px;"></i></a>
                 </div>
-                <div class="col-sm-6 col-md-4 item"><a class="stretched-link" href="../cs/stopar.html" target="_blank"><img src="../assets/img/crs_team.png" height="217.5"></a>
-                    <h3 class="name" style="font-family: Roboto, sans-serif;">Project Hitchhiker</h3>
-                    <p class="description" style="font-family: Roboto, sans-serif;">Currently, the Hitchhiker project is being worked on.</p><a class="action" href="../cs/stopar.html"><i class="fa fa-arrow-circle-right" style="color: rgb(0,0,0);font-size: 35px;width: 35px;"></i></a>
+                <div class="col-sm-6 col-md-4 item" style="border-top-left-radius: 35px;border-top-right-radius: 35px;border-bottom-right-radius: 35px;border-bottom-left-radius: 34px;border: 19px ridge rgba(0,20,51,0.06);padding-top: 20px;"><a href="https://czechrocketchallenge.cz" target="_blank"><img class="img-fluid" src="../assets/img/logos/crc_logo.png" height="217.5" width="300"></a>
+                    <h3 class="name" style="font-family: Roboto, sans-serif;">Czech Rocket Challenge 2022</h3>
+                    <p class="description" style="font-family: Roboto, sans-serif;padding-bottom: 20px;">Czech Rocket Society is going to organize the second year of students rocketry challenge in Czech Republic.</p>
                 </div>
-                <div class="col-sm-6 col-md-4 item"><a href="news.html#kpp"><img class="img-fluid" src="../assets/img/thumbnails/kpp.jpg" style="height: 217.5;"></a>
-                    <h3 class="name" style="font-family: Roboto, sans-serif;">Critical Design Review</h3>
-                    <p class="description" style="font-family: Roboto, sans-serif;">The meeting with experts from the field will help us to correct possible flaws in the design.</p><a class="action" href="news.html#kpp"><i class="fa fa-arrow-circle-right" style="color: rgb(0,0,0);font-size: 35px;width: 35px;"></i></a>
+                <div class="col-sm-6 col-md-4 item"><a href="cansat.html"><img class="img-fluid" src="../assets/img/thumbnails/kpp.jpg" height="217.5" width="300" style="border-width: 10px;border-color: rgb(0,0,0);"></a>
+                    <h3 class="name" style="font-family: Roboto, sans-serif;">CanSat Critical Design Review soon!</h3>
+                    <p class="description" style="font-family: Roboto, sans-serif;">Experts from the field will be met online to collect their feedback to our CanSat Launcher.</p><a class="action" href="cansat.html"><i class="fa fa-arrow-circle-right" style="color: rgb(0,0,0);font-size: 35px;width: 35px;"></i></a>
                 </div>
-            </div><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="news.html" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;">MORE NEWS</a>
+            </div>
         </div>
     </section>
-    <section class="article-list" style="padding: 14px 0px;background: rgb(40,37,37);padding-bottom: 50px;" id="portfolio">
+    <section class="article-list" style="padding: 14px 0px;background: rgb(40,37,37);padding-bottom: 50px;" id="portfolio-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center" style="border-color: rgb(29,1,199);">
-                    <h2 class="section-heading" style="color: var(--white);font-family: Raleway, sans-serif;">Our Projects</h2>
+                    <h2 class="section-heading" style="color: var(--white);font-family: Raleway, sans-serif;">Our projects</h2>
                     <hr class="my-4" style="border-color: rgb(29,1,199);">
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6"><a class="portfolio-box" href="../cs/stopar.html"><img class="img-fluid" src="../assets/img/logos/stopar_title.jpg" height="220">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;">FLAGSHIP projeCt</span></div>
-                                <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;">HITCHHIKER</span></div>
-                            </div>
+        <section class="projects-horizontal" style="padding-top: 0px;background: rgb(40,37,37);padding-bottom: 50px;">
+            <div class="container">
+                <div class="intro">
+                    <p style="font-family: Raleway, sans-serif;font-size: 14px;text-align: center;padding-bottom: 10px;"><em>To see the project name, hover over the pictures below. For more info, click it.</em></p>
+                </div>
+                <h3 class="text-center" style="color: rgb(255,255,255);padding-top: 20px;font-family: Raleway, sans-serif;">Launchers</h3>
+                <p style="font-family: Raleway, sans-serif;font-size: 14px;text-align: center;padding-bottom: 10px;"><em>Dominant projects of Czech Rocket Society are multipurpose rocket launchers.</em></p>
+                <div class="row projects">
+                    <div class="col-sm-6 item" style="padding-top: 0px;">
+                        <div class="row">
+                            <div class="col"><a class="portfolio-box" href="#modalcansat" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center;" data-toggle="modal" data-target="#modalcansat"><img class="img-fluid" src="../assets/img/logos/cansat_title.jpg" height="220">
+                                    <div class="portfolio-box-caption" style="background: rgba(99,64,240,0.2);">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">CURRENT PROJECT</span></div>
+                                            <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;color: rgb(255, 255, 255);">CANSAT LAUNCHER - SHERPA</span></div>
+                                        </div>
+                                    </div>
+                                </a></div>
                         </div>
-                    </a></div>
-                <div class="col-md-6"><a class="text-center portfolio-box" href="../cs/cansat.html" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);"><img class="img-fluid" src="../assets/img/logos/cansat_title.jpg" height="220">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;">FUTURE projeCT</span></div>
-                                <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;">CANSAT</span></div>
-                            </div>
+                    </div>
+                    <div class="col-sm-6 item" style="padding-top: 0px;">
+                        <div class="row">
+                            <div class="col"><a class="portfolio-box" href="#modalstopar" data-toggle="modal" data-target="#modalstopar"><img class="img-fluid" src="../assets/img/logos/stopar_title.jpg" height="220" style="background: #ffffff;">
+                                    <div class="portfolio-box-caption" style="background: rgba(240,95,64,0.2);border-radius: 0px;">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;">PAST projeCt</span></div>
+                                            <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;">HITCHHIKER</span></div>
+                                        </div>
+                                    </div>
+                                </a></div>
                         </div>
-                    </a></div>
+                    </div>
+                </div>
+                <div class="intro">
+                    <h3 class="text-center" style="padding-top: 0px;color: rgb(255,255,255);font-family: Roboto, sans-serif;">Teams</h3>
+                    <p class="text-center"></p>
+                </div>
+                <p style="font-family: Raleway, sans-serif;font-size: 14px;text-align: center;padding-bottom: 10px;"><em>Teams are single-focused units that are generally working apart from the main projects.</em></p>
+                <div class="row projects">
+                    <div class="col-sm-6 item" style="padding-top: 0px;"><a class="text-center portfolio-box" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);" href="#modalsolids" data-toggle="modal"><img class="img-fluid" src="../assets/img/fullsize/solids.jpg" height="220">
+                            <div class="portfolio-box-caption" style="background: rgba(51,0,255,0.46);">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">TEAM</span></div>
+                                    <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;color: rgb(255,255,255);">SOLIDS</span></div>
+                                </div>
+                            </div>
+                        </a></div>
+                    <div class="col-sm-6 item" style="padding-top: 0px;"><a class="text-center portfolio-box" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);" href="#modalcontrol" data-toggle="modal" data-target="#modalcontrol"><img class="img-fluid" src="../assets/img/fullsize/control.jpg" height="220">
+                            <div class="portfolio-box-caption" style="background: rgba(51,0,255,0.46);">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">TEAM</span></div>
+                                    <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;color: rgb(255,255,255);">CONTROL</span></div>
+                                </div>
+                            </div>
+                        </a></div>
+                </div>
+                <div class="intro">
+                    <h3 class="text-center" style="padding-top: 0px;color: rgb(255,255,255);font-family: Roboto, sans-serif;">Events</h3>
+                    <p class="text-center"></p>
+                </div>
+                <p style="font-family: Raleway, sans-serif;font-size: 14px;text-align: center;padding-bottom: 10px;"><em>Czech Rocket Society organizes and participates in events concerning cosmonautics and rocketry.</em></p>
+                <div class="row justify-content-center projects">
+                    <div class="col-sm-6 item" style="padding-top: 0px;"><a class="text-center portfolio-box" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);" href="#modalcrc" data-toggle="modal" data-target="#modalcrc"><img class="img-fluid" src="../assets/img/fullsize/crc.jpg" height="220">
+                            <div class="portfolio-box-caption" style="background: rgba(51,0,255,0.46);">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded"><span style="font-family: Roboto, sans-serif;color: rgb(255,255,255);">COMPETITION</span></div>
+                                    <div class="project-name"><span style="font-family: Raleway, sans-serif;font-weight: bold;color: rgb(255,255,255);">CZECH ROCKET CHALLENGE</span></div>
+                                </div>
+                            </div>
+                        </a></div>
+                </div>
             </div>
-        </div>
+        </section>
     </section>
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 text-center mx-auto">
-                    <h2 class="section-heading" style="font-family: Raleway, sans-serif;">Contact us!</h2>
-                    <hr class="my-4" style="border-color: rgb(29,1,199);">
-                    <p class="mb-5" style="font-family: Roboto, sans-serif;">Are you interested in supporting us? Would you like to collaborate or tell us your opinion on our work? Contact us via our email below or our social media.</p>
+                    <p class="mb-5" style="font-family: Roboto, sans-serif;">Would you like to support our activities by cooperation or providing us with your feedback? Let us know on e-mail addresses below or on our <a href="https://linktr.ee/czechrockets" target="_blank">social media</a>.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 text-center mx-auto"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
-                    <p><a href="mailto:your-email@your-domain.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">info@czechrockets.com</a></p>
+                <div class="col-auto col-lg-4 text-center mx-auto"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
+                    <p style="font-size: 19px;">INFO:<br><a href="mailto:info@czechrockets.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">info@czechrockets.com</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto">
+                    <p>CHAIRMAN of the BOARD:&nbsp;<br><a href="mailto:predseda@czechrockets.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">predseda@czechrockets.com</a></p>
+                    <p>PR:<br>&nbsp;<a href="mailto:pr@czechrockets.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">pr@czechrockets.com</a></p>
+                </div>
+                <div class="col-lg-4 text-center mx-auto">
+                    <p>SECRETARY:<br><a href="mailto:tajemnik@czechrockets.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">tajemnik@czechrockets.com</a></p>
+                    <p>CRS BOARD (common):<br><a href="mailto:rada@czechrockets.com" style="border-color: rgb(29,1,199);color: rgb(29,1,199);font-family: Roboto, sans-serif;font-size: 19px;">rada@czechrockets.com</a></p>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="footer-dark" style="height: auto;">
+    <footer class="footer-dark" style="height: auto;padding-bottom: 0px;">
         <div class="row no-gutters" style="padding-left: 0px;padding-right: 0px;">
-            <div class="col-sm-6 col-md-3 text-center item" style="margin-top: 0px;margin-bottom: 20px;"><a href="#" style="color: rgb(241,250,255);">
+            <div class="col-sm-6 col-md-3 text-center item" style="margin-top: 0px;margin-bottom: 20px;"><a href="https://czechrockets.com" style="color: rgb(241,250,255);">
                     <h3 style="color: rgb(241,250,255);font-family: Raleway, sans-serif;">Czech Rocket Society</h3>
                 </a>
                 <ul>
-                    <li><a href="../en/news.html" style="font-family: Roboto, sans-serif;">News</a></li>
                     <li><a href="../en/about-us.html" style="font-family: Roboto, sans-serif;">About Us</a></li>
+                    <li><a href="../en/media.html" style="font-family: Roboto, sans-serif;">Media</a></li>
                     <li><a href="../en/join-us.html" style="font-family: Roboto, sans-serif;">Join Us</a></li>
                     <li><a href="../en/contact.html" style="font-family: Roboto, sans-serif;">Contact</a></li>
                 </ul>
@@ -163,20 +247,115 @@
             <div class="col-sm-6 col-md-3 text-center item" style="padding: 0px;margin-bottom: 20px;">
                 <h3 style="font-family: Raleway, sans-serif;">Projects</h3>
                 <ul>
-                    <li><a href="../cs/stopar.html" style="font-family: Roboto, sans-serif;">Hitchhiker</a></li>
+                    <li><a href="https://czechrocketchallenge.cz" style="font-family: Roboto, sans-serif;" target="_blank">Czech Rocket Challenge</a></li>
                     <li><a href="../cs/cansat.html" style="font-family: Roboto, sans-serif;">CanSat</a></li>
+                    <li><a href="../cs/stopar.html" style="font-family: Roboto, sans-serif;">Hitchhiker</a></li>
+                    <li><a style="font-family: Roboto, sans-serif;color: rgb(73,95,109);">Solids</a></li>
+                    <li><a style="font-family: Roboto, sans-serif;color: rgb(73,95,109);">Control</a></li>
                 </ul>
             </div>
             <div class="col-md-6 item text" style="height: 100px;padding: 0px;max-width: none;">
                 <h3 style="text-align: center;font-family: Raleway, sans-serif;">Where to find us?</h3>
-                <div class="social-icons" style="width: 100%;height: 61px;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;"><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="https://www.instagram.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-instagram" style="transform: scale(0.63);"></i></a><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://linkedin.com/company/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-linkedin" style="transform: scale(0.64);"></i></a></div>
-                <p></p>
+                <div class="text-truncate social-icons" style="width: 100%;padding: 0px 0px;background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px;"><a href="https://linktr.ee/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-planet" style="transform: scale(0.63);"></i></a><a href="https://facebook.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-facebook" style="transform: scale(0.63);"></i></a><a href="https://www.instagram.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-instagram" style="transform: scale(0.63);"></i></a><a href="https://twitter.com/czechrockets" style="transform: scale(0.63);" target="_blank"><i class="icon ion-social-twitter" style="transform: scale(0.63);"></i></a><a href="https://www.linkedin.com/company/czechrockets/" style="transform: scale(0.63);"><i class="icon ion-social-linkedin" style="transform: scale(0.64);"></i></a></div>
             </div>
         </div>
-        <div class="col">
-            <p class="copyright" style="padding: 0px 0px 0px;height: 42px;font-family: Roboto, sans-serif;">Czech Rocket Society © 2021</p>
+        <div class="col" style="padding-top: 20px;">
+            <h3 class="text-center" style="font-family: Raleway, sans-serif;">Partners</h3>
+            <div class="container">
+                <div class="row justify-content-center" style="padding-bottom: 50px;">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3 align-self-center"><a target="_blank" href="http://www.planetum.cz"><img class="img-fluid" src="../assets/img/logos/planetum.jpg" alt="Advacam"></a></div>
+                    <div class="col-md-3 align-self-center"><a target="_blank" href="http://www.advacam.com"><img class="img-fluid" src="../assets/img/logos/advacam.svg" alt="Advacam"></a></div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <p class="d-lg-flex justify-content-lg-center align-items-lg-center copyright" style="padding: 0px 0px 0px;height: 42px;font-family: Roboto, sans-serif;">Czech Rocket Society z.s. © 2022</p><div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'L8FADK5BT3JRC',
+image: {
+src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+                <p class="copyright" style="padding: 0px 0px 0px;height: 15px;font-family: Roboto, sans-serif;font-size: 9px;">acct. [€ EUR]&nbsp;IBAN CZ6720100000000426378000</p>
+            </div>
         </div>
     </footer>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalstopar">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center" style="background: #ffffff;"><img class="img-fluid" src="../assets/img/logos/stopar.png" height="100" style="height: 85.203px;">
+                    <h4 class="display-4 modal-title" style="text-align: center;padding-left: 10px;padding-top: 9px;font-family: Raleway, sans-serif;font-size: 36px;">Hitchhiker</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background: #dedede;"><img class="img-fluid" src="../assets/img/fullsize/stopar_auto.png">
+                    <p class="text-justify" style="font-family: Roboto, sans-serif;padding-top: 10px;">A launcher, able to ascend up to 500 metres, it has been mainly meant to inspire public with its unique payload and to start the CRS activities. That is HitchHiker. It will stay the first CRS project forever.</p>
+                </div>
+                <div class="modal-footer" style="background: rgb(49,52,55);color: rgb(33, 37, 41);"><button class="btn btn-light" type="button" data-dismiss="modal" style="color: rgb(255,255,255);">CLOSE</button><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="hitchhiker.html" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;">LEARN MORE</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalcansat">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center" style="background: #ffffff;"><img src="../assets/img/logos/cansat.png" height="100">
+                    <h4 class="display-4 modal-title" style="text-align: center;padding-left: 10px;padding-top: 9px;font-family: Raleway, sans-serif;font-size: 36px;">CanSat Launcher</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background: #dedede;"><img class="img-fluid" src="../assets/img/logos/cansat_title.jpg">
+                    <p class="text-justify" style="font-family: Roboto, sans-serif;padding-top: 10px;">A launcher built to support high-school competition <a href="https://esero.sciencein.cz/cansat">CanSat</a> is the current flagship project of Czech Rocket Society. The payload consists of minisatellites made by high-school students. Those are taken by our launcher to 1 kilometer, where the minisatellites are deployed.</p>
+                </div>
+                <div class="modal-footer" style="background: rgb(49,52,55);color: rgb(33, 37, 41);"><button class="btn btn-light" type="button" data-dismiss="modal" style="color: rgb(255,255,255);">CLOSE</button><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="cansat.html" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;">LEARN MORE</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalsolids">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center" style="background: #ffffff;"><img src="../assets/img/logos/Propulsion.png" height="100">
+                    <h4 class="display-4 modal-title" style="text-align: center;padding-left: 10px;padding-top: 9px;font-family: Raleway, sans-serif;font-size: 36px;">Solids</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background: #dedede;"><img class="img-fluid" src="../assets/img/fullsize/sto_test_motor.jpg">
+                    <p class="text-justify" style="font-family: Roboto, sans-serif;padding-top: 10px;">Solids Team is researching and developing solid fuel powered rocket motors. They are also working on a new motor Ikarus for the CanSat launcher (Czech Rocket Society current flagship project).</p>
+                </div>
+                <div class="modal-footer" style="background: rgb(49,52,55);color: rgb(33, 37, 41);"><button class="btn btn-light" type="button" data-dismiss="modal" style="color: rgb(255,255,255);">CLOSE</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalcontrol">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center" style="background: #ffffff;"><img src="../assets/img/fullsize/control.jpg" height="100" style="height: 80px;">
+                    <h4 class="display-4 modal-title" style="text-align: center;padding-left: 10px;padding-top: 9px;font-family: Raleway, sans-serif;font-size: 36px;">Control</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background: #dedede;"><img class="img-fluid" src="../assets/img/fullsize/control.jpg">
+                    <p class="text-justify" style="font-family: Roboto, sans-serif;padding-top: 10px;">Control Team is researching and developing means of active and passive rockets control systems (attitude control). It will be very important team for the future Czech Rocket Society projects, but also for other teams.</p>
+                </div>
+                <div class="modal-footer" style="background: rgb(49,52,55);color: rgb(33, 37, 41);"><button class="btn btn-light" type="button" data-dismiss="modal" style="color: rgb(255,255,255);">CLOSE</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalcrc">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex align-items-center" style="background: #ffffff;"><img src="../assets/img/logos/crc_logo.png" height="100" style="height: 80px;">
+                    <h4 class="display-4 modal-title" style="text-align: center;padding-left: 10px;padding-top: 9px;font-family: Raleway, sans-serif;font-size: 36px;">Czech Rocket Challenge</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" style="background: #dedede;"><img class="img-fluid" src="../assets/img/fullsize/crc_team_crs.jpg">
+                    <p class="text-justify" style="font-family: Roboto, sans-serif;padding-top: 10px;">Czech Rocket Society was entrusted with organization of second year of Czech Rocket Challenge in 2022. For more information, click on Learn more.</p>
+                </div>
+                <div class="modal-footer" style="background: rgb(49,52,55);color: rgb(33, 37, 41);"><button class="btn btn-light" type="button" data-dismiss="modal" style="color: rgb(255,255,255);">CLOSE</button><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="https://czechrocketchallenge.cz/" style="background: rgb(29,1,199);font-family: Raleway, sans-serif;" target="_blank">Learn more</a></div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
