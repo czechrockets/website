@@ -90,3 +90,7 @@ p {
   background-position: center center;
 }
 
+.root {
+  --breakpoint-lg: 1000px;
+}
+

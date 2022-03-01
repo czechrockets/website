@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://czechrockets.com/cs/partners/advacam.html</loc>
+    </url>
+    <url>
         <loc>https://czechrockets.com/cs/cansat.html</loc>
+    </url>
+    <url>
+        <loc>https://czechrockets.com/cs/control.html</loc>
     </url>
     <url>
         <loc>https://czechrockets.com/cs/kontakt.html</loc>
@@ -25,6 +31,9 @@
         <loc>https://czechrockets.com/cs/stopar.html</loc>
     </url>
     <url>
+        <loc>https://czechrockets.com/en/partners/advacam.html</loc>
+    </url>
+    <url>
         <loc>https://czechrockets.com/en/about-us.html</loc>
     </url>
     <url>
@@ -37,7 +46,7 @@
         <loc>https://czechrockets.com/en/hitchhiker.html</loc>
     </url>
     <url>
-        <loc>https://czechrockets.com/en/index.html</loc>
+        <loc>https://czechrockets.com/en/</loc>
     </url>
     <url>
         <loc>https://czechrockets.com/en/join-us.html</loc>
@@ -55,7 +64,7 @@
         <loc>https://czechrockets.com/404.html</loc>
     </url>
     <url>
-        <loc>https://czechrockets.com/index.html</loc>
+        <loc>https://czechrockets.com/</loc>
     </url>
     <url>
         <loc>https://czechrockets.com/index-1.html</loc>
