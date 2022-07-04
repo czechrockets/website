@@ -1,5 +1,5 @@
 .btn:not(:disabled):not(.disabled) {
-  background: rgba(255,255,255,0);
+  background: rgb(29,1,199);
   border-color: rgba(255,255,255,0);
 }
 
