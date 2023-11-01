@@ -21,441 +21,352 @@
     <link rel="stylesheet" href="../assets/css/Team-Grid.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
 </head>
 
 <body>
-        <div class="dynamicColorNav">
-            <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-                <div class="container">
-                    <a href="../en/index.html" id="logoContainer "><img src="../assets/img/logos/logo.png" id="logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger nav-linkactive" href="../en/index.html">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="../en/oNas.html">
-                                    <nobr>ABOUT US
-                                    </nobr>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJECTS&nbsp;</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="../en/stopar.html">HitchHiker</a><a class="dropdown-item" href="../en/cansat.html" target="_parent">CanSat</a>
-
-                                    <a class="dropdown-item" target="_parent" href="../en/czechrocketchallenge.html">Czech Rocket Challenge</a>
-                                    <a class="dropdown-item" target="_parent" href="../en/thundercat.html">Thundercat</a>
-                                    <a class="dropdown-item" target="_parent" href="../en/cassiopeia.html">Cassiopeia</a>
-
-                                    <hr><a class="dropdown-item" href="../en/noveProjekty.html">New projects</a>
-
-                                </div>
-                            </li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/media.html">MEDIA</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/partneri.html">PARTNERS</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="../en/proZajemce.html">
-                                    <nobr>JOIN US
-                                    </nobr>
-                                </a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/kontakt.html">CONTACT</a></li>
-                            <li class="nav-item" style="background: url(&quot;../../assets/img/logos/cs.png&quot;) center / contain no-repeat;margin: 10px;">
-                                <a class="nav-link active" href="/index.html"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-
-
-
-        <header class="text-center" id="oNasCont">
-
-            <div class="container my-auto" id="stoparWelcomeDiv">
-                <div class="row" style="padding: 0px;">
-                    <div class="col-lg-10 mx-auto">
-                        <h1 class="text-uppercase"><strong>About us</strong></h1>
-                        <p class="text-faded mb-5"><em>We've got that too! We want to get Czechia to the space…. or at least come closer.</em></p>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <div class="TEXT-CENTER container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="/assets/img/fullsize/stanRakety.jpeg" class="img-fluid" alt="...">
-                </div>
-                <div class="col">
-                    <p class="text-justify">The Czech Rocket Society is an independent association for university students who are passionate about astronautics and rockets, we provide a platform to apply our studies in practice, experiment, and test independently. Our comprehensive
-                        approach to rocketry and astronautics extends to the legal aspects surrounding rockets, educational events, and the organization of the Czech Rocket Challenge competition for high school students. </p>
-                    <p class="text-justify">The founders of the CRS were inspired by similar student associations in England and the Netherlands, as they themselves study Aerospace Engineering. In both countries, those societies have a much longer tradition. These societies
-                        are usually directly linked to technical universities and technological companies that support them. Societies offer students their first touch with Aerospace engineering and then go on to real rocket and astronautical companies.
-                        At the same time, more and more rocket competitions emerging in which student societies compete against each other and slowly but surely come closer and closer to the space. (At the same time, there are more and more competitions
-                        emerging in which student rocket associations compete in rocket sophistication, and where students slowly but surely are reaching space.”)</p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="TEXT-CENTER container">
-            <div class="row">
-
-                <div class="col">
-
-
-                    <p class="text-justify"> The society was established almost immediately after the proposal to establish the association was presented at the first annual Czech Rocket Challenge competition in March 2021, and the first members have been contributing to the
-                        development of the society’s infrastructure and long-term vision from the very beginning. We see great untapped potential in the Czech Republic, which has quality technical universities and industry, but yet no official student
-                        association focused on space and rocketry that represents the country in this field.
-
-                    </p>
-                    <p class="text-justify">
-                        Our main vision is to “catch up” with other European and world societies, participate in the greatest competitions, develop our research, build more complex rockets, and perhaps even reach space. </p>
-
-                </div>
-                <div class="col-md-6">
-                    <img src="/assets/img/fullsize/sto_test_tym.jpg" class="img-fluid" alt="...">
-                </div>
-            </div>
-        </div>
-        <div class="team-clean" id="radaCont">
-            <div class="container text-center">
-
-                <h2>Our team</h2>
-                <p>We pride ourselves on having a great team of colleagues, friends, and aspiring rocket engineers who understand each other, work professionally, and utilize the wit and knowledge gained from our studies, along with a sense of humor in the
-                    moments where it belongs."</p>
-
-
-            </div>
-
+    <div class="dynamicColorNav">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
             <div class="container">
-                <div class="intro"></div>
-                <h2 class="text-center">Správní rada&nbsp;</h2>
-                <div class="row justify-content-center people ">
-
-                    <div class="col-md-6 col-lg-4 item "><img class="rounded-circle " src="/assets/img/faces/vojta.jpeg ">
-                        <h3 class="name " style=" color: #F3B600; ">Vojtěch Filipi</h3>
-                        <p class="title ">President of CRS</p>
-                        <div class="social "><a href="mailto:predseda@czechrockets.com "><i
-                                class="icon ion-ios-email-outline "></i></a><a href="https://uk.linkedin.com/in/vojtech-filipi " target="_blank "><i
-                                class="icon ion-social-linkedin-outline "></i></a></div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item "><img class="rounded-circle " src="/assets/img/faces/Bouchal.webp">
-                        <h3 class="name " style=" color: white;   ">Albert Bouchal</h3>
-                        <p class="title ">Vice-president</p>
-                        <div class="social "><a href="mailto:mistopredseda@czechrockets.com "><i
-                                class="icon ion-ios-email-outline "></i></a><a href="tel:+420774714525" alt="Jen v nutných případech"><i
-                                class="icon ion-ios-telephone-outline "></i></a><a href="https://www.linkedin.com/in/albertbouchal/ " target="_blank "><i
-                                class="icon ion-social-linkedin-outline "></i></a></div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item ">
-                        <img class="rounded-circle " src="/assets/img/faces/Hejlicek.webp ">
-                        <h3 class="name " style="    color: white;">Viktor Hejlíček</h3>
-                        <p class="title ">PR</p>
-
-                        <div class="social ">
-                            <a href="mailto:pr@czechrockets.com">
-                                <i class="icon ion-ios-email-outline "></i>
-                            </a><a href="https://www.linkedin.com/in/viktor-hejl%C3%AD%C4%8Dek-55629823a/ " target="_blank ">
-                                <i class="icon ion-social-linkedin-outline "></i>
+                <a href="../en/index.html" id="logoContainer "><img src="../assets/img/logos/logo.png" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger nav-linkactive" href="../en/index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../en/oNas.html">
+                                <nobr>
+                                    ABOUT US
+                                </nobr>
                             </a>
-                        </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJECTS&nbsp;</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="../en/stopar.html">HitchHiker</a><a class="dropdown-item" href="../en/cansat.html" target="_parent">CanSat</a>
+
+                                <a class="dropdown-item" target="_parent" href="../en/czechrocketchallenge.html">Czech Rocket Challenge</a>
+                                <a class="dropdown-item" target="_parent" href="../en/thundercat.html">Thundercat</a>
+                                <a class="dropdown-item" target="_parent" href="../en/cassiopeia.html">Cassiopeia</a>
+
+                                <hr><a class="dropdown-item" href="../en/noveProjekty.html">New projects</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../en/media.html">MEDIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../en/partneri.html">PARTNERS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="../en/proZajemce.html">
+                                <nobr>
+                                    JOIN US
+                                </nobr>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/kontakt.html">CONTACT</a></li>
+                        <li class="nav-item" style="background: url(&quot;../../assets/img/logos/cs.png&quot;) center / contain no-repeat;margin: 10px;">
+                            <a class="nav-link active" href="/index.html"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <header class="text-center" id="oNasCont">
+
+        <div class="container my-auto" id="stoparWelcomeDiv">
+            <div class="row" style="padding: 0px;">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase"><strong>About us</strong></h1>
+                    <p class="text-faded mb-5"><em>We've got that too! We want to get Czechia to the space…. or at least come closer.</em></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="TEXT-CENTER container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/assets/img/fullsize/stanRakety.jpeg" class="img-fluid" alt="...">
+            </div>
+            <div class="col">
+                <p class="text-justify">
+                    The Czech Rocket Society is an independent association for university students who are passionate about astronautics and rockets, we provide a platform to apply our studies in practice, experiment, and test independently. Our comprehensive
+                    approach to rocketry and astronautics extends to the legal aspects surrounding rockets, educational events, and the organization of the Czech Rocket Challenge competition for high school students.
+                </p>
+                <p class="text-justify">
+                    The founders of the CRS were inspired by similar student associations in England and the Netherlands, as they themselves study Aerospace Engineering. In both countries, those societies have a much longer tradition. These societies
+                    are usually directly linked to technical universities and technological companies that support them. Societies offer students their first touch with Aerospace engineering and then go on to real rocket and astronautical companies.
+                    At the same time, more and more rocket competitions emerging in which student societies compete against each other and slowly but surely come closer and closer to the space. (At the same time, there are more and more competitions
+                    emerging in which student rocket associations compete in rocket sophistication, and where students slowly but surely are reaching space.”)
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="TEXT-CENTER container">
+        <div class="row">
+
+            <div class="col">
+
+
+                <p class="text-justify">
+                    The society was established almost immediately after the proposal to establish the association was presented at the first annual Czech Rocket Challenge competition in March 2021, and the first members have been contributing to the
+                    development of the society’s infrastructure and long-term vision from the very beginning. We see great untapped potential in the Czech Republic, which has quality technical universities and industry, but yet no official student
+                    association focused on space and rocketry that represents the country in this field.
+
+                </p>
+                <p class="text-justify">
+                    Our main vision is to “catch up” with other European and world societies, participate in the greatest competitions, develop our research, build more complex rockets, and perhaps even reach space.
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/img/fullsize/sto_test_tym.jpg" class="img-fluid" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="team-clean" id="radaCont">
+        <div class="container text-center">
+
+            <h2>Our team</h2>
+            <p>
+                We pride ourselves on having a great team of colleagues, friends, and aspiring rocket engineers who understand each other, work professionally, and utilize the wit and knowledge gained from our studies, along with a sense of humor in the
+                moments where it belongs."
+            </p>
+
+
+        </div>
+
+        <div class="container">
+            <div class="intro"></div>
+            <h2 class="text-center">Správní rada&nbsp;</h2>
+            <div class="row justify-content-center people ">
+
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/vojta.jpeg ">
+                    <h3 class="name " style=" color: #F3B600; ">Vojtěch Filipi</h3>
+                    <p class="title ">President of CRS</p>
+                    <div class="social ">
+                        <a href="mailto:predseda@czechrockets.com ">
+                            <i class="icon ion-ios-email-outline "></i>
+                        </a><a href="https://uk.linkedin.com/in/vojtech-filipi " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
+                        </a>
                     </div>
                 </div>
-                <div class="row justify-content-center people ">
-                    <div class="col-md-6 col-lg-4 item ">
-                        <img class="rounded-circle " src="/assets/img/faces/Michalek.webp ">
-                        <h3 class="name " style="   color: white; ">Ota Michálek</h3>
-                        <p class="title ">Secretary</p>
-                        <div class="social ">
-                            <a href="mailto:tajemnik@czechrockets.com ">
-                                <i class="icon ion-ios-email-outline "></i>
-                            </a><a href="https://www.linkedin.com/in/ota-michalek/ " target="_blank ">
-                                <i class="icon ion-social-linkedin-outline "></i>
-                            </a>
-                        </div>
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/Bouchal.webp">
+                    <h3 class="name " style=" color: white;   ">Albert Bouchal</h3>
+                    <p class="title ">Vice-president</p>
+                    <div class="social ">
+                        <a href="mailto:mistopredseda@czechrockets.com ">
+                            <i class="icon ion-ios-email-outline "></i>
+                        </a><a href="tel:+420774714525" alt="Jen v nutných případech">
+                            <i class="icon ion-ios-telephone-outline "></i>
+                        </a><a href="https://www.linkedin.com/in/albertbouchal/ " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-4 item ">
-                        <img class="rounded-circle " src="/assets/img/faces/Rudolf.webp ">
-                        <h3 class="name " style="   color: white; ">David Rudolf</h3>
-                        <p class="title ">Finance Manager</p>
-                        <div class="social ">
-                            <a href="mailto:pokladnik@czechrockets.com ">
-                                <i class="icon ion-ios-email-outline "></i>
-                            </a><a href="https://www.linkedin.com/in/david-rudolf2/ " target="_blank ">
-                                <i class="icon ion-social-linkedin-outline "></i>
-                            </a>
-                        </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/Hejlicek.webp ">
+                    <h3 class="name " style="    color: white;">Viktor Hejlíček</h3>
+                    <p class="title ">PR</p>
+
+                    <div class="social ">
+                        <a href="mailto:pr@czechrockets.com">
+                            <i class="icon ion-ios-email-outline "></i>
+                        </a><a href="https://www.linkedin.com/in/viktor-hejl%C3%AD%C4%8Dek-55629823a/ " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-4 item ">
-                        <img class="rounded-circle " src="/assets/img/faces/Hrudicka.webp ">
-                        <h3 class="name " style="    color: white;">Aleš Hrudička</h3>
-                        <p class="title ">Deputy<p>
+                </div>
+            </div>
+            <div class="row justify-content-center people ">
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/Michalek.webp ">
+                    <h3 class="name " style="   color: white; ">Ota Michálek</h3>
+                    <p class="title ">Secretary</p>
+                    <div class="social ">
+                        <a href="mailto:tajemnik@czechrockets.com ">
+                            <i class="icon ion-ios-email-outline "></i>
+                        </a><a href="https://www.linkedin.com/in/ota-michalek/ " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/Rudolf.webp ">
+                    <h3 class="name " style="   color: white; ">David Rudolf</h3>
+                    <p class="title ">Finance Manager</p>
+                    <div class="social ">
+                        <a href="mailto:pokladnik@czechrockets.com ">
+                            <i class="icon ion-ios-email-outline "></i>
+                        </a><a href="https://www.linkedin.com/in/david-rudolf2/ " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/Hrudicka.webp ">
+                    <h3 class="name " style="    color: white;">Aleš Hrudička</h3>
+                    <p class="title ">Deputy<p>
                         <div class="social ">
                             <a href="mailto:tajemnik@czechrockets.com ">
                                 <i class="icon ion-ios-email-outline "></i>
                             </a><a href="https://www.linkedin.com/in/aleš-hrudička-54936818b/ " target="_blank "><i class="icon ion-social-linkedin-outline "></i></a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item ">
-                        <img class="rounded-circle " src="/assets/img/faces/anca.png ">
-                        <h3 class="name " style="    color: white;">Anna Muchová</h3>
-                        <p class="title ">Deputy PR manager</p>
-                        <div class="social ">
-                            <a href="mailto:pr@czechrockets.com "><i class="icon ion-ios-email-outline "></i></a><a href="https://www.linkedin.com/in/anna-muchová-8a4aa920a/ " target="_blank ">
-                                <i class="icon ion-social-linkedin-outline "></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
-
-            </div>
-        </div>
-        <div id="storyCont">
-            <h2 class="text-center"> Stories</h2>
-            <!-- TODO - small screen size earlier wrap -->
-            <div class="container-fluid" id="carouselCont">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card " id="hideBorder">
-                                <div class="card-horizontal ">
-                                    <img src="/assets/img/faces/albert.jpg " class="rounded-circle img-fluid fitImage ">
-
-                                    <div class="card-body " id="carouselCardBody">
-
-                                        <p class="card-text ">"I have been with the Czech Rocket Society from the very beginning. As an aviation student, I completely fell in love with rockets and space exploration a few years ago. The Czech Rocket Society provides me with
-                                            the opportunity to realize my potential and contribute towards pushing the boundaries of space exploration in the Czech Republic, especially for students."</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="carousel-item">
-                            <div class="card " id="hideBorder">
-                                <div class="card-horizontal ">
-                                    <img src="/assets/img/faces/story3.jpg " class="rounded-circle img-fluid fitImage ">
-
-                                    <div class="card-body " id="carouselCardBody">
-
-                                        <p class="card-text ">"Working on rockets has always been my distant dream. However, when I discovered the Czech Rocket Society, this dream became a reality. The association allowed me to transform my theoretical knowledge from mechanical
-                                            engineering studies into the design of real-life rockets that take us to new heights."
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card " id="hideBorder">
-                                <div class="card-horizontal ">
-                                    <img src="/assets/img/faces/story4.jpeg " class="rounded-circle img-fluid fitImage ">
-
-                                    <div class="card-body " id="carouselCardBody">
-
-                                        <p class="card-text ">"Sadly, the dream to become an astronaut is probably over (I probably won't fulfill my dream of becoming a cosmonaut), but thanks to the Czech Rocket Society, I could be at the dawn of rockets’ rise in Czechia which
-                                            can be just as thrilling. And maybe one day we will even fly to the edge of space."</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card " id="hideBorder">
-                                <div class="card-horizontal ">
-                                    <img src="/assets/img/faces/story2-crop.jpeg " class="rounded-circle img-fluid fitImage ">
-
-                                    <div class="card-body " id="carouselCardBody">
-
-                                        <p class="card-text ">"From Star Wars to home experiments with small rockets in a potato field, I have always been fascinated by astronautics and space exploration. I eagerly followed everything about rockets, big and small, on the internet
-                                            and was inspired by Elon Musk's visions. I wanted to be a part of all of this and somehow bring the space future home, to the Czech Republic. The Czech Rocket Society allows me to do this. I can work on rockets
-                                            and meet people every day who are just as passionate as I am. (I work on rockets and meet people every day who share my passion.")"</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="card " id="hideBorder">
-                                <div class="card-horizontal ">
-                                    <img src="/assets/img/faces/story5.jpeg " class="rounded-circle img-fluid fitImage ">
-
-                                    <div class="card-body " id="carouselCardBody">
-
-                                        <p class="card-text ">"I have been a member in several students societies but nowhere I have been involved in such large-scale projects as in CRS in such a short time. In the first seven months, I experienced five rocket launches and
-                                            was responsible for the flight software. Watching every launch with the knowledge that if somethings goes wrong, I can bear direct responsibility was a little bit (slightly) stressful, but on other hand great
-                                            life lesson and relief when it succeeded."</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customCaroControls">
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                <div class="col-md-6 col-lg-4 item ">
+                    <img class="rounded-circle " src="/assets/img/faces/anca.png ">
+                    <h3 class="name " style="    color: white;">Anna Muchová</h3>
+                    <p class="title ">Deputy PR manager</p>
+                    <div class="social ">
+                        <a href="mailto:pr@czechrockets.com "><i class="icon ion-ios-email-outline "></i></a><a href="https://www.linkedin.com/in/anna-muchová-8a4aa920a/ " target="_blank ">
+                            <i class="icon ion-social-linkedin-outline "></i>
                         </a>
                     </div>
                 </div>
             </div>
-
 
         </div>
-        <footer class="footer-dark">
+    </div>
+    <div id="storyCont">
+        <h2 class="text-center"> Stories</h2>
+        <!-- TODO - small screen size earlier wrap -->
+        <div class="container-fluid" id="carouselCont">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-            <div class="container-fluid">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card " id="hideBorder">
+                            <div class="card-horizontal ">
+                                <img src="/assets/img/faces/albert.jpg " class="rounded-circle img-fluid fitImage ">
 
-                <div class="row">
-                    <div class=" col-md-4" id="footerCentre">
+                                <div class="card-body " id="carouselCardBody">
 
-                        <a href="https://czechrockets.com/en/index.html" class="orange">
-                            <h3>Czech Rocket Society z. s.</h3>
-                        </a>
-                        <ul id="footerList">
-                            <li><a href="../en/oNas.html ">About us</a></li>
-                            <li><a href="../en/media.html ">Media</a></li>
-                            <li><a href="../en/proZajemce.html">Join us</a></li>
-                            <li><a href="../en/partneri.html">Partners</a></li>
-                            <li><a href="../en/kontakt.html">Contact</a></li>
-                        </ul>
+                                    <p class="card-text ">
+                                        "I have been with the Czech Rocket Society from the very beginning. As an aviation student, I completely fell in love with rockets and space exploration a few years ago. The Czech Rocket Society provides me with
+                                        the opportunity to realize my potential and contribute towards pushing the boundaries of space exploration in the Czech Republic, especially for students."
+                                    </p>
+                                </div>
+                            </div>
 
+                        </div>
                     </div>
 
 
+                    <div class="carousel-item">
+                        <div class="card " id="hideBorder">
+                            <div class="card-horizontal ">
+                                <img src="/assets/img/faces/story3.jpg " class="rounded-circle img-fluid fitImage ">
 
-                    <div class="col-md-2" id="footerCentre">
-                        <h3 class="orange">Projekty</h3>
-                        <ul>
+                                <div class="card-body " id="carouselCardBody">
 
-                            <li><a href="../en/cansat.html ">Cansat</a></li>
-                            <li><a href="../en/stopar.html ">HitchHiker</a></li>
-                            <li><a href="../en/czechrocketchallenge.html" target="_blank ">Czech Rocket Challenge</a>
-                            </li>
-                            <li><a href="../en/thundercat.html ">Thundercat</a></li>
-                            <li><a href="../en/cassiopeia.html ">Cassiopeia</a></li>
-                            <li><a href="../en/noveProjekty.html ">New projects</a></li>
+                                    <p class="card-text ">
+                                        "Working on rockets has always been my distant dream. However, when I discovered the Czech Rocket Society, this dream became a reality. The association allowed me to transform my theoretical knowledge from mechanical
+                                        engineering studies into the design of real-life rockets that take us to new heights."
+                                    </p>
+                                </div>
+                            </div>
 
-                        </ul>
+                        </div>
                     </div>
-                    <!-- TODO -->
-                    <div class=" col-md-6 offset-xl-0 text-center item text">
-                        <h3 class="orange text-center">Kde nás najdete?</h3>
-                        <div class="social-icons " style="background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px; ">
-                            <a href="https://linktr.ee/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-planet " style="transform: scale(0.63); "></i></a><a href="https://facebook.com/czechrockets " style="transform: scale(0.63); "
-                                target="_blank "><i class="icon ion-social-facebook "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.instagram.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-instagram "
-                                style="transform: scale(0.63); "></i></a><a href="https://twitter.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-twitter "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.linkedin.com/company/czechrockets/ " style="transform: scale(0.63); "><i class="icon ion-social-linkedin "
-                                style="transform: scale(0.64); "></i></a>
-                        </div>
-                        <a href="https://su.cvut.cz " target="_blank "><img src="/assets/img/logos/SU_logo.png " height="40 " style="margin-bottom: 20px; "></a>
-                    </div>
-                </div>
+                    <div class="carousel-item">
+                        <div class="card " id="hideBorder">
+                            <div class="card-horizontal ">
+                                <img src="/assets/img/faces/story4.jpeg " class="rounded-circle img-fluid fitImage ">
 
-                <div class="text-center ">
-                    <h3 id="partnerH" class="text-center">Partneři</h3>
-                    <div class="container">
-                        <div class="row justify-content-center align-items-center partnerRow">
-                            <div class="col-md-3 text-center align-self-center partnerCol">
-                                <a target="_blank " href="http://www.advacam.com "><img class="img-fluid " src="/assets/img/logos/Advacam-svetle.png "></a>
+                                <div class="card-body " id="carouselCardBody">
+
+                                    <p class="card-text ">
+                                        "Sadly, the dream to become an astronaut is probably over (I probably won't fulfill my dream of becoming a cosmonaut), but thanks to the Czech Rocket Society, I could be at the dawn of rockets’ rise in Czechia which
+                                        can be just as thrilling. And maybe one day we will even fly to the edge of space."
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.planetum.cz "><img class="img-fluid " src="/assets/img/logos/planetum_tranpa_orez.png "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="https://qminers.com/ "><img class="img-fluid " src="/assets/img/logos/qminers.svg "></a>
-                            </div>
-                            <div class="col-md-3 text-center align-self-center partnerCol">
-                                <a target="_blank " href="https://www.stratosyst.com/ "><img class="img-fluid " style="min-height: 25px;" src="/assets/img/logos/stratotystLogo2.png "></a>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card " id="hideBorder">
+                            <div class="card-horizontal ">
+                                <img src="/assets/img/faces/story2-crop.jpeg " class="rounded-circle img-fluid fitImage ">
+
+                                <div class="card-body " id="carouselCardBody">
+
+                                    <p class="card-text ">
+                                        "From Star Wars to home experiments with small rockets in a potato field, I have always been fascinated by astronautics and space exploration. I eagerly followed everything about rockets, big and small, on the internet
+                                        and was inspired by Elon Musk's visions. I wanted to be a part of all of this and somehow bring the space future home, to the Czech Republic. The Czech Rocket Society allows me to do this. I can work on rockets
+                                        and meet people every day who are just as passionate as I am. (I work on rockets and meet people every day who share my passion.")"
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="https://www.certicon.cz/ "><img class="img-fluid " src="/assets/img/logos/certiconLogo.png "></a>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card " id="hideBorder">
+                            <div class="card-horizontal ">
+                                <img src="/assets/img/faces/story5.jpeg " class="rounded-circle img-fluid fitImage ">
+
+                                <div class="card-body " id="carouselCardBody">
+
+                                    <p class="card-text ">
+                                        "I have been a member in several students societies but nowhere I have been involved in such large-scale projects as in CRS in such a short time. In the first seven months, I experienced five rocket launches and
+                                        was responsible for the flight software. Watching every launch with the knowledge that if somethings goes wrong, I can bear direct responsibility was a little bit (slightly) stressful, but on other hand great
+                                        life lesson and relief when it succeeded."
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-md-3 align-self-center partnerCol  ">
-                                <a target="_blank " href="http://www.akka-technologies.com/czech-republic "><img class="img-fluid " src="/assets/img/logos/AKKODIS_Logo_NEG_RGB.png "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="https://www.ohb-czech.cz/cz/ "><img class="img-fluid " src="/assets/img/logos/ohb.png "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol">
-                                <a target="_blank " href="https://stinn.cz/ "><img class="img-fluid" src="/assets/img/logos/Stinn-logo-bile.png" style="max-height: 65px;"></a>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.malcomcz.eu "><img class="img-fluid " src="/assets/img/logos/malcomcz.svg "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.altium.com "><img class="img-fluid " src="/assets/img/logos/altium.png "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.epsilon3.io "><img class="img-fluid " src="/assets/img/logos/epsilon3.png "></a>
-                            </div>
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.techsoft-eng.cz "><img class="img-fluid " src="/assets/img/logos/techsoft-white.png "></a>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-md-3 align-self-center partnerCol ">
-                                <a target="_blank " href="http://www.ansys.com "><img class="img-fluid " src="/assets/img/logos/Ansys_BW.png "></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
-
-                <!-- Do budoucna novej donate button -->
-                <div class="row justify-content-center">
-                    <div class="col-11 text-center">
-                        <p class="d-lg-flex justify-content-lg-center align-items-lg-center copyright">Czech Rocket Society z. s. © 2023</p>
-                        <div id="donate-button-container">
-                            <div id="donate-button"></div>
-                            <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                            <script>
-                                PayPal.Donation.Button({
-                                    env: 'production',
-                                    hosted_button_id: 'L8FADK5BT3JRC',
-                                    image: {
-                                        src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                                        alt: 'Donate with PayPal button',
-                                        title: 'PayPal - The safer, easier way to pay online!',
-                                    }
-                                }).render('#donate-button');
-                            </script>
-                        </div>
-                        <p class="copyright" style="padding: 0px 0px 0px;height: 15px;font-family: Roboto, sans-serif;font-size: 9px;">
-                            č.ú. [CZK] 42637800/2010
-                        </p>
-                    </div>
+                <div class="customCaroControls">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-        </footer>
+        </div>
 
 
-        <script src="/assets/js/jquery.min.js "></script>
-        <script src="/assets/bootstrap/js/bootstrap.min.js "></script>
-        <script src="/assets/js/bs-init.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js "></script>
-        <script src="/assets/js/creative.js "></script>
-        <script src="/assets/js/Bold-BS4-Animated-Back-To-Top.js "></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js "></script>
-        <script src="/assets/js/Simple-Slider.js "></script>
+    </div>
+
+    <iframe src="../footer_en.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless onload="resizeIframe(this)"></iframe>
+
+    <script src="/assets/js/jquery.min.js "></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js "></script>
+    <script src="/assets/js/bs-init.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js "></script>
+    <script src="/assets/js/creative.js "></script>
+    <script src="/assets/js/Bold-BS4-Animated-Back-To-Top.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js "></script>
+    <script src="/assets/js/Simple-Slider.js "></script>
 </body>
 
 </html>

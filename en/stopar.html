@@ -18,6 +18,11 @@
     <title>HitchHiker | Czech Rocket Society</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
 </head>
 
 <body>
@@ -27,19 +32,24 @@
                 <div class="container">
                     <a href="../en/index.html" id="logoContainer "><img src="../assets/img/logos/logo.png" id="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span></button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger nav-linkactive" href="../en/index.html">HOME</a>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger nav-linkactive" href="../en/index.html">HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger" href="../en/oNas.html">
-                                    <nobr>ABOUT US
+                                    <nobr>
+                                        ABOUT US
                                     </nobr>
                                 </a>
                             </li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJECTS&nbsp;</a>
-                                <div class="dropdown-menu"><a class="dropdown-item" href="../en/stopar.html">HitchHiker</a><a class="dropdown-item" href="../en/cansat.html" target="_parent">CanSat</a>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJECTS&nbsp;</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="../en/stopar.html">HitchHiker</a><a class="dropdown-item" href="../en/cansat.html" target="_parent">CanSat</a>
 
                                     <a class="dropdown-item" target="_parent" href="../en/czechrocketchallenge.html">Czech Rocket Challenge</a>
                                     <a class="dropdown-item" target="_parent" href="../en/thundercat.html">Thundercat</a>
@@ -49,14 +59,17 @@
 
                                 </div>
                             </li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/media.html">MEDIA</a>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="../en/media.html">MEDIA</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../en/partneri.html">PARTNERS</a>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="../en/partneri.html">PARTNERS</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link js-scroll-trigger" href="../en/proZajemce.html">
-                                    <nobr>JOIN US
+                                    <nobr>
+                                        JOIN US
                                     </nobr>
                                 </a>
                             </li>
@@ -82,8 +95,10 @@
                 </div>
                 <div id="darkBackground">
                     <div class="col-8 col-lg-8 mx-auto" id="welcomeTextCol">
-                        <p id="welcomeText">"Stopař" (Hitchhiker) is historically the first project of the Czech Rocket Society, with its name inspired by the popular fantasy novel "The Hitchhiker's Guide to the Galaxy" by Douglas Adams. The rocket shares similarities with
-                            those launched in the <a href="https://www.czechrocketchallenge.cz" target="_blank">Czech Rocket Challenge</a>, but CRS members build all its components from scratch, including the engine.<br></p>
+                        <p id="welcomeText">
+                            "Stopař" (Hitchhiker) is historically the first project of the Czech Rocket Society, with its name inspired by the popular fantasy novel "The Hitchhiker's Guide to the Galaxy" by Douglas Adams. The rocket shares similarities with
+                            those launched in the <a href="https://www.czechrocketchallenge.cz" target="_blank">Czech Rocket Challenge</a>, but CRS members build all its components from scratch, including the engine.<br>
+                        </p>
 
                     </div>
                 </div>
@@ -124,10 +139,12 @@
                     <!-- <img src="../assets/img/fullsize/stoparFlight.png" class="img-fluid" alt="..."> -->
                 </div>
                 <div class="col">
-                    <p class="text-justify projektyText"> Stopař's main mission was to unite the newly formed CRS team and see if they could build a rocket capable of flying from scratch. Inspired by SpaceX founder Elon Musk, who put his Tesla Roadster on his Falcon Heavy rocket, CRS chose
+                    <p class="text-justify projektyText">
+                        Stopař's main mission was to unite the newly formed CRS team and see if they could build a rocket capable of flying from scratch. Inspired by SpaceX founder Elon Musk, who put his Tesla Roadster on his Falcon Heavy rocket, CRS chose
                         a miniature car as Stopař's payload. The rocket released the car at the highest altitude with a parachute and filmed its journey back to Earth using a mini camera.
                     </p>
-                    <p class="text-justify projektyText">The rocket is a 1.2-meter-tall, single-stage rocket with a 60 mm diameter composite fuselage provided by CompoTech, propelled by solid fuel (a mixture of sorbitol and potassium nitrate). It can reach an apogee of up to 500 meters and
+                    <p class="text-justify projektyText">
+                        The rocket is a 1.2-meter-tall, single-stage rocket with a 60 mm diameter composite fuselage provided by CompoTech, propelled by solid fuel (a mixture of sorbitol and potassium nitrate). It can reach an apogee of up to 500 meters and
                         land safely with a parachute. During its 70-second-long flight, Stopař reaches speeds of up to 55 m/s, similar to the maximum speed of a Cessna 152 airplane. The rocket was launched on September 25, 2021, at the Medlánky airport
                         as a non-competitive rocket during the Czech Rocket Challenge competition. Today, it serves mainly for further promotion and as a historical artifact.
 
@@ -138,9 +155,9 @@
         </div>
         <div class="container">
             <video id="stoparVideo" width="100%" controls>
-            <source src="../assets/img/fullsize/stoparVideo.mov">
+                <source src="../assets/img/fullsize/stoparVideo.mov">
 
-        </video>
+            </video>
         </div>
 
 
@@ -207,7 +224,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h2 class="section-heading orange">
-                            Rocket parameters</h2>
+                            Rocket parameters
+                        </h2>
                         <div class="row">
                             <div class="col align-self-center">
                                 <p style="margin-top: 13px;">Maximum altitude</p>
@@ -239,7 +257,8 @@
                     </div>
                     <div class="col-md-6">
                         <h2 class="section-heading orange">
-                            Engine parameters</h2>
+                            Engine parameters
+                        </h2>
                         <div class="row">
                             <div class="col align-self-center">
                                 <p style="margin-top: 13px;">Impulse</p>
@@ -273,182 +292,62 @@
             </div>
             <h2 class="text-center orange" id="sherpa">Partners </h2>
             <p class="text-center white" id="logoCont">The main partner of this project is CompoTech, which provided the composite fuselage of the rocket.</p>
-            </div>
+        </div>
 
-            <div class="container text-center" id="twitterCont">
-                <div class="row">
-                    <div class="col">
-                        <div class="text-center">
-                            <blockquote class="twitter-tweet">
-                                <p lang="cs" dir="ltr">Děkujeme moc! Bylo to naprosto úžasné! 🚀❤️ <a href="https://t.co/jDu8FpC6W8">https://t.co/jDu8FpC6W8</a></p>&mdash; Xperience Aerospace (@XperienceAero) <a href="https://twitter.com/XperienceAero/status/1442170092125556738?ref_src=twsrc%5Etfw">September
-                            26, 2021</a>
-                            </blockquote>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-                        </div>
-                    </div>
-                    <div class="col">
-                        <iframe id="facebookPost" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fczechrockets%2Fposts%2F225985216246564&width=auto&show_text=true&appId=667143667593160&height=484" width="300px" height="600px" scrolling="no"
-                            frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                    <div class="col">
+        <div class="container text-center" id="twitterCont">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">
                         <blockquote class="twitter-tweet">
-                            <p lang="cs" dir="ltr">Kameramana mi tam nechali💔odstoupili do bezpečí, odpočítali a odpálili. Czech Rocket Society, raketa Stopař, medlánecké letiště, sobota T-10. <a href="https://t.co/VDpM0HVe9P">pic.twitter.com/VDpM0HVe9P</a></p>&mdash; Dominika
-                            Řebíková (@Rebikova_CT) <a href="https://twitter.com/Rebikova_CT/status/1441707303154167808?ref_src=twsrc%5Etfw">September
-                        25, 2021</a>
+                            <p lang="cs" dir="ltr">Děkujeme moc! Bylo to naprosto úžasné! 🚀❤️ <a href="https://t.co/jDu8FpC6W8">https://t.co/jDu8FpC6W8</a></p>&mdash; Xperience Aerospace (@XperienceAero) <a href="https://twitter.com/XperienceAero/status/1442170092125556738?ref_src=twsrc%5Etfw">
+                                September
+                                26, 2021
+                            </a>
                         </blockquote>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
 
+                    </div>
+                </div>
+                <div class="col">
+                    <iframe id="facebookPost" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fczechrockets%2Fposts%2F225985216246564&width=auto&show_text=true&appId=667143667593160&height=484" width="300px" height="600px" scrolling="no"
+                            frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <div class="col">
+                    <blockquote class="twitter-tweet">
+                        <p lang="cs" dir="ltr">Kameramana mi tam nechali💔odstoupili do bezpečí, odpočítali a odpálili. Czech Rocket Society, raketa Stopař, medlánecké letiště, sobota T-10. <a href="https://t.co/VDpM0HVe9P">pic.twitter.com/VDpM0HVe9P</a></p>&mdash; Dominika
+                        Řebíková (@Rebikova_CT) <a href="https://twitter.com/Rebikova_CT/status/1441707303154167808?ref_src=twsrc%5Etfw">
+                            September
+                            25, 2021
+                        </a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
             </div>
 
-            <section style="background: url(&quot;../assets/img/fullsize/stars_2.jpg&quot;);">
-                <h3 class="text-center" style="font-family: Raleway, sans-serif;"><a href="cansat.html">"The next step" :
-                CANSAT</a></h3>
-            </section>
-            <footer class="footer-dark">
+        </div>
 
-                <div class="container-fluid">
+        <section style="background: url(&quot;../assets/img/fullsize/stars_2.jpg&quot;);">
+            <h3 class="text-center" style="font-family: Raleway, sans-serif;">
+                <a href="cansat.html">
+                    "The next step" :
+                    CANSAT
+                </a>
+            </h3>
+        </section>
 
-                    <div class="row">
-                        <div class=" col-md-4" id="footerCentre">
+        <iframe src="../footer_en.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless onload="resizeIframe(this)"></iframe>
 
-                            <a href="https://czechrockets.com/en/index.html" class="orange">
-                                <h3>Czech Rocket Society z. s.</h3>
-                            </a>
-                            <ul id="footerList">
-                                <li><a href="../en/oNas.html ">About us</a></li>
-                                <li><a href="../en/media.html ">Media</a></li>
-                                <li><a href="../en/proZajemce.html">Join us</a></li>
-                                <li><a href="../en/partneri.html">Partners</a></li>
-                                <li><a href="../en/kontakt.html">Contact</a></li>
-                            </ul>
-
-                        </div>
-
-
-
-                        <div class="col-md-2" id="footerCentre">
-                            <h3 class="orange">Projekty</h3>
-                            <ul>
-
-                                <li><a href="../en/cansat.html ">Cansat</a></li>
-                                <li><a href="../en/stopar.html ">HitchHiker</a></li>
-                                <li><a href="../en/czechrocketchallenge.html" target="_blank ">Czech Rocket Challenge</a>
-                                </li>
-                                <li><a href="../en/thundercat.html ">Thundercat</a></li>
-                                <li><a href="../en/cassiopeia.html ">Cassiopeia</a></li>
-                                <li><a href="../en/noveProjekty.html ">New projects</a></li>
-
-                            </ul>
-                        </div>
-                        <!-- TODO -->
-                        <div class=" col-md-6 offset-xl-0 text-center item text">
-                            <h3 class="orange text-center">Kde nás najdete?</h3>
-                            <div class="social-icons " style="background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px; ">
-                                <a href="https://linktr.ee/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-planet " style="transform: scale(0.63); "></i></a><a href="https://facebook.com/czechrockets " style="transform: scale(0.63); "
-                                    target="_blank "><i class="icon ion-social-facebook "
-                                    style="transform: scale(0.63); "></i></a><a href="https://www.instagram.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-instagram "
-                                    style="transform: scale(0.63); "></i></a><a href="https://twitter.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-twitter "
-                                    style="transform: scale(0.63); "></i></a><a href="https://www.linkedin.com/company/czechrockets/ " style="transform: scale(0.63); "><i class="icon ion-social-linkedin "
-                                    style="transform: scale(0.64); "></i></a>
-                            </div>
-                            <a href="https://su.cvut.cz " target="_blank "><img src="../assets/img/logos/SU_logo.png " height="40 " style="margin-bottom: 20px; "></a>
-                        </div>
-                    </div>
-
-                    <div class="text-center ">
-                        <h3 id="partnerH" class="text-center">Partneři</h3>
-                        <div class="container">
-                            <div class="row justify-content-center align-items-center partnerRow">
-                                <div class="col-md-3 text-center align-self-center partnerCol">
-                                    <a target="_blank " href="http://www.advacam.com "><img class="img-fluid " src="../assets/img/logos/Advacam-svetle.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.planetum.cz "><img class="img-fluid " src="../assets/img/logos/planetum_tranpa_orez.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="https://qminers.com/ "><img class="img-fluid " src="../assets/img/logos/qminers.svg "></a>
-                                </div>
-                                <div class="col-md-3 text-center align-self-center partnerCol">
-                                    <a target="_blank " href="https://www.stratosyst.com/ "><img class="img-fluid " style="min-height: 25px;" src="/assets/img/logos/stratotystLogo2.png "></a>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="https://www.certicon.cz/ "><img class="img-fluid " src="/assets/img/logos/certiconLogo.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol  ">
-                                    <a target="_blank " href="http://www.akka-technologies.com/czech-republic "><img class="img-fluid " src="/assets/img/logos/AKKODIS_Logo_NEG_RGB.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="https://www.ohb-czech.cz/cz/ "><img class="img-fluid " src="/assets/img/logos/ohb.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol">
-                                    <a target="_blank " href="https://stinn.cz/ "><img class="img-fluid" src="/assets/img/logos/Stinn-logo-bile.png" style="max-height: 65px;"></a>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.malcomcz.eu "><img class="img-fluid " src="/assets/img/logos/malcomcz.svg "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.altium.com "><img class="img-fluid " src="/assets/img/logos/altium.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.epsilon3.io "><img class="img-fluid " src="/assets/img/logos/epsilon3.png "></a>
-                                </div>
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.techsoft-eng.cz "><img class="img-fluid " src="/assets/img/logos/techsoft-white.png "></a>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-md-3 align-self-center partnerCol ">
-                                    <a target="_blank " href="http://www.ansys.com "><img class="img-fluid " src="/assets/img/logos/Ansys_BW.png "></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Do budoucna novej donate button -->
-                    <div class="row justify-content-center">
-                        <div class="col-11 text-center">
-                            <p class="d-lg-flex justify-content-lg-center align-items-lg-center copyright">Czech Rocket Society z. s. © 2023</p>
-                            <div id="donate-button-container">
-                                <div id="donate-button"></div>
-                                <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                                <script>
-                                    PayPal.Donation.Button({
-                                        env: 'production',
-                                        hosted_button_id: 'L8FADK5BT3JRC',
-                                        image: {
-                                            src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                                            alt: 'Donate with PayPal button',
-                                            title: 'PayPal - The safer, easier way to pay online!',
-                                        }
-                                    }).render('#donate-button');
-                                </script>
-                            </div>
-                            <p class="copyright" style="padding: 0px 0px 0px;height: 15px;font-family: Roboto, sans-serif;font-size: 9px;">
-                                č.ú. [CZK] 42637800/2010
-                            </p>
-                        </div>
-                    </div>
-            </footer>
-
-            <script src="/assets/js/jquery.min.js"></script>
-            <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-            <script src="/assets/js/bs-init.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-            <script src="/assets/js/creative.js"></script>
-            <script src="/assets/js/Bold-BS4-Animated-Back-To-Top.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-            <script src="/assets/js/Simple-Slider.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/js/bs-init.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="/assets/js/creative.js"></script>
+        <script src="/assets/js/Bold-BS4-Animated-Back-To-Top.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+        <script src="/assets/js/Simple-Slider.js"></script>
 </body>
 
 </html>

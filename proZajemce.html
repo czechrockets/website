@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="icon" type="image/png" href="https://czechrockets.com/crs_logo_ico.png"/>
+    <link rel="icon" type="image/png" href="https://czechrockets.com/crs_logo_ico.png" />
     <!-- Bootstrap importy -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- Style -->
@@ -15,54 +15,71 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
     <script src="https://kit.fontawesome.com/c45eca4b18.js" crossorigin="anonymous"></script>
-	<title>Pro zájemce | Czech Rocket Society</title>
+    <title>Pro zájemce | Czech Rocket Society</title>
 
     <link rel="stylesheet" href="/assets/css/Team-Clean.css">
     <link rel="stylesheet" href="/assets/css/Team-Grid.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
 </head>
 
 <body>
-	<div class="dynamicColorNav">
-		<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-			<div class="container">
-				<a href="/index.html" id="logoContainer "><img src="/assets/img/logos/logo.png" id="logo"></a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html">Domů</a>
-						</li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/oNas.html">O
-								NÁS</a></li>
-						<li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJEKTY&nbsp;</a>
-							<div class="dropdown-menu"><a class="dropdown-item" href="/stopar.html">Stopař</a><a class="dropdown-item" href="/cansat.html" target="_parent">CanSat</a>
+    <div class="dynamicColorNav">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container">
+                <a href="/index.html" id="logoContainer "><img src="/assets/img/logos/logo.png" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/index.html">Domů</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/oNas.html">
+                                O
+                                NÁS
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJEKTY&nbsp;</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/stopar.html">Stopař</a><a class="dropdown-item" href="/cansat.html" target="_parent">CanSat</a>
 
-								<a class="dropdown-item" target="_parent" href="/czechrocketchallenge.html">Czech Rocket Challenge</a>
-								<a class="dropdown-item" target="_parent" href="/thundercat.html">Thundercat</a>
-								<a class="dropdown-item" target="_parent" href="/cassiopeia.html">Cassiopeia</a>
+                                <a class="dropdown-item" target="_parent" href="/czechrocketchallenge.html">Czech Rocket Challenge</a>
+                                <a class="dropdown-item" target="_parent" href="/thundercat.html">Thundercat</a>
+                                <a class="dropdown-item" target="_parent" href="/cassiopeia.html">Cassiopeia</a>
 
-								<hr><a class="dropdown-item" href="/noveProjekty.html">Nové projekty</a>
+                                <hr><a class="dropdown-item" href="/noveProjekty.html">Nové projekty</a>
 
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/media.html">MÉDIA</a>
-						</li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/partneri.html">PARTNEŘI</a></li>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/media.html">MÉDIA</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/partneri.html">PARTNEŘI</a></li>
 
-						<li class="nav-item"><a class="nav-link js-scroll-trigger nav-linkactive" href="/proZajemce.html">Pro
-								zájemce</a></li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/kontakt.html">KONTAKT</a></li>
-						<li class="nav-item" style="background: url(&quot;/assets/img/logos/uk.svg&quot;) center / contain no-repeat;margin: 10px;">
-							<a class="nav-link active" href="../../en/index.html"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger nav-linkactive" href="/proZajemce.html">
+                                Pro
+                                zájemce
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/kontakt.html">KONTAKT</a></li>
+                        <li class="nav-item" style="background: url(&quot;/assets/img/logos/uk.svg&quot;) center / contain no-repeat;margin: 10px;">
+                            <a class="nav-link active" href="../../en/index.html"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 
     <header class="text-center" id="oNasCont">
@@ -71,37 +88,42 @@
             <div class="row" style="padding: 0px;">
                 <div class="col-lg-10 mx-auto">
                     <h1 class="text-uppercase"><strong>PRO ZÁJEMCE</strong></h1>
-					<p class="text-faded mb-5"><em>Nábor je nyní znovu otevřen. Sledujte naše sociální sítě a pokud se chcete přidat, následujte instrukce na <a href="https://czechrockets.com/join">tomto odkaze</a>.</em></p>
+                    <p class="text-faded mb-5"><em>Nábor je nyní znovu otevřen. Sledujte naše sociální sítě a pokud se chcete přidat, následujte instrukce na <a href="https://czechrockets.com/join">tomto odkaze</a>.</em></p>
                 </div>
             </div>
+        </div>
     </header>
     <div class="container">
         <h2 class="text-center">Kdo vlastně jsme, jak se přidat a co získáš?</h2>
         <p class="text-justify projektyText">Jsme skupina nadšených studentů se zájmem o rakety, vesmír a vše kolem. V našem volném čase sami stavíme rakety. Pracujeme momentálně na dvou hlavních projektech – nosičích pro středoškolskou soutěž CanSat a motoru na kapalné palivo. Pořádáme také největší soutěž vypouštění raket v celé ČR. Chceme ale pracovat trochu jako start-up, proto máme i vlastní správní radu a různé administrativní pozice. Může se u nás tedy uplatnit každý.</p>
-		<p class="text-justify projektyText">Protože jsme nezisková organizace a všechno děláme ve svém volném čase, stačí mít chuť a vášeň. Výměnou ti poskytneme mnoho praktických znalostí, které se vždy hodí do tvého životopisu. Můžeš také získat reference za svou práci od ostatních členů a hlavně potkáš skvělou partu lidí se stejným zájmem. Pokud tě láká nahlédnout do světa studentských projektů/start-upů, tak jsi na správném místě.</p>
-		<p class="text-justify projektyText">Pracovat můžeš odkudkoliv na světě, ale v rámci spolku komunikujeme česky, v některých projektech pracujeme v angličtině. Nejvíce členů máme v Praze a v Brně. Přibližně jednou za týden až dva pořádáme meetingy, na kterých se všichni sejdeme, probereme aktuální pokrok a poté společně pracujeme na projektu. Pokud bys nemohl fyzicky přijít, můžeme tě do setkání zapojit online.</p>
-		<p class="text-justify projektyText">U nás neexistuje žádná hierarchie. Je zde pouze jedna osoba zodpovědná za tým, ale určitě nečekej stereotypního šéfa a podřízeného. Neměj také obavy, pokud nemáš žádné zkušenosti. Vstoupíš do spolku s konkrétním úkolem, za který budeš zodpovědný a v průběhu roku se vše, v čem tápeš, doučíš. Samozřejmě ti ostatní členové vždy rádi pomohou, a pokud budeš mít nějaké náročnější povinnosti ze školy, společně to zvládneme. Komunikace je pro nás klíčová. Škola je pro nás stále na prvním místě, a pokud se něco změní ve tvém časovém rozvrhu, není to problém.</p>
+        <p class="text-justify projektyText">Protože jsme nezisková organizace a všechno děláme ve svém volném čase, stačí mít chuť a vášeň. Výměnou ti poskytneme mnoho praktických znalostí, které se vždy hodí do tvého životopisu. Můžeš také získat reference za svou práci od ostatních členů a hlavně potkáš skvělou partu lidí se stejným zájmem. Pokud tě láká nahlédnout do světa studentských projektů/start-upů, tak jsi na správném místě.</p>
+        <p class="text-justify projektyText">Pracovat můžeš odkudkoliv na světě, ale v rámci spolku komunikujeme česky, v některých projektech pracujeme v angličtině. Nejvíce členů máme v Praze a v Brně. Přibližně jednou za týden až dva pořádáme meetingy, na kterých se všichni sejdeme, probereme aktuální pokrok a poté společně pracujeme na projektu. Pokud bys nemohl fyzicky přijít, můžeme tě do setkání zapojit online.</p>
+        <p class="text-justify projektyText">U nás neexistuje žádná hierarchie. Je zde pouze jedna osoba zodpovědná za tým, ale určitě nečekej stereotypního šéfa a podřízeného. Neměj také obavy, pokud nemáš žádné zkušenosti. Vstoupíš do spolku s konkrétním úkolem, za který budeš zodpovědný a v průběhu roku se vše, v čem tápeš, doučíš. Samozřejmě ti ostatní členové vždy rádi pomohou, a pokud budeš mít nějaké náročnější povinnosti ze školy, společně to zvládneme. Komunikace je pro nás klíčová. Škola je pro nás stále na prvním místě, a pokud se něco změní ve tvém časovém rozvrhu, není to problém.</p>
     </div>
     <div class="container" id="logoCont">
         <h4>Jak se připojit do spolku?</h4>
-		<p class="text-justify projektyText">Všechny instrukce najdeš na <b><a href="https://czechrockets.com/join">TOMTO ODKAZE</a></b>. Kdyby nebylo cokoli jasné, určitě neváhej nám napsat na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a>. Níže najdeš seznam oblastí a pozic, které si pročti, abys věděl/a, z čeho vybírat. Třeba se v něčem najdeš. Pokud ne, vůbec to nevadí.
+        <p class="text-justify projektyText">Všechny instrukce najdeš na <b><a href="https://czechrockets.com/join">TOMTO ODKAZE</a></b>. Kdyby nebylo cokoli jasné, určitě neváhej nám napsat na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a>. Níže najdeš seznam oblastí a pozic, které si pročti, abys věděl/a, z čeho vybírat. Třeba se v něčem najdeš. Pokud ne, vůbec to nevadí.
     </div>
     <div class="text-center text-white" id="darkBackground">
 
         <div class="container py-4 py-xl-5">
             <div class="text-left">
                 <h3 class="font-weight-bold text-center orange">Avionics</h3>
-                <p class="projektyText">Pracují na vývoji letového počítače, letového softwaru, kabeláže rakety, komunikace mezi raketou a pozemní stanicí a nově také systému pro vystřelování padáků. 
-					Nejsou tu žádné pevné požadavky, ale bylo by vhodné mít základní znalost programování (používáme hlavně C a C++, někdy i Python), zbytek ti rádi v rámci spolku vysvětlíme.</p>
+                <p class="projektyText">
+                    Pracují na vývoji letového počítače, letového softwaru, kabeláže rakety, komunikace mezi raketou a pozemní stanicí a nově také systému pro vystřelování padáků.
+                    Nejsou tu žádné pevné požadavky, ale bylo by vhodné mít základní znalost programování (používáme hlavně C a C++, někdy i Python), zbytek ti rádi v rámci spolku vysvětlíme.
+                </p>
                 <h3 class="font-weight-bold text-center orange">Structures</h3>
-                <p class="projektyText">Obecně pracují na návrhu a výrobě nosných potahů a konstrukcí raket (jedná se o přepážky, frézované, soustružené díly apod.). Spadá sem ale i vývoj a práce s kompozity, návrh a výroba testovacích stojanů pro motory, padáková a záchranná zařízení (recovery) nebo vypouštěcí systémy družic (payload).
-					Stačí ti lehčí strojírenský background a trocha nadšení. Zbytek ti ukážeme a naučíme.</p>
+                <p class="projektyText">
+                    Obecně pracují na návrhu a výrobě nosných potahů a konstrukcí raket (jedná se o přepážky, frézované, soustružené díly apod.). Spadá sem ale i vývoj a práce s kompozity, návrh a výroba testovacích stojanů pro motory, padáková a záchranná zařízení (recovery) nebo vypouštěcí systémy družic (payload).
+                    Stačí ti lehčí strojírenský background a trocha nadšení. Zbytek ti ukážeme a naučíme.
+                </p>
                 <h3 class="font-weight-bold text-center orange">Motory</h3>
                 <p class="projektyText">Během naší krátké existence spolku jsme se začali věnovat palivům jak pevným (solids), tak i kompozitním nebo kapalným (liquids). Pokud tě návrh a výroba motorů zajímá (včetně jejich testování), určitě to bude vyžadovat nasazení a samostudium. Ti zkušenější z nás budou ale určitě připraveni ti poradit, pomoci a konzultovat.</p>
-				<h3 class="font-weight-bold text-center orange">Obecné</h3>
+                <h3 class="font-weight-bold text-center orange">Obecné</h3>
                 <p class="projektyText">Nejsi srdcem úplně strojař, ale stejně se chceš zasloužit o rozvoj raket v ČR? Hledáme i manažerské pozice, PR, a ostatní. Některé najdeš níže pod nadpisem "Stále hledáme!"</p>
 
-			</div>
+            </div>
             <h2 class="text-center">Volné pozice pro rok 2023/2024</h2>
             <div class="row row-cols-1 row-cols-md-2" id="bottomP">
                 <div class="col ">
@@ -120,7 +142,7 @@
                 </div>
                 <div class="col ">
                     <div class="text-md-left ">
-						<h5 class="font-weight-bold orange py-1">Mobile Test Stand Mechanical Engineer (Structures)</h5>
+                        <h5 class="font-weight-bold orange py-1">Mobile Test Stand Mechanical Engineer (Structures)</h5>
                         <h5 class="font-weight-bold orange py-1">Composite Structures Specialist (Structures)</h5>
                         <h5 class="font-weight-bold orange py-1">Chief of Structures Department</h5>
                         <h5 class="font-weight-bold orange py-1">Structures Specialist</h5>
@@ -133,7 +155,7 @@
                 </div>
             </div>
         </div>
-		<div class="container py-4 py-xl-5">
+        <div class="container py-4 py-xl-5">
             <h2 class="text-center">Stále hledáme!</h2>
             <div class="row row-cols-1 row-cols-md-2" id="bottomP">
                 <div class="col"><img class="img-fluid" src="/assets/img/fullsize/ksc.jpg"></div>
@@ -162,7 +184,7 @@
                             <p class="projektyText">Cítíš se jako vůdce? Co takhle řídit projekt, na kterém se podílí perspektivní studenti, vymýšlí se raketové celky a zařizuje se startovní den?</p>
                         </div>
                     </div>
-					<div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
+                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
                         <div>
                             <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Safety manager</h4>
                             <p class="projektyText">Hledáme právě tebe, pokud si bez safety analýzy ani nevyčistíš zuby a krizová matice pro tebe není sprosté slovo.</p>
@@ -171,7 +193,8 @@
                     <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
                         <div>
                             <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Specialist(k)a na výbušniny</h4>
-                            <p class="projektyText">V nejlepším případě by měl kandidát mít koncesi pro nakládání s výbušnými látkami a pyrotechnikou. Ale bereme každého, kdo by se do toho chtěl ponořit.
+                            <p class="projektyText">
+                                V nejlepším případě by měl kandidát mít koncesi pro nakládání s výbušnými látkami a pyrotechnikou. Ale bereme každého, kdo by se do toho chtěl ponořit.
                             </p>
                         </div>
                     </div>
@@ -181,147 +204,21 @@
     </div>
     <div class="container" id="naborCont">
         <h3 class="text-center">Co obnáší být členem</h3>
-        <p class="text-justify projektyText">Každý člen spolku je aktivní, to znamená, že působí v jednom z projektů jako inženýr nebo pracuje pro Správní radu. V současné době spolek funguje hybridně, ačkoli se snažíme stále víc tlačit na osobní schůzky. Přesto se ale všichni členové spolku aktivně podílí na vývoji nebo jeho chodu. Rada spolku
+        <p class="text-justify projektyText">
+            Každý člen spolku je aktivní, to znamená, že působí v jednom z projektů jako inženýr nebo pracuje pro Správní radu. V současné době spolek funguje hybridně, ačkoli se snažíme stále víc tlačit na osobní schůzky. Přesto se ale všichni členové spolku aktivně podílí na vývoji nebo jeho chodu. Rada spolku
             i všechny departementy se scházejí minimálně jednou do týdne na společné schůzce (ale záleží na domluvě jak často) a mimo schůzky pracují na samostatných úkolech. Všichni ve spolku jsou studenty, takže samozřejmě bereme ohled na zkouškové a jiné studentské aktivity, proto
-            není třeba se bát, že budeš muset spolku obětovat veškerý svůj volný čas.</p>
-		<p class="text-justify projektyText">Pokud se staneš řádným členem, budeme hlavně rádi za to, když budeš samostnatně pracovat a budeš aktivní na našich komunikačních platformách. Jsme zvyklí si tam v případě potřeby odepisovat alespoň do 24 hodin a dávat vědět, kdy zrovna nebudeš k zastižení. Jako řádného člena tě poprosíme i o placení členského příspěvku jednou ročně. Minulý rok to bylo 1500 Kč, není to snad žádná velká tíha pro tvoji peněženku. Alternativně se můžeme domluvit i na jiném řešení.
-			Členský příspěvek slouží na pokrytí základních administrativních a jiných záležitostí, pokud by zrovna nebylo k dispozici jiné financování.
+            není třeba se bát, že budeš muset spolku obětovat veškerý svůj volný čas.
+        </p>
+        <p class="text-justify projektyText">
+            Pokud se staneš řádným členem, budeme hlavně rádi za to, když budeš samostnatně pracovat a budeš aktivní na našich komunikačních platformách. Jsme zvyklí si tam v případě potřeby odepisovat alespoň do 24 hodin a dávat vědět, kdy zrovna nebudeš k zastižení. Jako řádného člena tě poprosíme i o placení členského příspěvku jednou ročně. Minulý rok to bylo 1500 Kč, není to snad žádná velká tíha pro tvoji peněženku. Alternativně se můžeme domluvit i na jiném řešení.
+            Členský příspěvek slouží na pokrytí základních administrativních a jiných záležitostí, pokud by zrovna nebylo k dispozici jiné financování.
 
             <br><br>
         </p>
         <p class="text-justify projektyText"> Máš nějaké dotazy? Potom se neváhej obrátit na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a>.</p>
     </div>
-    <footer class="footer-dark">
 
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class=" col-md-4" id="footerCentre">
-
-                    <a href="https://czechrockets.com/en/index.html" class="orange">
-                        <h3>Czech Rocket Society z. s.</h3>
-                    </a>
-                    <ul id="footerList">
-                        <li><a href="/oNas.html ">O nás</a></li>
-                        <li><a href="/media.html ">Média</a></li>
-                        <li><a href="/proZajemce.html">Pro zájemce</a></li>
-                        <li><a href="/partneri.html">Partneři</a></li>
-                        <li><a href="/kontakt.html">Kontakt</a></li>
-                    </ul>
-
-                </div>
-
-
-
-                <div class="col-md-2" id="footerCentre">
-                    <h3 class="orange">Projekty</h3>
-                    <ul>
-
-                        <li><a href="/cansat.html ">Cansat</a></li>
-                        <li><a href="/stopar.html ">Stopař</a></li>
-                        <li><a href="czechrocketchallenge.html" target="_blank ">Czech Rocket Challenge</a>
-                        </li>
-                        <li><a href="/thundercat.html ">Thundercat</a></li>
-                        <li><a href="/cassiopeia.html ">Cassiopeia</a></li>
-                        <li><a href="/noveProjekty.html ">Nové projekty</a></li>
-
-                    </ul>
-                </div>
-                <!-- TODO -->
-                <div class=" col-md-6 offset-xl-0 text-center item text">
-                    <h3 class="orange text-center">Kde nás najdete?</h3>
-                    <div class="social-icons " style="background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px; ">
-                        <a href="https://linktr.ee/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-planet " style="transform: scale(0.63); "></i></a><a href="https://facebook.com/czechrockets " style="transform: scale(0.63); "
-                            target="_blank "><i class="icon ion-social-facebook "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.instagram.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-instagram "
-                                style="transform: scale(0.63); "></i></a><a href="https://twitter.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-twitter "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.linkedin.com/company/czechrockets/ " style="transform: scale(0.63); "><i class="icon ion-social-linkedin "
-                                style="transform: scale(0.64); "></i></a>
-                    </div>
-                    <a href="https://su.cvut.cz " target="_blank "><img src="/assets/img/logos/SU_logo.png " height="40 " style="margin-bottom: 20px; "></a>
-                </div>
-            </div>
-
-			<div class="text-center ">
-				<h3 id="partnerH" class="text-center">Partneři</h3>
-                <div class="container">
-                    <div class="row justify-content-center align-items-center partnerRow">
-                        <div class="col-md-3 text-center align-self-center partnerCol">
-                            <a target="_blank " href="http://www.advacam.com "><img class="img-fluid " src="/assets/img/logos/Advacam-svetle.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.planetum.cz "><img class="img-fluid " src="/assets/img/logos/planetum_tranpa_orez.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://qminers.com/ "><img class="img-fluid " src="/assets/img/logos/qminers.svg "></a>
-                        </div>
-                        <div class="col-md-3 text-center align-self-center partnerCol">
-                            <a target="_blank " href="https://www.stratosyst.com/ "><img class="img-fluid " style="min-height: 25px;" src="/assets/img/logos/stratotystLogo2.png "></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://www.certicon.cz/ "><img class="img-fluid " src="/assets/img/logos/certiconLogo.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol  ">
-                            <a target="_blank " href="http://www.akka-technologies.com/czech-republic "><img class="img-fluid " src="/assets/img/logos/AKKODIS_Logo_NEG_RGB.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://www.ohb-czech.cz/cz/ "><img class="img-fluid " src="/assets/img/logos/ohb.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol">
-                            <a target="_blank " href="https://stinn.cz/ "><img class="img-fluid" src="/assets/img/logos/Stinn-logo-bile.png" style="max-height: 65px;"></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.malcomcz.eu "><img class="img-fluid " src="/assets/img/logos/malcomcz.svg "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.altium.com "><img class="img-fluid " src="/assets/img/logos/altium.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.epsilon3.io "><img class="img-fluid " src="/assets/img/logos/epsilon3.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.techsoft-eng.cz "><img class="img-fluid " src="/assets/img/logos/techsoft-white.png "></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.ansys.com "><img class="img-fluid " src="/assets/img/logos/Ansys_BW.png "></a>
-                        </div>
-                    </div>
-                </div>
-			</div>
-
-
-            <!-- Do budoucna novej donate button -->
-            <div class="row justify-content-center">
-                <div class="col-11 text-center">
-                    <p class="d-lg-flex justify-content-lg-center align-items-lg-center copyright">Czech Rocket Society z. s. © 2023</p>
-                    <div id="donate-button-container">
-                        <div id="donate-button"></div>
-                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                        <script>
-                            PayPal.Donation.Button({
-                                env: 'production',
-                                hosted_button_id: 'L8FADK5BT3JRC',
-                                image: {
-                                    src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                                    alt: 'Donate with PayPal button',
-                                    title: 'PayPal - The safer, easier way to pay online!',
-                                }
-                            }).render('#donate-button');
-                        </script>
-                    </div>
-                    <p class="copyright" style="padding: 0px 0px 0px;height: 15px;font-family: Roboto, sans-serif;font-size: 9px;">
-                        č.ú. [CZK] 42637800/2010
-                    </p>
-                </div>
-            </div>
-    </footer>
-
+    <iframe src="footer.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless onload="resizeIframe(this)"></iframe>
 
     <script src="/assets/js/jquery.min.js "></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js "></script>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-	<link rel="icon" type="image/png" href="https://czechrockets.com/crs_logo_ico.png"/>
+    <link rel="icon" type="image/png" href="https://czechrockets.com/crs_logo_ico.png" />
     <!-- Bootstrap importy -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- Style -->
@@ -25,6 +25,11 @@
     <meta name="msapplication-wide310x150logo" content="/assets/img/icons/mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="/assets/img/icons/mstile-310x310.png" />
     <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
 </head>
 
 <body id="page-top">
@@ -32,15 +37,23 @@
         <div class="container">
             <a href="/index.html" id="logoContainer "><img src="/assets/img/logos/logo.png" id="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span></button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html">Domů</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/index.html">Domů</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/oNas.html">O
-                            NÁS</a></li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJEKTY&nbsp;</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="/stopar.html">Stopař</a><a class="dropdown-item" href="/cansat.html" target="_parent">CanSat</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/oNas.html">
+                            O
+                            NÁS
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">PROJEKTY&nbsp;</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/stopar.html">Stopař</a><a class="dropdown-item" href="/cansat.html" target="_parent">CanSat</a>
 
                             <a class="dropdown-item" target="_parent" href="/czechrocketchallenge.html">Czech Rocket Challenge</a>
                             <a class="dropdown-item" target="_parent" href="/thundercat.html">Thundercat</a>
@@ -50,12 +63,17 @@
 
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/media.html">MÉDIA</a>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/media.html">MÉDIA</a>
                     </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger nav-linkactive" href="/partneri.html">PARTNEŘI</a></li>
 
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/proZajemce.html">Pro
-                            zájemce</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/proZajemce.html">
+                            Pro
+                            zájemce
+                        </a>
+                    </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/kontakt.html">KONTAKT</a></li>
                     <li class="nav-item" style="background: url(&quot;/assets/img/logos/uk.svg&quot;) center / contain no-repeat;margin: 10px;">
                         <a class="nav-link active" href="../../en/index.html"></a>
@@ -76,11 +94,13 @@
             </div>
             <div class="col">
                 <div class="text-justify">
-                    <p>ADVACAM je společenství dvou nezávislých technologických spin-off firem ze České Republiky a Finska. Jejich společná expertíza nabízí celou škálu výrobků a služeb od výroby polovodičů přes nanotechnologické spoje až po kamery schopné
+                    <p>
+                        ADVACAM je společenství dvou nezávislých technologických spin-off firem ze České Republiky a Finska. Jejich společná expertíza nabízí celou škálu výrobků a služeb od výroby polovodičů přes nanotechnologické spoje až po kamery schopné
                         zachytit celé spektrum záření od rentgenových vln přes gama záření nebo elementární částice, a to jak pro průmyslové, tak akademické využití.
                     </p>
                     <p>
-                        ADVACAM s.r.o. úzce spolupracuje s Ústavem technické a experimentální fyziky na ČVUT, čímž sdružuje komunitu renomovaných vědců, inženýrů a programátorů s letitými zkušenostmi a nabízí možnost růstu pro nové bystré studenty.</p>
+                        ADVACAM s.r.o. úzce spolupracuje s Ústavem technické a experimentální fyziky na ČVUT, čímž sdružuje komunitu renomovaných vědců, inženýrů a programátorů s letitými zkušenostmi a nabízí možnost růstu pro nové bystré studenty.
+                    </p>
 
                 </div>
             </div>
@@ -96,11 +116,12 @@
         <div class="TEXT-CENTER container zigzagRow">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid fitImage" id="fitImage" src="/assets/img/fullsize/traktor.jpg"></a>
+                    <img class="img-fluid fitImage" id="fitImage" src="/assets/img/fullsize/traktor.jpg">
                 </div>
                 <div class="col">
                     <div class="text-justify">
-                        <p style="font-family: Raleway, sans-serif; ">MALCOM je firma zabývající se již přes 20 let komunální a lesní technikou. Rčení "Náš zákazník, náš pán." není pro MALCOM jen klišé, ale způsob myšlení. Profesionální a vyrovnaný vztah se zákazníkem, který je maximálně spokojený
+                        <p style="font-family: Raleway, sans-serif; ">
+                            MALCOM je firma zabývající se již přes 20 let komunální a lesní technikou. Rčení "Náš zákazník, náš pán." není pro MALCOM jen klišé, ale způsob myšlení. Profesionální a vyrovnaný vztah se zákazníkem, který je maximálně spokojený
                             s nabízenými službami je kompasem, kterým se firma řídí.
                         </p>
                         <p>
@@ -128,7 +149,8 @@
             </div>
             <div class="col">
                 <div class="text-justify">
-                    <p style="font-family: Raleway, sans-serif; ">Planetum je společnost, pod kterou spadá Plantárium Praha, Štefánikova hvězdárna a Hvězdárna Ďáblice. Slovo „planetárium“ označuje projektor určený k promítání hvězd, Slunce, Měsíce, planet a dalších vesmírných objektů. A Planetárium
+                    <p style="font-family: Raleway, sans-serif; ">
+                        Planetum je společnost, pod kterou spadá Plantárium Praha, Štefánikova hvězdárna a Hvězdárna Ďáblice. Slovo „planetárium“ označuje projektor určený k promítání hvězd, Slunce, Měsíce, planet a dalších vesmírných objektů. A Planetárium
                         Praha má tu NEJVĚTŠÍ plochu k promítání v ČR. Promítání lze sledovat díky unikátní technologii prostorového zobrazení vesmíru za každého počasí a v 8K rozlišení.
                     </p>
                     <p>
@@ -138,7 +160,8 @@
                         Hvězdárna Ďáblice je skvělým místem pro začínající astronomy s denním i nočním pozorováním oblohy. Pro školní exkurze je připraven bohatý program a stálá astromická výstava.
                     </p>
                     <p>
-                        V Planetáriu Praha si budete přidatat jako v reálném vesmíru.</p>
+                        V Planetáriu Praha si budete přidatat jako v reálném vesmíru.
+                    </p>
 
                 </div>
             </div>
@@ -154,11 +177,12 @@
         <div class="TEXT-CENTER container zigzagRow">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <img class="img-fluid fitImage" id="fitImage" src="/assets/img/fullsize/stinnFotka.png"></a>
+                    <img class="img-fluid fitImage" id="fitImage" src="/assets/img/fullsize/stinnFotka.png">
                 </div>
                 <div class="col">
                     <div class="text-justify">
-                        <p style="font-family: Raleway, sans-serif; ">Společnost STINN je stále se rozvíjející společnost zabývající se zpracováním kovů. STINN byl založen s myšlenkou, posunout kovovýrobu na vyšší úroveň. Rychlost, preciznost, profesionální přístup a moderní technologie jsou klíčové
+                        <p style="font-family: Raleway, sans-serif; ">
+                            Společnost STINN je stále se rozvíjející společnost zabývající se zpracováním kovů. STINN byl založen s myšlenkou, posunout kovovýrobu na vyšší úroveň. Rychlost, preciznost, profesionální přístup a moderní technologie jsou klíčové
                             parametry a tak zvládají vyrobit takřka cokoli z oblasti zpracování kovů.
                         </p>
                         <p>
@@ -188,11 +212,13 @@
 
 
                 <div class="text-justify">
-                    <p style="font-family: Raleway, sans-serif; ">Hledá-li automobilová, letadlová nebo jiná technická firma řešení či radu <strong>jde za Akkodis</strong>. Akkodis je světovou firmou, která vymýšlí technologie budoucnosti. Vytváří nástroje, systémy a součástky se kterými se můžete setkat ve svém
+                    <p style="font-family: Raleway, sans-serif; ">
+                        Hledá-li automobilová, letadlová nebo jiná technická firma řešení či radu <strong>jde za Akkodis</strong>. Akkodis je světovou firmou, která vymýšlí technologie budoucnosti. Vytváří nástroje, systémy a součástky se kterými se můžete setkat ve svém
                         okolí již nyní nebo v příštích letech. A to díky, používání nejmodernějších technologií, využívání znalostí z různých oborů a úzkou spoluprácí se techniickými vysokými školami a univerzitami.
                     </p>
                     <p>
-                        “V Akkodis, společně vytváříme přinášíme digitální a inženýrská řešení a vytváříme tak pro všechny chytřejší budoucnost. Globální značka, která míří až ke hvězdám.”</p>
+                        “V Akkodis, společně vytváříme přinášíme digitální a inženýrská řešení a vytváříme tak pro všechny chytřejší budoucnost. Globální značka, která míří až ke hvězdám.”
+                    </p>
 
                 </div>
             </div>
@@ -215,9 +241,11 @@
 
 
                     <div class="text-justify">
-                        <p style="font-family: Raleway, sans-serif; ">Vysoká škola není jen o nekonečném studiu. Studentská unie ČVUT umožňuje všem studentům si co nejvíce produktivně užít svá studentská léta: realizovat si své sny, pořádat akce s přáteli, bavit se, cestovat, odpočívat, sportovat
+                        <p style="font-family: Raleway, sans-serif; ">
+                            Vysoká škola není jen o nekonečném studiu. Studentská unie ČVUT umožňuje všem studentům si co nejvíce produktivně užít svá studentská léta: realizovat si své sny, pořádat akce s přáteli, bavit se, cestovat, odpočívat, sportovat
                             a dělat cokoliv je napadne a cokoliv si přejí. Studentská unie ČVUT je nezávislou studentskou organizací s vlastním řízením, strukturou, pravidly a posláním. Každý člen se může aktivně či pasivně zapojit do dění a prožít tak
-                            svůj studentský život naplno.</p>
+                            svůj studentský život naplno.
+                        </p>
                         <p>
                             „NECHŤ PRO VŠECHNA X Z MNOŽINY VŠECH KLUBŮ PŘI ČVUT EXISTUJE PRÁVĚ JEDNA ZASTŘEŠUJÍCÍ, SDRUŽUJÍCÍ A SJEDNOCUJÍCÍ PLATFORMA, PAK PRÁVĚ TUTO PLATFORMU NAZÝVÁME STUDENTSKOU UNIÍ.“
                         </p>
@@ -240,7 +268,8 @@
 
 
                 <div class="text-justify">
-                    <p style="font-family: Raleway, sans-serif; ">STRATOSYST je česká firma vyvíjející pseudo-satelity HAPS (High Altitude Pseudo-Satellites), což jsou plavidla, která po delší dobu pobývají ve výšce několika desítek kilometrů. Tato plavidla jsou často atmosférické balóny nebo letadla
+                    <p style="font-family: Raleway, sans-serif; ">
+                        STRATOSYST je česká firma vyvíjející pseudo-satelity HAPS (High Altitude Pseudo-Satellites), což jsou plavidla, která po delší dobu pobývají ve výšce několika desítek kilometrů. Tato plavidla jsou často atmosférické balóny nebo letadla
                         a používají se pro snímkování a pozorování Země, dále pro telekomunikaci a navigaci nebo i obranu, astronomii a testovaní nových technologiích.
                     </p>
                     <p>
@@ -272,31 +301,31 @@
 
                     <div class="text-justify">
                         <p style="font-family: Raleway, sans-serif; ">Hledá-li instituce koncepční řešení nebo dodavatele kompetního cyklu vývoje v oblasti zdravotnictvní, Smart City nebo automobilového průmyslu, tak CERTICON je ta správná volba.
-                            <p>
-                                Společnost CertiCon a.s. byla založena v roce 1996 jako spin-off ČVUT. Za tuto dobu dosáhla mnoha mezinárodních úspěchů na poli komerčním i výzkumném a právem se zařadila mezi špičkové vědecko-technické společnosti 21. století.
-                            </p>
-                            <ul>
-                                Mezi úspěšné projekty patří:
-                                <li>
-                                    <strong>ConCos</strong> - Construction Control System - digitální stavební deník s pokročilou videoanalýzou. Umělá inteligence ve stavebnictví
-                                </li>
-                                <li>
-                                    <strong>EPIQA</strong> smart scheduler je nástroj pro optimalizaci široké škály výrobních a logistických procesů v různých průmyslových oblastech.
-                                </li>
-                                <li>
-                                    <strong>CertiConVis</strong> je software, který analyzuje a zpracovává obraz z kamerového systému v reálném čase.
-                                </li>
-                                <li>
-                                    S využitím řešení <strong>Laryngo Voice</strong> může být zachován a dokonce i nadále využíván hlas pacientů, kteří trpí rakovinou hrtanu a museli podstoupit laryngektomii (odstranění hrtanu)
-                                </li>
-                            </ul>
+                        <p>
+                            Společnost CertiCon a.s. byla založena v roce 1996 jako spin-off ČVUT. Za tuto dobu dosáhla mnoha mezinárodních úspěchů na poli komerčním i výzkumném a právem se zařadila mezi špičkové vědecko-technické společnosti 21. století.
+                        </p>
+                        <ul>
+                            Mezi úspěšné projekty patří:
+                            <li>
+                                <strong>ConCos</strong> - Construction Control System - digitální stavební deník s pokročilou videoanalýzou. Umělá inteligence ve stavebnictví
+                            </li>
+                            <li>
+                                <strong>EPIQA</strong> smart scheduler je nástroj pro optimalizaci široké škály výrobních a logistických procesů v různých průmyslových oblastech.
+                            </li>
+                            <li>
+                                <strong>CertiConVis</strong> je software, který analyzuje a zpracovává obraz z kamerového systému v reálném čase.
+                            </li>
+                            <li>
+                                S využitím řešení <strong>Laryngo Voice</strong> může být zachován a dokonce i nadále využíván hlas pacientů, kteří trpí rakovinou hrtanu a museli podstoupit laryngektomii (odstranění hrtanu)
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-	<div class="TEXT-CENTER container zigzagRow">
+    <div class="TEXT-CENTER container zigzagRow">
         <div class="col text-center align-self-center ">
             <a target="_blank " href="https://www.qminers.com"><img class="img-fluid " id="partnerLogo" src="/assets/img/logos/qminers.svg" style="max-height: 200px; padding-top: 20px;"></a>
         </div>
@@ -308,20 +337,21 @@
 
 
                 <div class="text-justify">
-                    <p style="font-family: Raleway, sans-serif; ">Naším produktem je software pro tzv. “algoritmické obchodování”. Autonomně obchoduje na základě složitých optimalizovaných matematických modelů a algoritmů na mnoha světadílech.
+                    <p style="font-family: Raleway, sans-serif; ">
+                        Naším produktem je software pro tzv. “algoritmické obchodování”. Autonomně obchoduje na základě složitých optimalizovaných matematických modelů a algoritmů na mnoha světadílech.
                     </p>
                     <p>
                         Úspěch Qminers je výsledkem našeho poctivého vědeckého přístupu, který staví na matematice, statistice, modelování a obecně pečlivé práci s daty. Stavíme na chytrosti a pestrosti týmu, který pečlivě skládáme, aby obsahoval špičkové specialisty na všech úrovních
-						od matematiky, datové analytiky, softwarového inženýrství až po kybernetiku či ekonometrii. Naší ambicí je rozšířit své působení do nových oblasti, ve kterých vidíme velký potenciál. Láká nás vyřešit problémy, které ještě nikdo nevyřešil a přitom je řeší hodně
-						lidí po světě.
+                        od matematiky, datové analytiky, softwarového inženýrství až po kybernetiku či ekonometrii. Naší ambicí je rozšířit své působení do nových oblasti, ve kterých vidíme velký potenciál. Láká nás vyřešit problémy, které ještě nikdo nevyřešil a přitom je řeší hodně
+                        lidí po světě.
                     </p>
                 </div>
             </div>
         </div>
 
     </div>
-	
-	<div id="darkBackground" class="text-white">
+
+    <div id="darkBackground" class="text-white">
         <div class="col text-center align-self-center ">
             <a target="_blank " href="https://www.ohb-czech.cz/cz/"><img class="img-fluid " id="partnerLogo" src="/assets/img/logos/ohb_white.png" style="max-height: 200px; padding-top: 20px;"></a>
         </div>
@@ -336,152 +366,47 @@
 
 
                     <div class="text-justify">
-                        <p style="font-family: Raleway, sans-serif; ">Sídlíme v Brně a od roku 2018 jsme členem Evropské kosmické a technologické skupiny OHB SE, jednoho z největších evropských subjektů v kosmickém průmyslu.
-						</p>
-						<p>
-                        Mezi naše zákazníky patří agentury a společnosti z oblasti kosmického průmyslu. Dodáváme konstrukce vesmírných sond, družicových adaptérů a podpůrných pozemních zařízení podle specifikací zákazníka. Zaměřujeme se na jejich vývoj, návrh konstrukce, ověřování, zajištění nákupu a montáže, provádění mechanických zkoušek a dalších souvisejících úkolů.
-						</p>
-						<p>
-                        Ceníme si spolupráce se studenty a jsme rádi, že můžeme podpořit Czech Rocket Society v dosažení jejich cílů.
-						</p>
+                        <p style="font-family: Raleway, sans-serif; ">
+                            Sídlíme v Brně a od roku 2018 jsme členem Evropské kosmické a technologické skupiny OHB SE, jednoho z největších evropských subjektů v kosmickém průmyslu.
+                        </p>
+                        <p>
+                            Mezi naše zákazníky patří agentury a společnosti z oblasti kosmického průmyslu. Dodáváme konstrukce vesmírných sond, družicových adaptérů a podpůrných pozemních zařízení podle specifikací zákazníka. Zaměřujeme se na jejich vývoj, návrh konstrukce, ověřování, zajištění nákupu a montáže, provádění mechanických zkoušek a dalších souvisejících úkolů.
+                        </p>
+                        <p>
+                            Ceníme si spolupráce se studenty a jsme rádi, že můžeme podpořit Czech Rocket Society v dosažení jejich cílů.
+                        </p>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-	
-    <hr>
-    <footer class="footer-dark">
-
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class=" col-md-4" id="footerCentre">
-
-                    <a href="https://czechrockets.com/en/index.html" class="orange">
-                        <h3>Czech Rocket Society z. s.</h3>
-                    </a>
-                    <ul id="footerList">
-                        <li><a href="/oNas.html ">O nás</a></li>
-                        <li><a href="/media.html ">Média</a></li>
-                        <li><a href="/proZajemce.html">Pro zájemce</a></li>
-                        <li><a href="/partneri.html">Partneři</a></li>
-                        <li><a href="/kontakt.html">Kontakt</a></li>
-                    </ul>
-
-                </div>
-
-
-
-                <div class="col-md-2" id="footerCentre">
-                    <h3 class="orange">Projekty</h3>
-                    <ul>
-
-                        <li><a href="/cansat.html ">Cansat</a></li>
-                        <li><a href="/stopar.html ">Stopař</a></li>
-                        <li><a href="czechrocketchallenge.html" target="_blank ">Czech Rocket Challenge</a>
-                        </li>
-                        <li><a href="/thundercat.html ">Thundercat</a></li>
-                        <li><a href="/cassiopeia.html ">Cassiopeia</a></li>
-                        <li><a href="/noveProjekty.html ">Nové projekty</a></li>
-
-                    </ul>
-                </div>
-                <!-- TODO -->
-                <div class=" col-md-6 offset-xl-0 text-center item text">
-                    <h3 class="orange text-center">Kde nás najdete?</h3>
-                    <div class="social-icons " style="background: rgba(255,255,255,0);text-align: center;margin-bottom: 20px; ">
-                        <a href="https://linktr.ee/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-planet " style="transform: scale(0.63); "></i></a><a href="https://facebook.com/czechrockets " style="transform: scale(0.63); "
-                            target="_blank "><i class="icon ion-social-facebook "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.instagram.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-instagram "
-                                style="transform: scale(0.63); "></i></a><a href="https://twitter.com/czechrockets " style="transform: scale(0.63); " target="_blank "><i class="icon ion-social-twitter "
-                                style="transform: scale(0.63); "></i></a><a href="https://www.linkedin.com/company/czechrockets/ " style="transform: scale(0.63); "><i class="icon ion-social-linkedin "
-                                style="transform: scale(0.64); "></i></a>
-                    </div>
-                    <a href="https://su.cvut.cz " target="_blank "><img src="/assets/img/logos/SU_logo.png " height="40 " style="margin-bottom: 20px; "></a>
-                </div>
+    <div class="TEXT-CENTER container zigzagRow">
+        <div class="col text-center align-self-center ">
+            <a target="_blank " href="https://www.fyft.cz/drone-racing/"><img class="img-fluid " id="partnerLogo" src="/assets/img/logos/fyft.png" style="max-height: 200px; padding-top: 20px;"></a>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <a href="#"><img class="img-fluid" src="/assets/img/fullsize/fyft.jpeg"></a>
             </div>
-
-			<div class="text-center ">
-				<h3 id="partnerH" class="text-center">Partneři</h3>
-                <div class="container">
-                    <div class="row justify-content-center align-items-center partnerRow">
-                        <div class="col-md-3 text-center align-self-center partnerCol">
-                            <a target="_blank " href="http://www.advacam.com "><img class="img-fluid " src="/assets/img/logos/Advacam-svetle.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.planetum.cz "><img class="img-fluid " src="/assets/img/logos/planetum_tranpa_orez.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://qminers.com/ "><img class="img-fluid " src="/assets/img/logos/qminers.svg "></a>
-                        </div>
-                        <div class="col-md-3 text-center align-self-center partnerCol">
-                            <a target="_blank " href="https://www.stratosyst.com/ "><img class="img-fluid " style="min-height: 25px;" src="/assets/img/logos/stratotystLogo2.png "></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://www.certicon.cz/ "><img class="img-fluid " src="/assets/img/logos/certiconLogo.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol  ">
-                            <a target="_blank " href="http://www.akka-technologies.com/czech-republic "><img class="img-fluid " src="/assets/img/logos/AKKODIS_Logo_NEG_RGB.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="https://www.ohb-czech.cz/cz/ "><img class="img-fluid " src="/assets/img/logos/ohb.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol">
-                            <a target="_blank " href="https://stinn.cz/ "><img class="img-fluid" src="/assets/img/logos/Stinn-logo-bile.png" style="max-height: 65px;"></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.malcomcz.eu "><img class="img-fluid " src="/assets/img/logos/malcomcz.svg "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.altium.com "><img class="img-fluid " src="/assets/img/logos/altium.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.epsilon3.io "><img class="img-fluid " src="/assets/img/logos/epsilon3.png "></a>
-                        </div>
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.techsoft-eng.cz "><img class="img-fluid " src="/assets/img/logos/techsoft-white.png "></a>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-md-3 align-self-center partnerCol ">
-                            <a target="_blank " href="http://www.ansys.com "><img class="img-fluid " src="/assets/img/logos/Ansys_BW.png "></a>
-                        </div>
-                    </div>
-                </div>
-			</div>
+            <div class="col">
 
 
-            <!-- Do budoucna novej donate button -->
-            <div class="row justify-content-center">
-                <div class="col-11 text-center">
-                    <p class="d-lg-flex justify-content-lg-center align-items-lg-center copyright">Czech Rocket Society z. s. © 2023</p>
-                    <div id="donate-button-container">
-                        <div id="donate-button"></div>
-                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                        <script>
-                            PayPal.Donation.Button({
-                                env: 'production',
-                                hosted_button_id: 'L8FADK5BT3JRC',
-                                image: {
-                                    src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                                    alt: 'Donate with PayPal button',
-                                    title: 'PayPal - The safer, easier way to pay online!',
-                                }
-                            }).render('#donate-button');
-                        </script>
-                    </div>
-                    <p class="copyright" style="padding: 0px 0px 0px;height: 15px;font-family: Roboto, sans-serif;font-size: 9px;">
-                        č.ú. [CZK] 42637800/2010
+                <div class="text-justify">
+                    <p style="font-family: Raleway, sans-serif; ">
+                        <b>FYFT</b> je zkratka pro <b>Fill Your Free Time</b> - vyplň svůj volný čas. Je to obchod, komunita, místo spojené s myšlenkou, že volný čas je to nejcennější, co máme, a proto je třeba ho využít k něčemu, co má smysl. </p>
+                        <p>Posláním FYFTu je pomáhat lidem najít koníček, který vede k osobnímu rozvoji. To může být cokoliv - od skládání Rubikovy kostky až po cestování. </p>
+                        <p>FYFT je víc než jenom obchod. Podporujeme komunity, tvoříme návody a workshopy, organizujeme soutěže a naše pobočky jsou místem pro setkávání pro všechny komunity.
                     </p>
                 </div>
             </div>
-    </footer>
+        </div>
+
+    </div>
+    <hr>
+
+    <iframe src="footer.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless onload="resizeIframe(this)"></iframe>
+
     <script src="/assets/js/jquery.min.js "></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js "></script>
     <script src="/assets/js/bs-init.js "></script>
@@ -493,3 +418,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js "></script>
     <script src="/assets/js/Simple-Slider.js "></script>
 </body>
+</html>
