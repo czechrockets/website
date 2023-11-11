@@ -92,16 +92,6 @@
             </div>
         </div>
     </nav>
-    <header class="text-center" id="oNasCont" style="margin-bottom: 0;">
-        <div class="container my-auto" id="stoparWelcomeDiv">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>CRS ŽIVĚ</strong></h1>
-                    <p class="text-faded mb-5"><em>Živé přenosy přímo ze startu přístupné odkudkoliv!</em></p>
-                </div>
-            </div>
-        </div>
-    </header>
     <div class="live">
         <div id="live-main-feed">
             <h2>HLAVNÍ PŘENOS</h2>
@@ -121,7 +111,7 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-                <button onclick="setToMainFeed(this)">Switch camera</button>
+                <button class="live-feed-switch-button" onclick="setToMainFeed(this)">Switch camera</button>
             </div>
             <div class="live-between-container">
                 <h2>CAM 2</h2>
@@ -131,12 +121,17 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-                <button onclick="setToMainFeed(this)">Switch camera</button>
+                <button class="live-feed-switch-button" onclick="setToMainFeed(this)">Switch camera</button>
             </div>
         </div>
     </div>
 
-    <iframe src="footer.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless
+    <div class="focus-mode-button">
+        <button onclick="focusSwitch(this)">Start focus!</button>
+        <button class="info" onclick="alert('Focus vypne nepotřebné elementy webu')">?</button>
+    </div>
+
+    <iframe class="live-footer" src="footer.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless
         onload="resizeIframe(this)"></iframe>
 
 

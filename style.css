@@ -818,45 +818,73 @@ background-color: none !important;
      border-bottom-color: #2fcea5
  }
 
-.live{
+/* Live styles */
+.live {
     display: flex;
     align-items: center;
     width: 100%;
     flex-direction: column;
+    margin-top: 2rem;
 }
-#live-main-feed{
+
+#live-main-feed {
     width: 60%;
     margin: 0px;
     padding: 0px;
-    >h2{
+
+    >h2 {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
 }
-#live-other-feeds{
-    margin-top: 2rem;
+
+#live-other-feeds {
+    margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: 80%;
     overflow: hidden;
-    >.live-between-container{
+    margin-bottom: 1rem;
+
+    >.live-between-container {
         flex-direction: column;
         display: flex;
         text-align: center;
         width: 30%;
+        align-items: center;
+
+        >h2 {
+            font-size: 1rem;
+        }
     }
 
+
 }
- /* Live styles */
- .live-iframe-container {
+
+.live-feed-switch-button {
+    text-align: center;
+    width: 40%;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #1D01C8;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.live-iframe-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
-  
-  /* Then style the iframe to fit in the container div with full height and width */
+
+/* Then style the iframe to fit in the container div with full height and width */
 .live-iframe-responsive-iframe {
     position: absolute;
     top: 0;
@@ -865,6 +893,41 @@ background-color: none !important;
     right: 0;
     width: 100%;
     height: 100%;
+}
+.focus-mode-button{
+   display: flex;
+   position: fixed;
+   background-color: #1D01C8;
+   color: white;
+   right: 10px;
+   bottom: 10px;
+   padding: 5px;
+   border-radius: 20px;
+   gap: 10px;
+   >button{
+       background: none;
+       color: inherit;
+       border: none;
+       padding: 0;
+       font: inherit;
+       cursor: pointer;
+       outline: inherit;
+       padding-left: 10px;
+   }
+   >.info{
+       background-color: white;
+       padding: 0.25rem;
+       border-radius: 50%;
+       width: 2rem;
+       height: 2rem;
+       color: black;
+   }
+}
+.focus-switch{
+   display: none;
+}
+.focus-button-switched{
+   background-color: #F70F0F !important;
 }
 
  
