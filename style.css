@@ -943,7 +943,16 @@ background-color: none !important;
      .main-timeline .timeline-content {
          margin-top: 75px
      }
- }
+     #live-main-feed{
+        width: 100%;
+     }
+     #live-other-feeds{
+        width: 100%;
+        >.live-between-container{
+            width: 100%;
+
+        }
+    }
  
  @media only screen and (max-width:990px) {
      .main-timeline .timeline {
@@ -957,6 +966,9 @@ background-color: none !important;
      }
      .main-timeline .timeline-content {
          margin-top: 115px
+     }
+     #live-other-feeds{
+        flex-direction: column;
      }
  }
  
