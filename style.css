@@ -882,6 +882,10 @@ background-color: none !important;
     padding-top: 56.25%;
     /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
+.live-countdown{
+    background-color: #FD0809 !important;
+    margin-top: 1rem;
+}
 
 /* Then style the iframe to fit in the container div with full height and width */
 .live-iframe-responsive-iframe {
@@ -892,6 +896,19 @@ background-color: none !important;
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+#live-other-info{
+    padding-top: 2rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    > .test-text{
+        font-size: 3rem;
+        background-color: #FD0809;
+    }
 }
 .focus-mode-button{
    display: flex;
@@ -923,7 +940,7 @@ background-color: none !important;
    }
 }
 .focus-switch{
-   display: none;
+   display: none !important;
 }
 .focus-button-switched{
    background-color: #F70F0F !important;

@@ -48,4 +48,12 @@ function focusSwitch(buttonObject){
     else{
         document.getElementsByClassName("live-footer")[0].classList.add("focus-switch");
     }
+
+    // hide other info
+    if(document.getElementById("live-other-info").classList.contains("focus-switch")){
+        document.getElementById("live-other-info").classList.remove("focus-switch");
+    }
+    else{
+        document.getElementById("live-other-info").classList.add("focus-switch");
+    }
 }
