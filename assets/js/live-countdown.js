@@ -4,7 +4,7 @@ var seconds = upgradeTime;
 // calculate secounds between now and 25/11/2023
 var now = new Date();
 // date 26/11/2023 14:00:00 GMT+0200 (Eastern European Standard Time)
-var then = new Date(2023, 10, 26, 14, 0, 0, 0);
+var then = new Date(2023, 10, 26, 13, 0, 0, 0);
 
 var diff = then.getTime() - now.getTime();
 diff = Math.floor(diff / 1000);
