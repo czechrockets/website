@@ -580,7 +580,7 @@ background-color: none !important;
  }
  
  .img-fluid {
-     border-radius: 40px;
+     border-radius: 0px;
  }
  
  #ignoreRadius {
