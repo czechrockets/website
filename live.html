@@ -94,7 +94,6 @@
     </nav>
     <div class="live">
         <div id="live-main-feed">
-            <h2>Drone #1</h2>
             <div class="live-iframe-container">
                 <iframe class="live-iframe-responsive-iframe" width="560" height="315"
                     src="https://www.youtube.com/embed/XPBdiFtPBGs?si=vCScLIZrlvaK3Uen" title="YouTube video player"
@@ -102,33 +101,35 @@
                     allowfullscreen></iframe>
             </div>
         </div>
-        <div id="live-other-feeds">
-            <div class="live-between-container">
-                <h2>Drone #2</h2>
-                <div class="live-iframe-container">
-                    <iframe class="live-iframe-responsive-iframe" width="560" height="315"
-                        src="https://www.youtube.com/embed/x1nYYZnbTjw?si=EWVSvxQYn5DhgOP8" title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+        <div class="start-info">
+            <div class="info-boxes">
+                <div class="card">
+                    <div class="info">
+                        <div>
+                            <img src="assets/img/icons/time.png" alt="">
+                        </div>
+                        <div>
+                            <p>18.02.2024</p>
+                            <p>13:00 - 17:24</p>
+                        </div>
+                    </div>
                 </div>
-                <button class="live-feed-switch-button" onclick="setToMainFeed(this)">Switch camera</button>
-            </div>
-            <div class="live-between-container">
-                <h2>Telemetry</h2>
-                <div class="live-iframe-container">
-                    <iframe class="live-iframe-responsive-iframe" width="560" height="315"
-                        src="https://www.youtube.com/embed/vIq1HE010Pw?si=RUPUwGYK-_yd-Gxq" title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <button class="live-feed-switch-button" onclick="setToMainFeed(this)">Switch camera</button>
+
+                <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47098585dcc469a5:0x8d01b5e6b87d0077?sa=X&ved=2ahUKEwih_8TtmLCEAxWD9bsIHeesCLkQ4kB6BAgUEAA">
+                    <div class="card">
+                        <div class="info">
+                            <div>
+                                <img src="assets/img/icons/position.png" alt="">
+                            </div>
+                            <div>
+                                <p>Modelpark Suché</p>
+                                <p>50°37'43, 13° 55'18/4"E</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
-    <div id="live-other-info">
-        <p>Otevření startovacího okna:</p>
-        <p>(26.11.2023 13:00)</p>
-        <p>Místo: Letiště Medlánky (LKCM)</p>
     </div>
 
     <div class="focus-mode-button">

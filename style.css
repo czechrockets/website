@@ -946,6 +946,40 @@ background-color: none !important;
    background-color: #F70F0F !important;
 }
 
+
+/* Start info styles*/
+.start-info{
+    >.info-boxes{
+        display: flex;
+        >a{
+            text-decoration: none;
+            color: #212529;
+        }
+        >.card , >a>.card{
+            text-decoration: none !important;
+            padding: 1rem !important;
+            display: flex;
+            flex-direction: column;
+            >h3{
+                font-size: 1.5rem;
+            }
+            >.info{
+                display: flex;
+                flex-direction: row;
+                >div{
+                    img{
+                        padding-right: 1rem;
+                    }
+                    p{
+                        margin: 0;
+                        text-decoration: dotted;
+
+                    }
+                }
+            }
+        }
+    }
+}
  
  @media only screen and (max-width:1200px) {
      .main-timeline .timeline-icon:before {
