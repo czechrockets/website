@@ -4,12 +4,11 @@ var timeCount=[];
 var maxGaugeList=[];
 let uc = 0;
 
-function textBox(value, mx, mn, x, y, w, h, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
+function textBox(value, mn, mx, div, x, y, w, h, mode, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
   w = w*(rad + xOffset)-xOffset;
   h = h*(rad + yOffset)-yOffset;
-  let valLen = max(str(mx).length, str(mn).length) + unit.length;
   let textCol = colMode * 255;
   let lerpCol = colMode * 120;
 
@@ -28,18 +27,28 @@ function textBox(value, mx, mn, x, y, w, h, name, unit, rad, padding, xOffset, y
   textSize(rad/10);
   text(name, x+w/2,y+3);
 
-  fill(min(map(value,mn,mx,0,255*2),255),min(255*2-map(value,mn,mx,0,255*2),255),0);
+  if(mode)fill(min(map(value,mn,mx,0,255*2),255),min(255*2-map(value,mn,mx,0,255*2),255),0);
+  else fill(vc);
   textAlign(CENTER,CENTER);
-  textSize(min(w/(valLen/1.2),h));
-  text(format(value," ")+unit,x+w/2,y+h/2+h/16);
-  //text(round(min(map(value,mn,mx,0,255*2),255))+":"+round(min(255*2-map(value,mn,mx,0,255*2),255)),x+w/2,y+h/2+h/4);
+  textSize(rad/div);
+  if(!isNaN(value))text(format(value,"")+unit,x+w/2,y+h/2+h/16);
+
+  if(isNaN(value)){
+    fill(0,150);
+    noStroke();
+    rect(x,y,rad,rad,5);
+    fill(255,0,0);
+    textAlign(CENTER,CENTER);
+    textSize(rad/5)
+    text("No data!",x+w/2,y+h/2);
+  };
 }
 
-function Gauge(index, value, mx, mn, x, y, name, unit, rad, padding, xOffset, yOffset, vc, bg, contc, middle, midb) {
+function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yOffset, vc, bg, contc, middle, midb) {
   if (maxGaugeList.length - 1 < index)maxGaugeList.push(mn);
   x = x*(rad + xOffset) + rad/2 + padding;
   y = y*(rad + yOffset) + rad/2 + padding;
-  let showValue = PI-map(min(value,mx), mn, mx, 0, -PI);
+  let showValue = PI-map(cap(value,mn,mx), mn, mx, 0, -PI);
   let textCol = colMode * 255;
   let lerpCol = colMode * 120;
 
@@ -78,9 +87,19 @@ function Gauge(index, value, mx, mn, x, y, name, unit, rad, padding, xOffset, yO
   fill(max(textCol-55,55));
   textSize(rad / 13.0);
   text("max: "+maxGaugeList[index], x, y + rad/9.5);
+
+  if(isNaN(value)){
+    fill(0,150);
+    noStroke();
+    rect(x-rad/2,y-rad/2-rad/4,rad,rad,5);
+    fill(255,0,0);
+    textAlign(CENTER,CENTER);
+    textSize(rad/5)
+    text("No data!",x,y-rad/4);
+  }
 }
 
-function bars(value, mx, mn, x, y, w, h, rev, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
+function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
   let offset = rad/15;
   let rows = value.length;
   let bar = (rows*8)*(w/2)/(h);
@@ -89,6 +108,8 @@ function bars(value, mx, mn, x, y, w, h, rev, name, unit, rad, padding, xOffset,
   let dim = 0;
   let textCol = colMode * 255;
   let lerpCol = colMode * 120;
+  let nn = 0;
+  let sz = (w+h)/2;
 
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
@@ -135,15 +156,28 @@ function bars(value, mx, mn, x, y, w, h, rev, name, unit, rad, padding, xOffset,
       rect(x+columnWidth*k+k*Xoffset,y+rowHeight*i+i*Yoffset,columnWidth,rowHeight,(rowHeight/columnWidth)*(rad/225.0));
       if(round((bar/(mx[i]-mn[i]))*(value[i]-mn[i]))<=k)dim = 300/(colMode+2);
       else dim = 255;
+      if(isNaN(value[i]))dim=100/(colMode+1);
       if(!rev)fill(min(k*(510/bar),255),min((bar-k)*(510/bar),255),0,dim);
       else fill(min((bar-k)*(510/bar),255),min((bar-(bar-k))*(510/bar),255),0,dim);
       rect(x+columnWidth*k+k*Xoffset,y+rowHeight*i+i*Yoffset,columnWidth,rowHeight,(rowHeight/columnWidth)*(rad/225.0));
     }
     fill(textCol);
+    if(isNaN(value[i]))fill(255,0,0);
     textAlign(CENTER,CENTER);
     text(name[i], x-offset*2, y+rowHeight*i+i*Yoffset+rowHeight/2)
     textAlign(CENTER,CENTER);
     text(format(value[i]), x+w+offset*2, y+rowHeight*i+i*Yoffset+rowHeight/2)
+    if(isNaN(value[i]))nn++;
+  }
+
+  if(nn>=value.length){
+    fill(0,150);
+    noStroke();
+    rect(x-offset*4,y-offset*3,w+offset*8,h+offset*4,5);
+    fill(255,0,0);
+    textAlign(CENTER,CENTER);
+    textSize((rad/5)*sz);
+    text("No data!",x+w/2,y+h/2);
   }
 }
 
@@ -159,6 +193,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   let repNum = 0;
   let textCol = colMode * 255;
   let lerpCol = colMode * 120;
+  let sz = (w+h)/2;
 
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
@@ -192,9 +227,9 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   if(timeFrame-endTime(k-1,w) > endTime(k,w)-timeFrame)repNum = k;
   else repNum = k-1;
 
-  const d = new Date();
-  if(timeCount[index] >= repNum)
+  if(timeCount[index] >= repNum && !isNaN(value))
   {
+    const d = new Date();
     graphList[index].unshift(value);
     timeList[index].unshift(d.toLocaleTimeString());
     timeCount[index]=0;
@@ -215,7 +250,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   div = range / h;
 
   strokeWeight(2);
-  for (let i = graphList[index].length - 1; i > 0; i--) {
+  for (let i = graphList[index].length - 1; i >= 0; i--) {
     //stroke((graphList[index][i] - minVal) * (255.0 / range), 0, 255 - ((graphList[index][i] - minVal) * (255.0 / range)));
     stroke(vc);
     line(
@@ -225,6 +260,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   }
 
   noStroke();
+  fill(255);
   textSize(rad / 15.0);
   textAlign(RIGHT, CENTER);
   text(format(maxVal), x - 2, y);
@@ -250,8 +286,17 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   line(x+w/2, y, x+w/2, y+h);
   line(x+w/2+w/4, y, x+w/2+w/4, y+h);
 
+  if(isNaN(value)){
+    fill(0,150);
+    noStroke();
+    rect(x-offset,y-offset,w+offset*2,h+offset*2,5);
+    fill(255,0,0);
+    textAlign(CENTER,CENTER);
+    textSize((rad/5)*sz)
+    text("No data!",x+w/2,y+h/2);
+  }
 }
-function mainTextBox(value, x, y, w, h, divValue, rad, padding, xOffset, yOffset, contc, middle, midb) {
+function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, contc, middle, midb) {
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
   w = w*(rad + xOffset)-xOffset;
@@ -269,13 +314,15 @@ function mainTextBox(value, x, y, w, h, divValue, rad, padding, xOffset, yOffset
   strokeWeight(2);
   rect(x,y,w,h,5);
   strokeWeight(1);
-
+  
   if(value[2]==0){fsws = "INIT"; fswCol=color(241,196,15);}
   else if(value[2]==1){fsws = "READY"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
   else if(value[2]==2){fsws = "ARM"; fswCol=color(231,76,60);}
   else if(value[2]==3){fsws = "LIFTOFF"; fswCol=textCol;}
   else if(value[2]==4){fsws = "DESCENT"; fswCol=color(62,100,240)}
-  else if(value[2]==5){fsws = "LANDED"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
+  else if(value[2]==5){fsws = "PARACHUTE"; fswCol=color(231,76,60)}
+  else if(value[2]==6){fsws = "LANDED"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
+  else {fsws = "UNKNOWN"; fswCol=lerpColor(color(50),color(200),colMode);}
 
   tint(255,25+(colMode*50));
   image(img, x, y,w,h);
@@ -283,7 +330,7 @@ function mainTextBox(value, x, y, w, h, divValue, rad, padding, xOffset, yOffset
   noStroke();
   textAlign(CENTER,CENTER);
   textStyle(BOLD);
-  textSize(rad/divValue);
+  textSize(rad/div);
   text(value[1],x+w/2,y+h/4-h/32);
   text(value[0],x+w/2,y+h/2);
   fill(fswCol);
@@ -311,4 +358,8 @@ function format(input, b=""){
   else if(input<=-100 && input>-1000)return nf(input, 3, 0)+b;
   else if(input<=-1000)return nf(input/1000, 1, 1)+b+"k";
 
+}
+
+function cap(value,mn,mx){
+  return max(min(value,mx),mn);
 }

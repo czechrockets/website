@@ -15,6 +15,7 @@ let rd;
 let img;
 let isGetting = false;
 let data = 0;
+let isLocal = false;
 
 function preload() {
   img = loadImage('/assets/dashboardApp/crs_logo.png');
@@ -37,7 +38,7 @@ function draw() {
       isGetting = true;
       req().then((e)=>{
         data = JSON.parse(e);
-        console.log(data);
+        //console.log(data);
         isGetting = false;
       })
     }
@@ -50,28 +51,27 @@ function draw() {
 
       background(background_color);
 
-      Gauge(0,mouseX, 170, 0, 5, 0, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(1,mouseX, 1100, 0, 6, 0, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(2,mouseY*(1.5/height), 1.5, 0, 5, 1, "Rotation", "rps", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(3,mouseX*(150/width), 150, 0, 6, 1, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(0,data.velocity, 0, 180, 5, 0, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(1,data.rel_alti, 0, 1200, 6, 0, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(2,abs(data.mpu_gyro_y/360), 0, 1.5, 5, 1, "Rotation", "rps", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(3,data.gps_alt, 0, 1200, 6, 1, "GPS Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
 
-      const dt = new Date();
-      mainTextBox(["Sherpa DEMO1",dt.toLocaleTimeString()+" UTC",data.fsw_state], 3, 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
-      textBox(round(mouseX/100), 0, width/200, 7, 0, 1, 1, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      textBox(round(mouseX/100), 0, width/200, 7, 1, 1, 1, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      mainTextBox(["Sherpa DEMO1",data.time+" CET",data.fsw_state], 3, 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
+      textBox(data.gps_sat, 10, 0, 3, 7, 1, 1, 1, true, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      textBox(data.Temperature, 0, 0, 4, 7, 0, 1, 1, false, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-      bars([mouseX*(12.6/width),mouseX*(30/width)], [12.6,30], [9.3,0], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      bars([mouseX*(200/width),mouseX*(200/width),mouseY*(400/height)], [300,300,300], [0,0,0], 6, 3, 2, 1, false, ["X","Y","Z","Acceleration"], "m/s²", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      bars([data.ina_Voltage,data.ina_Curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      bars([abs(data.mpu_accel_x),abs(data.mpu_accel_y),abs(data.mpu_accel_z)], [0,0,0], [16,16,16], 6, 3, 2, 1, false, ["X","Y","Z","Acceleration"], "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       
-      Graph(0, height-mouseY, 0, 0, 3, 2, 30, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      Graph(1, mouseX, 0, 2, 3, 2, 60, "Distance", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      Graph(2, mouseY/10, 3, 2, 3, 2, 60, "Acceleration", "m/s²", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      Graph(0, data.rel_alti, 0, 0, 3, 2, 30, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      Graph(1, data.velocity, 0, 2, 3, 2, 60, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      Graph(2, data.mpu_accel_y, 3, 2, 3, 2, 60, "Acceleration", "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-      //for(let k=0;k<rowCount;k++)for(let l=0;l<columnCount;l++)Graph(0, round(mouseX*(15/width)), l, k, 1, 1, radius, padding, xOffset, visuals_bgcolor, "Sattelites");
+      /*for(let k=0;k<rowCount;k++)for(let l=0;l<columnCount;l++)Graph(0, round(mouseX*(15/width)), l, k, 1, 1, radius, padding, xOffset, visuals_bgcolor, "Sattelites");
       textSize(radius / 10.0);
       fill(255);
       textAlign(LEFT, BOTTOM);
-      text("Fps:" + round(frameRate()) + ":" + fps, width-100, height - 10);
+      text("Fps:" + round(frameRate()) + ":" + fps, width-100, height - 10);*/
       fps += round((frameRate() - fps) * 0.2);
   }
   else {
@@ -122,8 +122,8 @@ function clickCheck(x,y,w,h){
 function req() {
   return new Promise((resolve, reject) => {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://czechrockets.euweb.cz/get.php', true);
-    //xhr.open('GET', 'http://gspi.local:8000/', true);
+    if(!isLocal)xhr.open('GET', 'https://czechrockets.euweb.cz/get.php', true);
+    else xhr.open('GET', 'http://gspi.local:8000/', true);
     xhr.send();
 
     xhr.onreadystatechange = function () {
