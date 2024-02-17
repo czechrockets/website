@@ -18,7 +18,7 @@ let data = 0;
 let isLocal = false;
 
 function preload() {
-  img = loadImage('/assets/dashboardApp/crs_logo.png');
+  img = loadImage('crs_logo.png');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -67,7 +67,7 @@ function draw() {
       textBox(data.gps_sat, 10, 0, 3, 7, 0, 1, 1, true, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       textBox(data.bmp_temp, 0, 0, 4, 7, 1, 1, 1, false, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-      bars([data.ina_volt,data.ina_curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      bars([data.ina_Voltage,data.ina_Curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       bars([abs(data.mpu_accel_x),abs(data.mpu_accel_y),abs(data.mpu_accel_z)], [0,0,0], [16,16,16], 6, 3, 2, 1, false, ["X","Y","Z","Acceleration"], "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       
       Graph(0, data.rel_alti, 0, 0, 3, 2, 60, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
