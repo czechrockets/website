@@ -18,7 +18,7 @@ let data = 0;
 let isLocal = false;
 
 function preload() {
-  img = loadImage('crs_logo.png');
+  img = loadImage('/assets/dashboardApp/crs_logo.png');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
