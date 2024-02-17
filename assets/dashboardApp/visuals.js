@@ -336,6 +336,18 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   fill(fswCol);
   text("Status: "+fsws,x+w/2,y+h/2+h/4+h/32);
   textStyle(NORMAL)
+  stroke(lerpColor(contc,color(lerpCol),0.1));
+
+  if(value[3])fill(62,100,240);
+  else fill(62,100,240,100);
+  circle(x+w/2-w/8,y+h/1.12,rad/12);
+  if(value[4])fill(241,196,15);
+  else fill(241,196,15,100);
+  circle(x+w/2,y+h/1.12,rad/12);
+  if(value[5])fill(lerpColor(color(92,240,72),color(46,204,113),colMode));
+  else fill(lerpColor(color(92,240,72,100),color(46,204,113,100),colMode));
+  circle(x+w/2+w/8,y+h/1.12,rad/12);
+  
 }
 function listCheck(array, index){
   if(array.length-1 < index)return "";

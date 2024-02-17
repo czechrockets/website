@@ -59,20 +59,20 @@ function draw() {
       background(background_color);
 
       Gauge(0,data.velocity, 0, 180, 5, 0, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(1,data.rel_alti, 0, 1200, 6, 0, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(2,abs(data.mpu_gyro_y/360), 0, 1.5, 5, 1, "Rotation", "rps", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
-      Gauge(3,data.gps_alt, 0, 1200, 6, 1, "GPS Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(1,data.rel_alti, 0, 1200, 5, 1, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(2,abs(data.mpu_gyro_y/360), 0, 1.5, 6, 1, "Rotation", "rps", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
+      Gauge(3,data.gps_alt, 0, 1200, 6, 0, "GPS Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
 
-      mainTextBox(["Sherpa DEMO1",data.time+" CET",data.fsw_state], 3, 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
-      textBox(data.gps_sat, 10, 0, 3, 7, 1, 1, 1, true, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      textBox(data.Temperature, 0, 0, 4, 7, 0, 1, 1, false, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      mainTextBox(["Sherpa DEMO1", data.time+" CET", data.fsw_state, data.payload_released, data.drogue_released, data.parachute_released], 3, 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
+      textBox(data.gps_sat, 10, 0, 3, 7, 0, 1, 1, true, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      textBox(data.bmp_temp, 0, 0, 4, 7, 1, 1, 1, false, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-      bars([data.ina_Voltage,data.ina_Curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      bars([data.ina_volt,data.ina_curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       bars([abs(data.mpu_accel_x),abs(data.mpu_accel_y),abs(data.mpu_accel_z)], [0,0,0], [16,16,16], 6, 3, 2, 1, false, ["X","Y","Z","Acceleration"], "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       
       Graph(0, data.rel_alti, 0, 0, 3, 2, 60, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       Graph(1, data.velocity, 0, 2, 3, 2, 60, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
-      Graph(2, data.mpu_accel_y, 3, 2, 3, 2, 60, "Acceleration", "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      Graph(2, -data.mpu_accel_y, 3, 2, 3, 2, 60, "Acceleration", "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
       /*for(let k=0;k<rowCount;k++)for(let l=0;l<columnCount;l++)Graph(0, round(mouseX*(15/width)), l, k, 1, 1, radius, padding, xOffset, visuals_bgcolor, "Sattelites");
       textSize(radius / 10.0);
