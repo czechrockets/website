@@ -122,7 +122,7 @@ function clickCheck(x,y,w,h){
 function req() {
   return new Promise((resolve, reject) => {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://czechrockets.euweb.cz/get.php', true);
+    xhr.open('GET', 'https://czechrockets.euweb.cz/get.php', true);
     //xhr.open('GET', 'http://gspi.local:8000/', true);
     xhr.send();
 
@@ -130,8 +130,7 @@ function req() {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           let text = xhr.responseText;
-          let realData = text.split("<!--WZ-REKLAMA-1.0IK-->")[1];
-          resolve(realData);
+          resolve(text);
         } else {
           reject(new Error(`Failed with status ${xhr.status}`));
         }
