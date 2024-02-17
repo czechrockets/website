@@ -37,8 +37,15 @@ function draw() {
     if(!isGetting){
       isGetting = true;
       req().then((e)=>{
-        data = JSON.parse(e);
-        //console.log(data);
+        e = e.replace("null","\"u\"");
+        e = e.replace("\\","");
+
+        try {
+          data = JSON.parse(e);
+        } catch (error) {
+          console.log(error);
+        }
+
         isGetting = false;
       })
     }
@@ -63,7 +70,7 @@ function draw() {
       bars([data.ina_Voltage,data.ina_Curr/1000], [9,0], [12.6,3], 6, 2, 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       bars([abs(data.mpu_accel_x),abs(data.mpu_accel_y),abs(data.mpu_accel_z)], [0,0,0], [16,16,16], 6, 3, 2, 1, false, ["X","Y","Z","Acceleration"], "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       
-      Graph(0, data.rel_alti, 0, 0, 3, 2, 30, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+      Graph(0, data.rel_alti, 0, 0, 3, 2, 60, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       Graph(1, data.velocity, 0, 2, 3, 2, 60, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
       Graph(2, data.mpu_accel_y, 3, 2, 3, 2, 60, "Acceleration", "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
@@ -129,8 +136,7 @@ function req() {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          let text = xhr.responseText;
-          resolve(text);
+          resolve(xhr.responseText);
         } else {
           reject(new Error(`Failed with status ${xhr.status}`));
         }

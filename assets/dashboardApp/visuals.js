@@ -320,7 +320,7 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   else if(value[2]==2){fsws = "ARM"; fswCol=color(231,76,60);}
   else if(value[2]==3){fsws = "LIFTOFF"; fswCol=textCol;}
   else if(value[2]==4){fsws = "DESCENT"; fswCol=color(62,100,240)}
-  else if(value[2]==5){fsws = "PARACHUTE"; fswCol=color(231,76,60)}
+  else if(value[2]==5){fsws = "LANDING"; fswCol=color(231,76,60)}
   else if(value[2]==6){fsws = "LANDED"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
   else {fsws = "UNKNOWN"; fswCol=lerpColor(color(50),color(200),colMode);}
 
@@ -357,6 +357,7 @@ function format(input, b=""){
   else if(input<=-10 && input>-100)return nf(input, 2, 1)+b;
   else if(input<=-100 && input>-1000)return nf(input, 3, 0)+b;
   else if(input<=-1000)return nf(input/1000, 1, 1)+b+"k";
+  else return "";
 
 }
 
