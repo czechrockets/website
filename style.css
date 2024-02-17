@@ -910,7 +910,15 @@ background-color: none !important;
         background-color: #FD0809;
     }
 }
+.dashboard-button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+}
+/* 
 .focus-mode-button{
+    pad: ;
    display: flex;
    position: fixed;
    background-color: #1D01C8;
@@ -945,7 +953,7 @@ background-color: none !important;
 .focus-button-switched{
    background-color: #F70F0F !important;
 }
-
+ */
 
 /* Start info styles*/
 .start-info{
@@ -979,6 +987,22 @@ background-color: none !important;
             }
         }
     }
+}
+.dashboard-return{
+    position: absolute;
+    left: .5rem;
+    bottom: .5rem;
+    background-color: black;
+    padding: 0.5rem;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    transition-duration: .25s;
+    opacity: 0.25;
+}
+.dashboard-return:hover{
+
+    opacity: 1;
 }
  
  @media only screen and (max-width:1200px) {

@@ -19,41 +19,41 @@ function setToMainFeed(buttonObject){
         // set small text
         buttonObject.parentElement.getElementsByTagName("h2")[0].innerHTML = oldText;
     }
-}
-function focusSwitch(buttonObject){
-    if(buttonObject instanceof HTMLButtonElement){
-        if(buttonObject.innerHTML == "Start focus!") {
-            buttonObject.innerHTML = "Stop focus!";
-            buttonObject.parentElement.classList.add("focus-button-switched");
-        }
-        else {
-            buttonObject.innerHTML = "Start focus!";
-            buttonObject.parentElement.classList.remove("focus-button-switched");
-        }
-    }
+// }
+// function focusSwitch(buttonObject){
+//     if(buttonObject instanceof HTMLButtonElement){
+//         if(buttonObject.innerHTML == "Start focus!") {
+//             buttonObject.innerHTML = "Stop focus!";
+//             buttonObject.parentElement.classList.add("focus-button-switched");
+//         }
+//         else {
+//             buttonObject.innerHTML = "Start focus!";
+//             buttonObject.parentElement.classList.remove("focus-button-switched");
+//         }
+//     }
 
-    // if nav is visible, hide it
-    if(document.getElementsByTagName("nav")[0].classList.contains("focus-switch")){
-        document.getElementsByTagName("nav")[0].classList.remove("focus-switch");
-    }
-    // if nav is hidden, show it
-    else{
-        document.getElementsByTagName("nav")[0].classList.add("focus-switch");
-    }
+//     // if nav is visible, hide it
+//     if(document.getElementsByTagName("nav")[0].classList.contains("focus-switch")){
+//         document.getElementsByTagName("nav")[0].classList.remove("focus-switch");
+//     }
+//     // if nav is hidden, show it
+//     else{
+//         document.getElementsByTagName("nav")[0].classList.add("focus-switch");
+//     }
 
-    // do same with footer (footer has class live-footer)
-    if(document.getElementsByClassName("live-footer")[0].classList.contains("focus-switch")){
-        document.getElementsByClassName("live-footer")[0].classList.remove("focus-switch");
-    }
-    else{
-        document.getElementsByClassName("live-footer")[0].classList.add("focus-switch");
-    }
+//     // do same with footer (footer has class live-footer)
+//     if(document.getElementsByClassName("live-footer")[0].classList.contains("focus-switch")){
+//         document.getElementsByClassName("live-footer")[0].classList.remove("focus-switch");
+//     }
+//     else{
+//         document.getElementsByClassName("live-footer")[0].classList.add("focus-switch");
+//     }
 
-    // hide other info
-    if(document.getElementById("live-other-info").classList.contains("focus-switch")){
-        document.getElementById("live-other-info").classList.remove("focus-switch");
-    }
-    else{
-        document.getElementById("live-other-info").classList.add("focus-switch");
-    }
-}
+//     // hide other info
+//     if(document.getElementById("live-other-info").classList.contains("focus-switch")){
+//         document.getElementById("live-other-info").classList.remove("focus-switch");
+//     }
+//     else{
+//         document.getElementById("live-other-info").classList.add("focus-switch");
+//     }
+// }
