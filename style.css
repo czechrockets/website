@@ -959,6 +959,8 @@ background-color: none !important;
 .start-info{
     >.info-boxes{
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         >a{
             text-decoration: none;
             color: #212529;
