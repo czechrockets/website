@@ -2,26 +2,23 @@ var graphList=[];
 var  timeList=[];
 var timeCount=[];
 var maxGaugeList=[];
-let uc = 0;
 
 function textBox(value, mn, mx, div, x, y, w, h, mode, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
   w = w*(rad + xOffset)-xOffset;
   h = h*(rad + yOffset)-yOffset;
-  let textCol = colMode * 255;
-  let lerpCol = colMode * 120;
 
   if(midb)x+=middle;
   else y+=middle;
 
   fill(contc);
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
   strokeWeight(2);
   rect(x,y,w,h,5);
   strokeWeight(1);
 
-  fill(textCol);
+  fill(255);
   noStroke();
   textAlign(CENTER,TOP);
   textSize(rad/10);
@@ -49,8 +46,6 @@ function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yO
   x = x*(rad + xOffset) + rad/2 + padding;
   y = y*(rad + yOffset) + rad/2 + padding;
   let showValue = PI-map(cap(value,mn,mx), mn, mx, 0, -PI);
-  let textCol = colMode * 255;
-  let lerpCol = colMode * 120;
 
   if(midb)x+=middle;
   else y+=middle;
@@ -58,7 +53,7 @@ function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yO
   maxGaugeList[index] = round(max(maxGaugeList[index],value),2);
 
   fill(contc);
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
   strokeWeight(2);
   rect(x-rad/2,y-rad/2,rad,rad,5);
 
@@ -71,7 +66,7 @@ function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yO
   stroke(vc);
   if(value>0.01+mn)arc(x, y, rad / 1.2, rad, -PI, showValue);
   noStroke();
-  fill(textCol);
+  fill(255);
   arc(x, y, (rad*1.1) / 1.2, rad*1.1, showValue-PI/128, showValue+PI/64);
   strokeWeight(1);
   fill(contc);
@@ -80,11 +75,11 @@ function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yO
   noStroke();
   textAlign(CENTER, CENTER);
   textSize(rad / 5.0);
-  fill(textCol);
+  fill(255);
   text(format(value), x, y - rad / 8);
   textSize(rad / 10.0);
   text(name+" ["+unit+"]", x, y);
-  fill(max(textCol-55,55));
+  fill(200);
   textSize(rad / 13.0);
   text("max: "+maxGaugeList[index], x, y + rad/9.5);
 
@@ -106,8 +101,6 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
   let Yoffset = (20/rows)*(rad/300);
   let Xoffset = (6/rows)*(rad/300);
   let dim = 0;
-  let textCol = colMode * 255;
-  let lerpCol = colMode * 120;
   let nn = 0;
   let sz = (w+h)/2;
 
@@ -121,7 +114,7 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
   else y+=middle;
 
   fill(contc);
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
   strokeWeight(2);
   rect(x,y,w,h,5);
   strokeWeight(1);
@@ -147,21 +140,21 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
   noStroke();
   textSize(rad/12);
   textAlign(CENTER,CENTER);
-  fill(textCol);
+  fill(255);
   text(name[name.length-1]+" ["+unit+"]", x+w/2, y-offset*1.5);
 
   for(let i=0;i<rows;i++){
     for(let k=0;k<bar;k++){
       fill(30);
       rect(x+columnWidth*k+k*Xoffset,y+rowHeight*i+i*Yoffset,columnWidth,rowHeight,(rowHeight/columnWidth)*(rad/225.0));
-      if(round((bar/(mx[i]-mn[i]))*(value[i]-mn[i]))<=k)dim = 300/(colMode+2);
+      if(round((bar/(mx[i]-mn[i]))*(value[i]-mn[i]))<=k)dim = 100;
       else dim = 255;
-      if(isNaN(value[i]))dim=100/(colMode+1);
+      if(isNaN(value[i]))dim = 50;
       if(!rev)fill(min(k*(510/bar),255),min((bar-k)*(510/bar),255),0,dim);
       else fill(min((bar-k)*(510/bar),255),min((bar-(bar-k))*(510/bar),255),0,dim);
       rect(x+columnWidth*k+k*Xoffset,y+rowHeight*i+i*Yoffset,columnWidth,rowHeight,(rowHeight/columnWidth)*(rad/225.0));
     }
-    fill(textCol);
+    fill(255);
     if(isNaN(value[i]))fill(255,0,0);
     textAlign(CENTER,CENTER);
     text(name[i], x-offset*2, y+rowHeight*i+i*Yoffset+rowHeight/2)
@@ -191,8 +184,6 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   let range = 1;
   let offset = rad/5;
   let repNum = 0;
-  let textCol = colMode * 255;
-  let lerpCol = colMode * 120;
   let sz = (w+h)/2;
 
   x = (x*(rad + xOffset))+padding;
@@ -204,7 +195,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   else y+=middle;
   
   fill(contc);
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
   strokeWeight(2);
   rect(x,y,w,h,5);
   strokeWeight(1);
@@ -213,7 +204,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   noStroke();
   textAlign(CENTER, CENTER);
   textSize(rad/10);
-  fill(textCol);
+  fill(255);
   text(name+" ["+unit+"]", x + w/2, y + offset/2);
 
   x += offset;
@@ -238,13 +229,8 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
 
   while(graphList[index].length > w)graphList[index].pop();
   while(timeList[index].length > w)timeList[index].pop();
-  maxVal = max(graphList[index]);
-  minVal = min(graphList[index]);
-
-  if (maxVal - minVal < 2) {
-    maxVal = value+2;
-    minVal = value-2;
-  }
+  maxVal = max(graphList[index])+0.00001;
+  minVal = min(graphList[index])-0.00001;
 
   range = maxVal - minVal;
   div = range / h;
@@ -277,7 +263,7 @@ function Graph(index, value, x, y, w, h, timeFrame, name, unit, rad, padding, xO
   textAlign(LEFT,BOTTOM);
   text("-"+round(endTime(repNum,w))+"s",x+w,y);
 
-  stroke(textCol,10);
+  stroke(255,10);
   line(x, y + h/2 - h/4, x + w, y + h/2 - h/4);
   line(x, y + h/2, x + w, y + h/2);
   line(x, y + h/2 + h/4, x + w, y + h/2 + h/4);
@@ -301,8 +287,6 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   y = (y*(rad + yOffset))+padding;
   w = w*(rad + xOffset)-xOffset;
   h = h*(rad + yOffset)-yOffset;
-  let textCol = colMode * 255;
-  let lerpCol = colMode * 120;
   fsws = "";
   fswCol = 0;
 
@@ -310,23 +294,23 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   else y+=middle;
 
   fill(contc);
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
   strokeWeight(2);
   rect(x,y,w,h,5);
   strokeWeight(1);
   
   if(value[2]==0){fsws = "INIT"; fswCol=color(241,196,15);}
-  else if(value[2]==1){fsws = "READY"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
+  else if(value[2]==1){fsws = "READY"; fswCol=color(46,204,113);}
   else if(value[2]==2){fsws = "ARM"; fswCol=color(231,76,60);}
-  else if(value[2]==3){fsws = "LIFTOFF"; fswCol=textCol;}
+  else if(value[2]==3){fsws = "LIFTOFF"; fswCol=color(255);}
   else if(value[2]==4){fsws = "DESCENT"; fswCol=color(62,100,240)}
   else if(value[2]==5){fsws = "LANDING"; fswCol=color(231,76,60)}
-  else if(value[2]==6){fsws = "LANDED"; fswCol=lerpColor(color(92,240,72),color(46,204,113),colMode);}
-  else {fsws = "UNKNOWN"; fswCol=lerpColor(color(50),color(200),colMode);}
+  else if(value[2]==6){fsws = "LANDED"; fswCol=color(46,204,113);}
+  else {fsws = "UNKNOWN"; fswCol=color(150);}
 
-  tint(255,25+(colMode*50));
+  tint(255,75);
   image(img, x, y,w,h);
-  fill(textCol);
+  fill(255);
   noStroke();
   textAlign(CENTER,CENTER);
   textStyle(BOLD);
@@ -336,7 +320,7 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   fill(fswCol);
   text("Status: "+fsws,x+w/2,y+h/2+h/4+h/32);
   textStyle(NORMAL)
-  stroke(lerpColor(contc,color(lerpCol),0.1));
+  stroke(contc+10);
 
   if(value[3])fill(62,100,240);
   else fill(62,100,240,100);
@@ -344,8 +328,8 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   if(value[4])fill(241,196,15);
   else fill(241,196,15,100);
   circle(x+w/2,y+h/1.12,rad/12);
-  if(value[5])fill(lerpColor(color(92,240,72),color(46,204,113),colMode));
-  else fill(lerpColor(color(92,240,72,100),color(46,204,113,100),colMode));
+  if(value[5])fill(color(46,204,113));
+  else fill(color(46,204,113,100));
   circle(x+w/2+w/8,y+h/1.12,rad/12);
   
 }
