@@ -306,6 +306,7 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   else if(value[2]==4){fsws = "DESCENT"; fswCol=color(62,100,240)}
   else if(value[2]==5){fsws = "LANDING"; fswCol=color(231,76,60)}
   else if(value[2]==6){fsws = "LANDED"; fswCol=color(46,204,113);}
+  else if(value[2]==7){fsws = "FAIL"; fswCol=color(231,76,60);}
   else {fsws = "UNKNOWN"; fswCol=color(150);}
 
   tint(255,75);
