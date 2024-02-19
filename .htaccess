@@ -1,5 +1,13 @@
 
 RewriteEngine On
+
+# If the link is not a file or a folder...
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+
+# ...add .html suffix:
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
+
+# Also make us visible on www, too:
+RewriteCond %{HTTP_HOST} ^www\.czechrockets\.com [NC]
+RewriteRule ^(.*)$ http://czechrockets.com/$1 [L,R=301]
