@@ -61,10 +61,10 @@ function ArtHor(eject, boardState, pitch, roll, yaw, x, y, w, h, name, rad, padd
 
   let state = ["DRS", "CAN", "DRG", "PAR"];
   let cols = [color(106,132,251,50),color(231,76,60,50),color(241,196,15,50),color(46,204,102,50)];
-  if(eject[1]>=3 || (eject[1] == 1 && !blink) || (eject[1] == 2 && shortBlink))cols[0]=color(106,132,251);
-  if(eject[2]>=3 || (eject[2] == 1 && blink) || (eject[2] == 2 && !shortBlink))cols[1]=color(231,76,60);
-  if(eject[3]>=3 || (eject[3] == 1 && !blink) || (eject[3] == 2 && shortBlink))cols[2]=color(241,196,15);
-  if(eject[4]>=3 || (eject[4] == 1 && blink) || (eject[4] == 2 && !shortBlink))cols[3]=color(46,204,102);
+  if(eject[0]>=3 || (eject[0] == 1 && !blink) || (eject[0] == 2 && shortBlink))cols[0]=color(106,132,251);
+  if(eject[1]>=3 || (eject[1] == 1 && blink) || (eject[1] == 2 && !shortBlink))cols[1]=color(231,76,60);
+  if(eject[2]>=3 || (eject[2] == 1 && !blink) || (eject[2] == 2 && shortBlink))cols[2]=color(241,196,15);
+  if(eject[3]>=3 || (eject[3] == 1 && blink) || (eject[3] == 2 && !shortBlink))cols[3]=color(46,204,102);
 
   let ho = 2;
   let barh = ((boxHeight-boxPadding)-(ho*5))/4;
@@ -79,7 +79,7 @@ function ArtHor(eject, boardState, pitch, roll, yaw, x, y, w, h, name, rad, padd
     rect(x+w-boxPadding, y+h-boxHeight+barOffset,-boxWidth, barh, rad/35);
     fill(0);
     stroke(0);
-    if(isNaN(eject[i+1])){
+    if(isNaN(eject[i])){
       fill(signalRed);
       stroke(signalRed);
     }
@@ -114,7 +114,7 @@ function ArtHor(eject, boardState, pitch, roll, yaw, x, y, w, h, name, rad, padd
   let rnan = false;
   let ynan = false;
   if(isNaN(pitch)){
-    pitch = 0;
+    pitch = 90;
     pnan = true;
   }
   if(isNaN(roll)){

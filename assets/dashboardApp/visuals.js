@@ -297,8 +297,8 @@ function Graph(index, value, x, y, w, h, timeFrame, disTime, name, unit, rad, pa
   }
 }
 function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, contc, middle, midb) {
-  let fsws = ["INIT","READY","ARM","ASCENT", "APOGEE", "DESCENT","LANDING","LANDED","FAIL","UNKNOWN"];
-  let fswCol = [color(241,196,15),color(46,204,102),color(231,76,60),color(255), color(0,220,250),color(62,100,240),color(241,196,15),color(46,204,102),color(231,76,60),color(150)];
+  let fsws = ["INIT","READY","WAITING GS","ARM","ASCENT", "APOGEE", "DESCENT","LANDING","LANDED","FAIL","UNKNOWN"];
+  let fswCol = [color(241,196,15),color(46,204,102),color(241,196,15),color(231,76,60),color(255), color(0,220,250),color(62,100,240),color(241,196,15),color(46,204,102),color(231,76,60),color(150)];
 
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
@@ -309,7 +309,7 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   else y+=middle;
 
   value[2] = round(value[2]);
-  if(value[2] < 0 || value[2] > 8 || isNaN(value[2]))value[2] = 9;
+  if(value[2] < 0 || value[2] > 9 || isNaN(value[2]))value[2] = 10;
 
   fill(contc);
   stroke(contc+10);
@@ -327,8 +327,8 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   textAlign(CENTER,CENTER);
   textStyle(BOLD);
   textSize(rad/div);
-  text(value[1],x+w/2,y+h/4-h/32);
-  text(value[0],x+w/2,y+h/2-h/60);
+  text(value[1],x+w/2,y+h/4);
+  text(value[0],x+w/2,y+h/2);
   fill(fswCol[value[2]]);
   text("Status: "+fsws[value[2]],x+w/2,y+h/2+h/4);
   textSize(rad/(div*2));
@@ -339,6 +339,9 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   fill(241,196,15);
   textSize(rad/(div*3));
   if(autoPauseOverride)text("(overridden)",x+w/2,y+h-h/32);
+  fill(255);
+  textSize((rad/div)/1.5);
+  if(value[2] >= 4)text("T+ " + nf(value[3],0,2), x+w/2, y+h/10);
   textStyle(NORMAL)
   
 }

@@ -139,18 +139,18 @@ function draw() {
   Gauge(2,abs(data.bno_data?.rotation/360.0), 0, 1.5, [6,2][d], [0,2][d], "Rotation", "rps", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
   if(d)Gauge(3,data.gps_data?.altitude, 0, 1200, [5,0][d], [2,3][d], "GPS Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, background_color, container_color, middle, midb);
   
-  mainTextBox(["CanSat FINALE", data.timestamp_gs+" CET", data.fsw_state?.state], [3,0][d], 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
+  mainTextBox(["CanSat FINALE", data.timestamp_gs+" CET", data.fsw_state?.state, data.timestamp/1000.0], [3,0][d], 0, 2, 2, 5, radius, padding, xOffset, yOffset, container_color, middle, midb);
   if(d)textBox(data.gps_data?.satellite, 10, 0, 3, [7,1][d], [0,3][d], 1, 1, true, "Satellite", "", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
   textBox(data.bmp_data?.temperature, 0, 0, 4, [7,3][d], [0,2][d], 1, 1, false, "Temperature", "°C", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-  bars([data.ina_data?.voltage,data.ina_data?.current], [9.3,0], [12.6,3], [6,2][d], [1,3][d], 2, 1, true, ["U","I","Power"], "V,A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
+  bars([data.ina_data?.voltage,data.ina_data?.current], [9.3,0], [12.6,10], [6,2][d], [1,3][d], 2, 1, true, ["U","I","Power"], "V, A", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
   //bars([abs(data.mpu_accel_x),abs(data.mpu_accel_y),abs(data.mpu_accel_z)], [0,0,0], [16,16,16], [6,2][d], [3,2][d], 2, 1, false, ["X","Y","Z","Acceleration"], "G", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
      
   Graph(0, data.pos_data?.rel_altitude, 0, [0,4][d], [3,4][d], 2, 60, data.timestamp_gs, "Altitude", "m", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
   Graph(1, data.pos_data?.est_velocity, 0, [2,6][d], [3,4][d], 2, 60, data.timestamp_gs, "Velocity", "m/s", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
   if(!d)Graph(2, data.pos_data?.est_acceleration, [5,0][d], 2, 3, 2, 60, data.timestamp_gs, "Acceleration", "m/s²", radius, padding, xOffset, yOffset, visuals_color, container_color, middle, midb);
 
-  ArtHor([data.fsw_state?.state, data.eject_output?.doors, data.eject_output?.payload, data.eject_output?.drogue, data.eject_output?.parachute], [data.board_status?.pwb_status, data.board_status?.cnb_status, data.board_status?.snb_status, data.board_status?.cmb_status],data.bno_data?.euler_p, data.bno_data?.euler_r, data.bno_data?.euler_h, [3,2][d], [2,0][d], 2, 2, "NAVBALL", radius, padding, xOffset, yOffset, container_color, middle, midb);
+  ArtHor([data.eject_output?.doors, data.eject_output?.payload, data.eject_output?.drogue, data.eject_output?.parachute], [data.board_status?.pwb_status, data.board_status?.cnb_status, data.board_status?.snb_status, data.board_status?.cmb_status],data.bno_data?.euler_p, data.bno_data?.euler_r, data.bno_data?.euler_h, [3,2][d], [2,0][d], 2, 2, "NAVBALL", radius, padding, xOffset, yOffset, container_color, middle, midb);
 
   /*textSize(radius / 10.0);
   fill(255);
