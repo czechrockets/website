@@ -1,5 +1,3 @@
-//Made by @tomas-pribyl
-
 p5.disableFriendlyErrors = true;
 
 var graphList=[];
@@ -7,7 +5,7 @@ var  timeList=[];
 var timeCount=[];
 var maxGaugeList=[];
 var signalString = "No Data";
-var blink = false;
+var longBlink = false;
 
 function textBox(value, mn, mx, div, x, y, w, h, mode, name, unit, rad, padding, xOffset, yOffset, vc, contc, middle, midb) {
   x = (x*(rad + xOffset))+padding;
@@ -40,7 +38,7 @@ function textBox(value, mn, mx, div, x, y, w, h, mode, name, unit, rad, padding,
     fill(0,150);
     noStroke();
     rect(x,y,rad,rad,5);
-    fill(255,0,0);
+    fill(signalRed);
     textAlign(CENTER,CENTER);
     textSize(rad/5)
     text(signalString,x+w/2,y+h/2);
@@ -93,7 +91,7 @@ function Gauge(index, value, mn, mx, x, y, name, unit, rad, padding, xOffset, yO
     fill(0,150);
     noStroke();
     rect(x-rad/2,y-rad/2-rad/4,rad,rad,5);
-    fill(255,0,0);
+    fill(signalRed);
     textAlign(CENTER,CENTER);
     textSize(rad/5)
     text(signalString,x,y-rad/4);
@@ -144,7 +142,7 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
   columnWidth = (w-(bar-1)*Xoffset)/bar;
 
   noStroke();
-  textSize(rad/12);
+  textSize(rad/10);
   textAlign(CENTER,CENTER);
   fill(255);
   text(name[name.length-1]+" ["+unit+"]", x+w/2, y-offset*1.5);
@@ -161,7 +159,7 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
       rect(x+columnWidth*k+k*Xoffset,y+rowHeight*i+i*Yoffset,columnWidth,rowHeight,(rowHeight/columnWidth)*(rad/225.0));
     }
     fill(255);
-    if(isNaN(value[i]))fill(255,0,0);
+    if(isNaN(value[i]))fill(signalRed);
     textAlign(CENTER,CENTER);
     text(name[i], x-offset*2, y+rowHeight*i+i*Yoffset+rowHeight/2)
     textAlign(CENTER,CENTER);
@@ -173,7 +171,7 @@ function bars(value, mn, mx, x, y, w, h, rev, name, unit, rad, padding, xOffset,
     fill(0,150);
     noStroke();
     rect(x-offset*4,y-offset*3,w+offset*8,h+offset*4,5);
-    fill(255,0,0);
+    fill(signalRed);
     textAlign(CENTER,CENTER);
     textSize((rad/5)*sz);
     text(signalString,x+w/2,y+h/2);
@@ -228,7 +226,7 @@ function Graph(index, value, x, y, w, h, timeFrame, disTime, name, unit, rad, pa
   if(timeFrame-endTime(k-1,w) > endTime(k,w)-timeFrame)repNum = k;
   else repNum = k-1;
 
-  if(timeCount[index] >= repNum && !isNaN(value))
+  if(timeCount[index] >= repNum && !isNaN(value) && !LOSpause)
   {
     graphList[index].unshift(value);
     timeList[index].unshift(disTime);
@@ -292,15 +290,15 @@ function Graph(index, value, x, y, w, h, timeFrame, disTime, name, unit, rad, pa
     fill(0,150);
     noStroke();
     rect(x-offset,y-offset,w+offset*2,h+offset*2,5);
-    fill(255,0,0);
+    fill(signalRed);
     textAlign(CENTER,CENTER);
     textSize((rad/5)*sz)
     text(signalString,x+w/2,y+h/2);
   }
 }
 function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, contc, middle, midb) {
-  let fsws = ["INIT","READY","ARM","LIFTOFF","DESCENT","LANDING","LANDED","FAIL","UNKNOWN"];
-  let fswCol = [color(241,196,15),color(46,204,102),color(231,76,60),color(255),color(62,100,240),color(231,76,60),color(46,204,102),color(231,76,60),color(150)];
+  let fsws = ["INIT","READY","ARM","ASCENT", "APOGEE", "DESCENT","LANDING","LANDED","FAIL","UNKNOWN"];
+  let fswCol = [color(241,196,15),color(46,204,102),color(231,76,60),color(255), color(0,220,250),color(62,100,240),color(241,196,15),color(46,204,102),color(231,76,60),color(150)];
 
   x = (x*(rad + xOffset))+padding;
   y = (y*(rad + yOffset))+padding;
@@ -311,7 +309,7 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   else y+=middle;
 
   value[2] = round(value[2]);
-  if(value[2] < 0 || value[2] > 7 || isNaN(value[2]))value[2] = 8;
+  if(value[2] < 0 || value[2] > 8 || isNaN(value[2]))value[2] = 9;
 
   fill(contc);
   stroke(contc+10);
@@ -330,24 +328,18 @@ function mainTextBox(value, x, y, w, h, div, rad, padding, xOffset, yOffset, con
   textStyle(BOLD);
   textSize(rad/div);
   text(value[1],x+w/2,y+h/4-h/32);
-  text(value[0],x+w/2,y+h/2);
+  text(value[0],x+w/2,y+h/2-h/60);
   fill(fswCol[value[2]]);
-  text("Status: "+fsws[value[2]],x+w/2,y+h/2+h/4+h/32);
-  textStyle(NORMAL)
-  stroke(contc+10);
-
-  if(value[3])fill(231,76,60);
+  text("Status: "+fsws[value[2]],x+w/2,y+h/2+h/4);
+  textSize(rad/(div*2));
+  if(warningStatus.includes("data"))fill(46,204,102);
+  else if(longBlink)fill(231,76,60);
   else fill(231,76,60,50);
-  if(value[2] == 4 && blink)fill(231,76,60);
-  circle(x+w/2-w/8,y+h/1.12,rad/12);
-  if(value[4])fill(241,196,15);
-  else fill(241,196,15,50);
-  if((value[3] || value[2] == 5) && blink)fill(241,196,15);
-  circle(x+w/2,y+h/1.12,rad/12);
-  if(value[5])fill(color(46,204,102));
-  else fill(color(46,204,102,50));
-  if(value[4] && !blink)fill(46,204,102);
-  circle(x+w/2+w/8,y+h/1.12,rad/12);
+  text("Signal status: "+warningStatus,x+w/2,y+h-h/12);
+  fill(241,196,15);
+  textSize(rad/(div*3));
+  if(autoPauseOverride)text("(overridden)",x+w/2,y+h-h/32);
+  textStyle(NORMAL)
   
 }
 function listCheck(array, index){
@@ -371,7 +363,6 @@ function format(input, b=""){
   else if(input<=-100 && input>-1000)return nf(input, 3, 0)+b;
   else if(input<=-1000)return nf(input/1000, 1, 1)+b+"k";
   else return "";
-
 }
 
 function cap(value,mn,mx){
@@ -379,5 +370,7 @@ function cap(value,mn,mx){
 }
 
 setInterval(() => {
-  blink = !blink
-}, 300);
+  longBlink = !longBlink;
+}, 750);
+
+//Made by @tomas-pribyl
