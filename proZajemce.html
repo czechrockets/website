@@ -6,6 +6,7 @@
     <!-- Bootstrap importy -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- Style -->
+    <link rel="stylesheet" href="cleanStyle.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -81,142 +82,193 @@
         </nav>
     </div>
 
-
-    <header class="text-center" id="oNasCont">
-
-        <div class="container my-auto" id="stoparWelcomeDiv">
-            <div class="row" style="padding: 0px;">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>PRO ZÁJEMCE</strong></h1>
-                    <p class="text-faded mb-5"><em>Nábor je nyní znovu otevřen. Sledujte naše sociální sítě a pokud se chcete přidat, následujte instrukce na <a href="https://czechrockets.com/join">tomto odkaze</a>.</em></p>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="container">
-        <h2 class="text-center">Kdo vlastně jsme, jak se přidat a co získáš?</h2>
-        <p class="text-justify projektyText">Jsme skupina nadšených studentů se zájmem o rakety, vesmír a vše kolem. V našem volném čase sami stavíme rakety. Pracujeme momentálně na dvou hlavních projektech – nosičích pro středoškolskou soutěž CanSat a motoru na kapalné palivo. Pořádáme také největší soutěž vypouštění raket v celé ČR. Chceme ale pracovat trochu jako start-up, proto máme i vlastní správní radu a různé administrativní pozice. Může se u nás tedy uplatnit každý.</p>
-        <p class="text-justify projektyText">Protože jsme nezisková organizace a všechno děláme ve svém volném čase, stačí mít chuť a vášeň. Výměnou ti poskytneme mnoho praktických znalostí, které se vždy hodí do tvého životopisu. Můžeš také získat reference za svou práci od ostatních členů a hlavně potkáš skvělou partu lidí se stejným zájmem. Pokud tě láká nahlédnout do světa studentských projektů/start-upů, tak jsi na správném místě.</p>
-        <p class="text-justify projektyText">Pracovat můžeš odkudkoliv na světě, ale v rámci spolku komunikujeme česky, v některých projektech pracujeme v angličtině. Nejvíce členů máme v Praze a v Brně. Přibližně jednou za týden až dva pořádáme meetingy, na kterých se všichni sejdeme, probereme aktuální pokrok a poté společně pracujeme na projektu. Pokud bys nemohl fyzicky přijít, můžeme tě do setkání zapojit online.</p>
-        <p class="text-justify projektyText">U nás neexistuje žádná hierarchie. Je zde pouze jedna osoba zodpovědná za tým, ale určitě nečekej stereotypního šéfa a podřízeného. Neměj také obavy, pokud nemáš žádné zkušenosti. Vstoupíš do spolku s konkrétním úkolem, za který budeš zodpovědný a v průběhu roku se vše, v čem tápeš, doučíš. Samozřejmě ti ostatní členové vždy rádi pomohou, a pokud budeš mít nějaké náročnější povinnosti ze školy, společně to zvládneme. Komunikace je pro nás klíčová. Škola je pro nás stále na prvním místě, a pokud se něco změní ve tvém časovém rozvrhu, není to problém.</p>
-    </div>
-    <div class="container" id="logoCont">
-        <h4>Jak se připojit do spolku?</h4>
-        <p class="text-justify projektyText">Všechny instrukce najdeš na <b><a href="https://czechrockets.com/join">TOMTO ODKAZE</a></b>. Kdyby nebylo cokoli jasné, určitě neváhej nám napsat na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a>. Níže najdeš seznam oblastí a pozic, které si pročti, abys věděl/a, z čeho vybírat. Třeba se v něčem najdeš. Pokud ne, vůbec to nevadí.
-    </div>
-    <div class="text-center text-white" id="darkBackground">
-
-        <div class="container py-4 py-xl-5">
-            <div class="text-left">
-                <h3 class="font-weight-bold text-center orange">Avionics</h3>
-                <p class="projektyText">
-                    Pracují na vývoji letového počítače, letového softwaru, kabeláže rakety, komunikace mezi raketou a pozemní stanicí a nově také systému pro vystřelování padáků.
-                    Nejsou tu žádné pevné požadavky, ale bylo by vhodné mít základní znalost programování (používáme hlavně C a C++, někdy i Python), zbytek ti rádi v rámci spolku vysvětlíme.
-                </p>
-                <h3 class="font-weight-bold text-center orange">Structures</h3>
-                <p class="projektyText">
-                    Obecně pracují na návrhu a výrobě nosných potahů a konstrukcí raket (jedná se o přepážky, frézované, soustružené díly apod.). Spadá sem ale i vývoj a práce s kompozity, návrh a výroba testovacích stojanů pro motory, padáková a záchranná zařízení (recovery) nebo vypouštěcí systémy družic (payload).
-                    Stačí ti lehčí strojírenský background a trocha nadšení. Zbytek ti ukážeme a naučíme.
-                </p>
-                <h3 class="font-weight-bold text-center orange">Motory</h3>
-                <p class="projektyText">Během naší krátké existence spolku jsme se začali věnovat palivům jak pevným (solids), tak i kompozitním nebo kapalným (liquids). Pokud tě návrh a výroba motorů zajímá (včetně jejich testování), určitě to bude vyžadovat nasazení a samostudium. Ti zkušenější z nás budou ale určitě připraveni ti poradit, pomoci a konzultovat.</p>
-                <h3 class="font-weight-bold text-center orange">Obecné</h3>
-                <p class="projektyText">Nejsi srdcem úplně strojař, ale stejně se chceš zasloužit o rozvoj raket v ČR? Hledáme i manažerské pozice, PR, a ostatní. Některé najdeš níže pod nadpisem "Stále hledáme!"</p>
-
-            </div>
-            <h2 class="text-center">Volné pozice pro rok 2023/2024</h2>
-            <div class="row row-cols-1 row-cols-md-2" id="bottomP">
-                <div class="col ">
-                    <div class="text-md-left ">
-                        <h5 class="font-weight-bold orange py-1">Člen nebo členka spolku (technická pozice)</h5>
-                        <p class="projektyText">Hledáme každého, kdo má zájem o jakékoli členství ve spolku. Tvá specifická pozice bude rozhodnuta později, podle toho, kde se třeba najdeš. Pokud chceš být zaměřenější, můžeš si vybrat okruh (výše) anebo přímo vypsanou pozici (dále):</p>
-
-                        <h5 class="font-weight-bold orange py-1">Chief of Feed Department (Liquids)</h5>
-
-                        <h5 class="font-weight-bold orange py-1">Fluid Simulation Specialist (Liquids)</h5>
-
-                        <h5 class="font-weight-bold orange py-1">Výpočtář (Motory, Structures)</h5>
-
-                        <h5 class="font-weight-bold orange py-1">Chemik (Motory)</h5>
-                    </div>
-                </div>
-                <div class="col ">
-                    <div class="text-md-left ">
-                        <h5 class="font-weight-bold orange py-1">Mobile Test Stand Mechanical Engineer (Structures)</h5>
-                        <h5 class="font-weight-bold orange py-1">Composite Structures Specialist (Structures)</h5>
-                        <h5 class="font-weight-bold orange py-1">Chief of Structures Department</h5>
-                        <h5 class="font-weight-bold orange py-1">Structures Specialist</h5>
-                        <h5 class="font-weight-bold orange py-1">Metoda konečných prvků (MKP)</h5>
-                        <h5 class="font-weight-bold orange py-1">3D Print Optimalization</h5>
-                        <h5 class="font-weight-bold orange py-1">Payload Engineer</h5>
-                        <h5 class="font-weight-bold orange py-1">System Engineer (Obecné)</h5>
-                        <h5 class="font-weight-bold orange py-1">Recovery Systems Engineer</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container py-4 py-xl-5">
-            <h2 class="text-center">Stále hledáme!</h2>
-            <div class="row row-cols-1 row-cols-md-2" id="bottomP">
-                <div class="col"><img class="img-fluid" src="/assets/img/fullsize/ksc.jpg"></div>
-                <div class="col d-flex flex-column justify-content-center">
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Účetní</h4>
-                            <p class="projektyText">Jednoduché účetnictví, mikro účetní jednotka, neplátce DPH. Říká vám to něco? A bavilo by vás platit díly pro rakety, objednávat ze všech koutů republiky i světa a spravovat raketové finance?</p>
-                        </div>
-                    </div>
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Právník / právnička</h4>
-                            <p class="projektyText">Space law je (alespoň v Česku) úplně nová oblast práva. Pomůžeš nám nastavit nová pravidla pro rakety v Česku a možná i v Evropě? Budeme ale potřebovat podporu i co se týče občanského práva (smlouvy, pravidla, spolky, ...).</p>
-                        </div>
-                    </div>
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Content Creator</h4>
-                            <p class="projektyText">Máš cit pro točení videí a focení fotografií? Hodil by se nám někdo, kdo by byl ochotný se točit kolem nás a raket a zájmově se třeba věnoval i střihu.</p>
-                        </div>
-                    </div>
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Project manager</h4>
-                            <p class="projektyText">Cítíš se jako vůdce? Co takhle řídit projekt, na kterém se podílí perspektivní studenti, vymýšlí se raketové celky a zařizuje se startovní den?</p>
-                        </div>
-                    </div>
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Safety manager</h4>
-                            <p class="projektyText">Hledáme právě tebe, pokud si bez safety analýzy ani nevyčistíš zuby a krizová matice pro tebe není sprosté slovo.</p>
-                        </div>
-                    </div>
-                    <div class="text-center text-md-left d-flex flex-column align-items-center align-items-md-start mb-5">
-                        <div>
-                            <h4 class="font-weight-bold" style="color:rgb(243,182,0);">Specialist(k)a na výbušniny</h4>
-                            <p class="projektyText">
-                                V nejlepším případě by měl kandidát mít koncesi pro nakládání s výbušnými látkami a pyrotechnikou. Ale bereme každého, kdo by se do toho chtěl ponořit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="titleContainer">
+        <div>
+            <h1 class="title">Pro zájemce</h1>
+            <a class="link" role="button" href="https://czechrockets.com/join">Jdu do toho</a>
         </div>
     </div>
-    <div class="container" id="naborCont">
-        <h3 class="text-center">Co obnáší být členem</h3>
-        <p class="text-justify projektyText">
-            Každý člen spolku je aktivní, to znamená, že působí v jednom z projektů jako inženýr nebo pracuje pro Správní radu. V současné době spolek funguje hybridně, ačkoli se snažíme stále víc tlačit na osobní schůzky. Přesto se ale všichni členové spolku aktivně podílí na vývoji nebo jeho chodu. Rada spolku
-            i všechny departementy se scházejí minimálně jednou do týdne na společné schůzce (ale záleží na domluvě jak často) a mimo schůzky pracují na samostatných úkolech. Všichni ve spolku jsou studenty, takže samozřejmě bereme ohled na zkouškové a jiné studentské aktivity, proto
-            není třeba se bát, že budeš muset spolku obětovat veškerý svůj volný čas.
-        </p>
-        <p class="text-justify projektyText">
-            Pokud se staneš řádným členem, budeme hlavně rádi za to, když budeš samostnatně pracovat a budeš aktivní na našich komunikačních platformách. Jsme zvyklí si tam v případě potřeby odepisovat alespoň do 24 hodin a dávat vědět, kdy zrovna nebudeš k zastižení. Jako řádného člena tě poprosíme i o placení členského příspěvku jednou ročně. Minulý rok to bylo 1500 Kč, není to snad žádná velká tíha pro tvoji peněženku. Alternativně se můžeme domluvit i na jiném řešení.
-            Členský příspěvek slouží na pokrytí základních administrativních a jiných záležitostí, pokud by zrovna nebylo k dispozici jiné financování.
 
-            <br><br>
-        </p>
-        <p class="text-justify projektyText"> Máš nějaké dotazy? Potom se neváhej obrátit na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a>.</p>
-    </div>
+    <section class="three-quarters">
+        <h1>Něco málo o nás</h1>
+        <div class="questionContainer">
+            <h2>Kdo vlastně jsme?</h2>
+            <p>Jsme skupina nadšených studentů se zájmem o rakety, vesmír a vše kolem. V našem volném čase sami stavíme rakety. Pracujeme momentálně na dvou hlavních projektech – nosičích pro středoškolskou soutěž CanSat a motoru na kapalné palivo. Pořádáme také největší soutěž vypouštění raket v celé ČR. Chceme ale pracovat trochu jako start-up, proto máme i vlastní správní radu a různé administrativní pozice. Může se u nás tedy uplatnit každý.</p>
+        </div>
+        <div class="questionContainer">
+            <h2>Co získáš?</h2>
+            <p>Protože jsme nezisková organizace a všechno děláme ve svém volném čase, stačí mít chuť a vášeň. Výměnou ti poskytneme mnoho praktických znalostí, které se vždy hodí do tvého životopisu. Můžeš také získat reference za svou práci od ostatních členů a hlavně potkáš skvělou partu lidí se stejným zájmem. Pokud tě láká nahlédnout do světa studentských projektů/start-upů, tak jsi na správném místě.</p>
+        </div>
+        <div class="questionContainer">
+            <h2>Co tě čeká?</h2>
+            <p>Pracujeme hlavně remote, takže se můžeš zapojit odkudkoli na světě, ačkoli většina členů je z Prahy a Brna. Komunikujeme česky, někdy i anglicky, a jednou za týden až dva máme online nebo osobní meetingy. Nemáme hierarchii – každý má svůj úkol, a pokud potřebuješ pomoct, ostatní ti vždy ochotně poradí. Zkušenosti nejsou nutné, vše se naučíš za běhu. Práce se dá snadno rozvrhnout, takže i při náročnějším rozvrhu zvládneš skloubit školu i spolkové aktivity.</p>
+        </div>
+    </section>
+
+    <section class="three-quarters">
+        <div class="callToAction">
+            <h1>Chceš se přidat?</h1>
+            <div class="bottom-part">
+                <div class="section">
+                    <h2>Zní to dobře?</h2>
+                    <p>Pokud tě zaujalo, co děláme, a chceš se k nám přidat tak prosím klikni na tlačítko níže. Zavede tě na stránku kde jsou podrobnější informace. <p></p>
+                    <a class="btn btn-primary" role="button" href="https://czechrockets.com/join">Jdu do toho</a>
+                </div>
+                <span class="vertical-line"></span>
+                <div class="section">
+                    <h2>Chci se individuálně zeptat</h2>
+                    <p>Pokud bys chtěl/a vědět víc o tom, co děláme, nebo máš nějaké dotazy, napiš nám na <a href="mailto:info@czechrockets.com">info@czechrockets.com</a></p>
+                    <h2>Nevěříš si - koukni níž</h2>
+                    <p>Níž na stránce najdeš podrobnější popis toho co by jsi mohl dělat, nějaké fotky a odpovědi an nejdůležitější otázky.</p>
+                </div>
+            </div>
+        <img class="arrowDown" src="/assets/img/icons/arrowdown.png">
+    </section>
+        
+    <section class="three-quarters">
+        <h1>Volné pozice</h1>
+        <div class="research-groups">
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/avionics.jpg">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Avionics</h2>
+                        <p>Staráme se především o vývoj letového počítače, letového softwaru a pozemní stanice. Mezi naše další projekty patří vývoj meteostanice pro rampu a vývoj altimetru pro soutěž Czech Rocket Challenge. Hlavním záběrem avioniky je programování a taktéž design a výroba desek plošný spojů,  věnujeme se také programování GUI či serverovým aplikacím.</p>
+                    </div>
+                    <div class="position">
+                        <div>Hardware Engineer</div>
+                        <div>Software Developer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/payload.jpg">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Payload</h2>
+                        <p>Navrhujeme a stavíme struktury a systémy zajišťující nesení nákladu v průběhu letu a jeho bezpečné vypuštění v požadované výšce. Naše práce zahrnuje návrh mechanismů, tvorbu 3D modelů, kontrolní výpočty, testování a výrobu. Úzce spolupracujeme se Structures.</p>
+                    </div>
+                    <div class="position">
+                        <div>Design Engineer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/structures.jpg">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Structures</h2>
+                        <p>Obecně pracují na návrhu a výrobě nosných potahů a konstrukcí raket (jedná se o přepážky, frézované, soustružené díly apod.). Spadá sem ale i vývoj a práce s kompozity, návrh a výroba testovacích stojanů pro motory, padáková a záchranná zařízení (recovery) nebo vypouštěcí systémy družic (payload). Stačí ti lehčí strojírenský background a trocha nadšení. Zbytek ti ukážeme a naučíme.</p>
+                    </div>
+                    <div class="position">
+                        <div>Simulations Engineer (CFD, FEM)</div>
+                        <div>Designer</div>
+                        <div>Composite Production</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/propulsion.jpg">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Propulsion</h2>
+                        <p>Když se přidáš k vývoji motorů v našem spolku, získáš zkušenost nejen s výrobou pevným, kompozitním nebo kapalným paliv, ale i s designem a výrobním procesem samotné konstrukce motoru. Pokud tě návrh a výroba motorů zajímá (včetně jejich testování), Budeme vyžadovat aktivní nasazení a větší špetku samostudia. Ti zkušenější z nás budou určitě připraveni ti poradit či konzultovat tvé návrhy. Takže se neboj, a přidej se k nám.</p>
+                    </div>
+                    <div class="position">
+                        <div>Simulation Engineer</div>
+                        <div>CAD Designer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/pr.jpg">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>PR Team</h2>
+                        <p>Naším cílem je dostat náš spolek do povědomí veřejnosti a dát prostor tvé kreativitě. Ať už jsi fotograf, grafik, copywriter, nebo jen někdo s chutí tvořit, u nás najdeš uplatnění. Chceš se podílet na projektech spojených s raketami a zároveň rozvíjet své dovednosti? Přidej se k nám a posuň se dál!</p>
+                    </div>
+                    <div class="position">
+                        <div>Social Networks</div>
+                        <div>Copywriter</div>
+                        <div>Organisers</div>
+                        <div>Video Production</div>
+                        <div>Graphic Designer</div>
+                        <div>Photographer</div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/bos.jpg" alt="">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Bureau of Safety</h2>
+                        <p></p>
+                    </div>
+                    <div class="position">
+                        <div>Safety Technician</div>
+                    </div>
+                </div>
+            </div>
+            -->
+            
+            <div class="group">
+                <div class="img-part">
+                    <img src="/assets/img/departments/other.jpg" alt="">
+                </div>
+                <div class="text-part">
+                    <div class="top">
+                        <h2>Ostatní pozice</h2>
+                        <p>Zajímá tě vesmír a rakety, ale nevíš, kde přesně začít? Máme spoustu dalších pozic nad rámec těch uvedených! Ve spolku můžeš postupně objevovat, co tě nejvíc baví. Ať už tě zajímá finance, právní záležitosti, práce s lidmi nebo cokoliv jiného – i tyto oblasti u nás najdou své místo.</p>
+                    </div>
+                    <div class="position">
+                        <div>Účetní</div>
+                        <div>Právník / Právnička</div>
+                        <div>Project manager</div>
+                        <div>Human resources</div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="three-quarters">
+        <h1>Nejčastější otázky</h1>
+        <br>
+        <div class="questionContainer">
+            <h2>Mám pocit, že to nebudu stíhat. Má to smysl?</h2>
+            <p>Většina z nás studuje na vysokých školách a často zároveň pracuje – spolek je skvělou příležitostí, jak se naučit efektivně řídit svůj čas. Pokud si nejsi jistý, můžeš začít jako mimořádný člen a zjistit, jak ti to vyhovuje. Ve spolku navíc dbáme na individuální přístup, takže se nemusíš ničeho obávat.</p>
+        </div>
+        <div class="questionContainer">
+            <h2>Jak skloubit práci ve spolku se školou a dalšími povinnostmi?</h2>
+            <p>Každý člen spolku se aktivně podílí na jednom z projektů nebo pracuje pro Správní radu, případně pro Bezpečnostní organizaci. Fungujeme primárně remote, ale pravidelně pořádáme schůzky, a to podle domluvy, většinou alespoň jednou týdně. Všichni jsme studenti, takže bereme ohled na zkouškové období a další povinnosti – nemusíš se bát, že bys spolku musel obětovat všechen volný čas.</p>
+        </div>
+        <div class="questionContainer">
+            <h2>Co znamená být členem?</h2>
+            <p>Naši řádní členové přispívají ročně členským příspěvkem ve výši 1500 Kč, který pokrývá základní administrativní náklady našeho spolku. Většinu nákladů spojených s výrobou a prací pokrývají externí firmy, se kterými spolupracujeme. Pokud si nejste jisti, můžete zvolit možnost mimořádného členství, které vám na jeden semestr odpouští členský příspěvek. Řádní členové mají také právo hlasovat a podílet se na rozhodování o směřování spolku.</p>
+        </div>
+    </section>
+
+    <section class="three-quarters">
+        <div class="lastCall">
+            <h1>Chceš se přidat?</h1>
+            <div class="bottom-part">
+                <div class="section">
+                    <a class="btn btn-primary" role="button" href="https://czechrockets.com/join">Jdu do toho</a>
+                </div>
+            </div>
+    </section>
+
 
     <iframe src="footer.html" width="100%" frameborder="0" scrolling="no" style="border:none;" seamless onload="resizeIframe(this)"></iframe>
 
