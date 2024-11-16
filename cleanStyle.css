@@ -17,7 +17,7 @@ section{
 
 }
 
-.titleContainer{
+.title-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@ section{
     
 }
 
-.questionContainer{
+.question-container{
     display: block;
     position: relative;
     margin-top: 2rem;
@@ -89,12 +89,7 @@ section{
     }
 }
 
-.callToAction{
-    width: 100%;
-    color: white;
-    border-radius: 10px;
-    background-color: #001432;
-    position: relative;
+.call-to-action{
     h1{
         display: flex;
         font-size: 2.5rem;
@@ -206,12 +201,14 @@ section{
         }
     }
 }
-.lastCall{
+.dark-container{
     width: 100%;
     color: white;
     border-radius: 10px;
     background-color: #001432;
     position: relative;
+}
+.last-call{
     h1{
         display: flex;
         font-size: 2.5rem;
@@ -228,12 +225,10 @@ section{
         color: white;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         .section{
-            width: 50%;
             display: flex;
             flex-direction: column;
-            padding: 1rem;
+            padding: 2rem;
             h2{
                 font-size: 1.5rem;
                 font-weight: 700;
@@ -246,25 +241,11 @@ section{
                 border-radius: 10px;
                 text-align: center;
                 font-weight: 700;
-                margin-top: 1rem;
                 text-decoration: none;
+                padding-left: 2rem;
+                padding-right: 2rem;
             }
         }
-        .vertical-line{
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            width: 1px;
-            content: "";
-            height: auto;
-            background-color: rgb(225, 225, 225);
-        }
-    }
-    .arrowDown{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 3rem;
-        height: 3rem;
     }
 }
 
@@ -272,13 +253,13 @@ section{
     section.three-quarters{
         width: 100%;
     }
-    .titleContainer{
+    .title-container{
         height: 15rem;
         h1{
             font-size: 2rem;
         }
     }
-    .questionContainer{
+    .question-container{
         h2{
             font-size: 1.2rem;
         }
@@ -286,7 +267,7 @@ section{
             font-size: 1rem;
         }
     }
-    .callToAction{
+    .call-to-action{
         h1{
             font-size: 2rem;
         }
@@ -310,7 +291,7 @@ section{
             }
         }
     }
-    .lastCall{
+    .last-call{
         h1{
             font-size: 2rem;
         }
@@ -325,7 +306,7 @@ section{
 }
 
 @media (max-width: 768px) {
-    .callToAction>.bottom-part{
+    .call-to-action>.bottom-part{
         flex-direction: column;
         .section{
             width: 100%;
