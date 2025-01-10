@@ -14,9 +14,11 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="cleanStyle.css">
     <title>O nás | Czech Rocket Society</title>
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/Team-Clean.css">
     <link rel="stylesheet" href="/assets/css/Team-Grid.css">
 
@@ -79,25 +81,53 @@
         </div>
     </nav>
 
+    <!-- This part will be replaced with video in time -->
+    <div class="title-container">
+        <div>
+            <h1 class="title">O nás</h1>
+            <p class="quote">“Máme na to taky. Chceme Česko do vesmíru…<br> nebo se mu alespoň přiblížit!”</p>
+        </div>
+    </div>
 
-
-
-    <header class="text-center" id="oNasCont">
-
-        <div class="container my-auto" id="stoparWelcomeDiv">
-            <div class="row" style="padding: 0px;">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase"><strong>O NÁS</strong></h1>
-                    <p class="text-faded mb-5">
-                        <em>
-                            Máme na to taky. Chceme Česko do vesmíru…
-                            nebo se mu alespoň přiblížit!
-                        </em>
-                    </p>
-                </div>
+    <section class="screen-heigh presentation" id="timeline">
+        <div class="timeline">
+            <div data-id="0" class="action-element selected">2021</div>
+            <div data-id="1" class="action-element">2022</div>
+            <div data-id="2" class="action-element">2023</div>
+            <div data-id="3" class="action-element">2024</div>
+            <div data-id="4" class="action-element">2025</div>
+        </div>
+        <div class="element" style="background-image: url(/assets/img/fullsize/sto_test_tym.jpg);">
+            <div class="text">
+                <h1>Založení spolku</h1>
+                <p>Spolek byl založen po představení návrhu během prvního ročníku Czech Rocket Challenge v březnu 2021, a setkal se s velkým nadšením studentů. První členové se okamžitě zapojili do budování infrastruktury a vizí spolku. Studenti vidí v Česku nevyužitý potenciál, protože i přes kvalitní univerzity a průmysl zde dosud neexistoval oficiální kosmický studentský spolek.</p>
             </div>
         </div>
-    </header>
+        <div class="element" style="background-image: url(/assets/img/fullsize/2022.JPG);">
+            <div class="text">
+                <h1>První Cansat, první Sherpa</h1>
+                <p>Simple text for the asdasda  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quaerat ratione illum praesentium, cum corrupti quisquam nobis molestias in impedit sit laudantium suscipit minus, dolores expedita dolorem asperiores aspernatur totam.</p>
+            </div>
+        </div>
+        <div class="element" style="background-image: url(/assets/img/fullsize/3.jpg);">
+            <div class="text">
+                <h1>Title contentus</h1>
+                <p>Simple text for the asdasda  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quaerat ratione illum praesentium, cum corrupti quisquam nobis molestias in impedit sit laudantium suscipit minus, dolores expedita dolorem asperiores aspernatur totam.</p>
+            </div>
+        </div>
+        <div class="element" style="background-image: url(/assets/img/fullsize/4.jpg);">
+            <div class="text">
+                <h1>Title contentus</h1>
+                <p>Simple text for the asdasda  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quaerat ratione illum praesentium, cum corrupti quisquam nobis molestias in impedit sit laudantium suscipit minus, dolores expedita dolorem asperiores aspernatur totam.</p>
+            </div>
+        </div>
+        <div class="element" style="background-image: url(/assets/img/fullsize/5.jpg);">
+            <div class="text">
+                <h1>Title contentus</h1>
+                <p>Simple text for the asdasda  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quaerat ratione illum praesentium, cum corrupti quisquam nobis molestias in impedit sit laudantium suscipit minus, dolores expedita dolorem asperiores aspernatur totam.</p>
+            </div>
+        </div>
+    </section>
 
     <div class="TEXT-CENTER container">
         <div class="row">
@@ -364,6 +394,8 @@
     <script src="/assets/js/Bold-BS4-Animated-Back-To-Top.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js "></script>
     <script src="/assets/js/Simple-Slider.js "></script>
+    <script src="cleanScript.js "></script>
+    <script>prepareTimeline()</script>
 </body>
 
 </html>

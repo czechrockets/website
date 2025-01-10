@@ -89,6 +89,43 @@ section{
     }
 }
 
+.partner-container{
+    display: flex;
+    position: relative;
+    margin-top: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-top: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+    .logo-part{
+        width: 30%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text-part{
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        >a{
+            width: 50%;
+        }
+        p{
+            width: 50%;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
 .call-to-action{
     h1{
         display: flex;
@@ -302,6 +339,113 @@ section{
                 }
             }
         }
+    }
+}
+.quote{
+    font-family: "Edu AU VIC WA NT Pre", cursive;    ;
+    color: white;
+    position: relative;
+    font-size: 1.2rem;
+    padding: 1rem;
+    padding: 0;
+}
+
+.presentation{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 !important;
+    position: relative;
+    overflow: hidden;
+    >.timeline{
+        display: flex;
+        z-index: 999;
+        position: absolute;
+        bottom: 0%;
+        right: 10%;
+        height: inherit;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        gap: 2rem;
+        >.action-element{
+            font-size: 1.4rem;
+            position: relative;
+            cursor: pointer;
+        }
+        >.selected::before{
+            background-color: white;
+        }
+        /* make the circle on before in front of the text and on after make the vertical line */
+        >.action-element::before{
+            content: "";
+            position: absolute;
+            top: 25%;
+            left: -40%;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid white;
+            border-radius: 50%;
+            z-index: 999;
+            transition: background-color ease-in-out 0.15s;
+            cursor: pointer;
+        }
+        >.action-element::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: -25%;
+            width: 1px;
+            height: 100%;
+            background-color: white;
+            z-index: 999;
+        }
+        /* if the element is last remove the after */
+        >.action-element:last-child::after{
+            display: none;
+        }
+    }
+    >.element{            
+        transition: ease-in-out 0.25s;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        background-size: cover;
+        background-position: center;
+        
+        .text{
+            z-index: 999;
+            width: 50%;
+            position: absolute;
+            color: white;
+            left: 0%;
+            bottom: 0%;
+            padding: 4rem;
+            text-align: left;
+            h1{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    >.element::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255,255,255);
+        background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);    
     }
 }
 
