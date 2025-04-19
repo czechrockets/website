@@ -14,6 +14,12 @@ section{
         justify-content: center;
 
     }
+    .title{
+        display: flex;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
 
 }
 
@@ -31,6 +37,7 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
     >div{
         width: 100%;
         height: 100%;
@@ -43,6 +50,9 @@ section{
         align-items: center;
         display: flex;
         justify-content: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1rem 2rem;
+        border-radius: 10px;
 
         h1{
             color: white;
@@ -61,6 +71,22 @@ section{
         }
     }
     
+}
+
+.three-quarters .row {
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.three-quarters img {
+    border-radius: 10px;
+}
+
+.three-quarters img.smaller-image {
+    width: 90%;
+    border-radius: 50px !important;
+    margin: 0 auto;
+    display: block;
 }
 
 .question-container{
@@ -298,6 +324,87 @@ section{
     }
 }
 
+.team-grid {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.team-grid .grid {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-grid .team-row {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.team-grid .team-member {
+    width: 200px;
+    text-align: center;
+}
+
+.team-grid .avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.team-grid .avatar-bg {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.team-grid .avatar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.team-grid h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.team-grid p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.team-grid .social-links {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team-grid .social-links a {
+    color: #001432;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.team-grid .social-links a:hover {
+    color: #ffde59;
+}
+
 @media (max-width: 1000px) {
     section.three-quarters{
         width: 100%;
@@ -355,6 +462,15 @@ section{
 }
 
 @media (max-width: 768px) {
+    .team-grid .grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .team-grid .team-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
     .call-to-action>.bottom-part{
         flex-direction: column;
         .section{
@@ -392,5 +508,12 @@ section{
                 }
             }
         }
+    }
+    .three-quarters img.smaller-image {
+        width: 100%;
+    }
+    .three-quarters .row:nth-child(2) {
+        flex-wrap: wrap-reverse;
+        display: flex;
     }
 }
