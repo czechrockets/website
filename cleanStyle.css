@@ -331,6 +331,10 @@ section{
     padding: 0;
 }
 
+.team-grid p {
+    margin-bottom: 0;
+}
+
 .team-grid .grid {
     margin-top: 4rem;
     display: flex;
