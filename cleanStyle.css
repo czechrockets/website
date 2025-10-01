@@ -389,7 +389,7 @@ section{
 }
 
 .team-grid .social-links {
-    margin-top: 0.5rem;
+    margin-top: 0rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
